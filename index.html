@@ -3,67 +3,61 @@
 
 <head>
     <title>LostBurger</title>
+    <link rel="stylesheet" href="estilo/styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="bootstrap/CSS/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
 
-    <div class="container mt-3">
-        <h2>Comida Rápida Express.</h2>
-        <p>Lista De Comida Rápida Express.</p>
+    <div class="container">
+        <h1>My First Bootstrap Page</h1>
+        <p>This is some text.</p>
+    </div>
 
-        <button type="button" class="btn btn-primary">Hamburguesas</button>
-        <button type="button" class="btn btn-primary">Completos</button>
-        <button type="button" class="btn btn-primary">Pizzas</button>
-        <button type="button" class="btn btn-primary">Papas Fritas</button>
-        <button type="button" class="btn btn-primary">Bebidas</button>
+    <!-- Nav pills -->
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="pill" href="#completo">Completos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#hamburgesas">Hamburgesas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#papas">Papas Fritas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#pizzas">Pizzas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#bebidas">Bebidas</a>
+        </li>
+    </ul>
 
-        <div class="row">
-            <div class="column">
-                <h2>Hamburguesas</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
-                    venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
-                    aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque
-                    tortor sed accumsan convallis.</p>
-            </div>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div id="completo" class="container tab-pane active"><br>
+            <h3>Completo</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+        </div>
+        <div id="hamburgesas" class="container tab-pane fade"><br>
+            <h3>Hamburgesas</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+        </div>
+        <div id="menu2" class="container tab-pane fade"><br>
+            <h3>Menu 2</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem aperiam.</p>
+        </div>
+    </div>
+    </div>
 
-            <div class="column">
-                <h2>Completos</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
-                    venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
-                    aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque
-                    tortor sed accumsan convallis.</p>
-            </div>
 
-            <div class="column">
-                <h2>Pizzas</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
-                    venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
-                    aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque
-                    tortor sed accumsan convallis.</p>
-            </div>
-
-            <div class="column">
-                <h2>Papas Fritas</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
-                    venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
-                    aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque
-                    tortor sed accumsan convallis.</p>
-            </div>
-
-            <div class="column">
-                <h2>Bebidas</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
-                    venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
-                    aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque
-                    tortor sed accumsan convallis.</p>
-            </div>
 </body>
-<footer>
-    <p>&copy; 2024 Comida Rápida Express. Todos los derechos reservados.</p>
-</footer>
 
 </html>
