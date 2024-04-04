@@ -3,36 +3,73 @@
 
 <head>
     <title>LostBurger</title>
-    <link rel="stylesheet" href="estilo/styles.css">
+    <link rel="stylesheet" href="bootstrap/CSS/styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="bootstrap/CSS/bootstrap.min.css" rel="stylesheet">
     <script src="bootstrap/js/bootstrap.min.js"></script>
-
 </head>
 
 <body>
 
-    <div class="container">
-        <h1>My First Bootstrap Page</h1>
-        <p>This is some text.</p>
+    <div class="container-fluid p-0 bg-dark text-warning">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <img src="img/Logo.png" alt="Logo" class="img-fluid" width="180" height="180">
+            </div>
+            <div class="col">
+                <h1 class="ms-3"style="font-size: 4rem;">LostBurger</h1>
+                <h3 style="color: white;">"Descubre la perfección en cada sabor"</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel"
+            style="max-width: calc(100% - 2cm); margin-left: 2cm; margin-right: 2cm;">
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/comida.png" alt="comida" class="d-block mx-auto"
+                        style="width: 100%; height: 70vh; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/burger.png" alt="burger" class="d-block mx-auto"
+                        style="width: 100%; height: 70vh; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/pizza.png" alt="pizza" class="d-block mx-auto"
+                        style="width: 100%; height: 70vh; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
     </div>
 
     <!-- Nav pills -->
     <ul class="nav nav-pills">
-        <li class="nav-item">
+
+        <li class="nav-item mustard-bg">
             <a class="nav-link active" data-bs-toggle="pill" href="#completo">Completos</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mustard-bg">
             <a class="nav-link" data-bs-toggle="pill" href="#hamburgesas">Hamburgesas</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mustard-bg">
             <a class="nav-link" data-bs-toggle="pill" href="#papas">Papas Fritas</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mustard-bg">
             <a class="nav-link" data-bs-toggle="pill" href="#pizzas">Pizzas</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mustard-bg">
             <a class="nav-link" data-bs-toggle="pill" href="#bebidas">Bebidas</a>
         </li>
     </ul>
@@ -46,11 +83,22 @@
         </div>
         <div id="hamburgesas" class="container tab-pane fade"><br>
             <h3>Hamburgesas</h3>
+            <img src="img/hamburgesas.jfif" alt="Imagen" width="154" height="172">
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat.</p>
         </div>
-        <div id="menu2" class="container tab-pane fade"><br>
-            <h3>Menu 2</h3>
+        <div id="papas" class="container tab-pane fade"><br>
+            <h3>Papas Fritas</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem aperiam.</p>
+        </div>
+        <div id="pizzas" class="container tab-pane fade"><br>
+            <h3>Pizzas</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem aperiam.</p>
+        </div>
+        <div id="bebidas" class="container tab-pane fade"><br>
+            <h3>Bebidas</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
                 rem aperiam.</p>
         </div>

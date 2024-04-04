@@ -1,0 +1,25 @@
+body {
+  background-color: powderblue;
+}
+
+h1 {
+  color: rgb(241, 10, 10);
+}
+
+p {
+  color: rgb(14, 13, 13);
+}
+.mustard-bg {
+  background-color: #FFDB58 !important; /* Código de color mostaza */
+}
+
+.mustard-bg a {
+  color: black !important; /* Cambiar el color del texto a negro */
+}
+.mustard-bg .nav-link.active,
+.mustard-bg .nav-link:hover,
+.mustard-bg .nav-link:focus {
+    background-color: black !important; /* Color de fondo */
+    color: yellow !important; /* Color del texto */
+    outline: none !important; /* Quita el borde azul del enlace enfocado */
+}
