@@ -1,25 +1,126 @@
-body {
-  background-color: powderblue;
-}
-
-h1 {
-  color: rgb(241, 10, 10);
-}
-
 p {
   color: rgb(14, 13, 13);
 }
+
 .mustard-bg {
-  background-color: #FFDB58 !important; /* Código de color mostaza */
+  background-color: #FFDB58 !important;
+  /* Código de color mostaza */
 }
 
 .mustard-bg a {
-  color: black !important; /* Cambiar el color del texto a negro */
+  color: black !important;
+  /* Cambiar el color del texto a negro */
 }
+
 .mustard-bg .nav-link.active,
 .mustard-bg .nav-link:hover,
 .mustard-bg .nav-link:focus {
-    background-color: black !important; /* Color de fondo */
-    color: yellow !important; /* Color del texto */
-    outline: none !important; /* Quita el borde azul del enlace enfocado */
+  background-color: black !important;
+  /* Color de fondo */
+  color: yellow !important;
+  /* Color del texto */
+  outline: none !important;
+  /* Quita el borde azul del enlace enfocado */
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+section img {
+  margin: 5px;
+  max-width: 350px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+}
+
+section img:hover {
+  cursor: crosshair;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+/* Estilos para pantallas más pequeñas, como teléfonos */
+@media only screen and (max-width: 768px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section img {
+    width: calc(100% - 20px);
+  }
+}
+
+/* Estilos para pantallas más grandes, como dispositivos de escritorio */
+@media only screen and (min-width: 769px) {
+  section img {
+    width: calc(25% - 10px);
+    /* Reduje el ancho y el margen para acomodar cuatro imágenes por fila */
+    margin: 0px;
+    /* Reduje el margen */
+  }
+}
+/*CARRITO DE COMPRAS*/
+/* Estilos generales */
+.cart-container {
+  position: relative;
+}
+
+.mobile-cart-button {
+  display: block;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.desktop-cart-panel {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 300px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.vaciar-carrito-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Media query para mostrar u ocultar el panel del carrito según el tamaño de la pantalla */
+@media screen and (min-width: 768px) {
+  .mobile-cart-button {
+      display: none;
+  }
+
+  .desktop-cart-panel {
+      display: block;
+  }
 }

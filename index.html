@@ -2,110 +2,199 @@
 <html lang="es">
 
 <head>
-    <title>LostBurger</title>
-    <link rel="stylesheet" href="bootstrap/CSS/styles.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="bootstrap/CSS/bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+  <title>LostBurger</title>
+  <link rel="icon" href="img/Logo.png" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap/CSS/styles.css">
+  <link href="bootstrap/CSS/bootstrap.min.css" rel="stylesheet">
+  <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-
-    <div class="container-fluid p-0 bg-dark text-warning">
-        <div class="row align-items-center">
-            <div class="col-auto">
-                <img src="img/Logo.png" alt="Logo" class="img-fluid" width="180" height="180">
-            </div>
-            <div class="col">
-                <h1 class="ms-3"style="font-size: 4rem;">LostBurger</h1>
-                <h3 style="color: white;">"Descubre la perfección en cada sabor"</h3>
-            </div>
-        </div>
-    </div>
+  <!-- Titulo Pag -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel"
-            style="max-width: calc(100% - 2cm); margin-left: 2cm; margin-right: 2cm;">
-
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/comida.png" alt="comida" class="d-block mx-auto"
-                        style="width: 100%; height: 70vh; object-fit: cover;">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/burger.png" alt="burger" class="d-block mx-auto"
-                        style="width: 100%; height: 70vh; object-fit: cover;">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/pizza.png" alt="pizza" class="d-block mx-auto"
-                        style="width: 100%; height: 70vh; object-fit: cover;">
-                </div>
+      <img src="img/Logo.png" alt="Logo" style="width:40px; height:40px;" class="rounded-pill">
+      <a class="navbar-brand" href="#" style="color: #FFDB58">LostBurger</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn-light" href="#" style="color: white;">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-light" href="#" style="color: white;">Local</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-light" href="#" style="color: white;">Pedidos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" style="color: white;" id="dropdownId" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Administración </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Paquetes</a>
+              <a class="dropdown-item" href="#">Compras</a>
+              <a class="dropdown-item" href="#">Usuarios</a>
             </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item text-light">Registrar</li>
+          <a href="index.html"></a>
+        </ul>
 
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
+
+      </div>
     </div>
+  </nav>
 
-    <!-- Nav pills -->
-    <ul class="nav nav-pills">
+</body>
+<section>
+  <img src="img/papas1.jpg">
+  <img src="img/pizza1.jpg">
+  <img src="img/completo2.jpg">
+  <img src="img/coca1.png">
+</section>
 
-        <li class="nav-item mustard-bg">
-            <a class="nav-link active" data-bs-toggle="pill" href="#completo">Completos</a>
-        </li>
-        <li class="nav-item mustard-bg">
-            <a class="nav-link" data-bs-toggle="pill" href="#hamburgesas">Hamburgesas</a>
-        </li>
-        <li class="nav-item mustard-bg">
-            <a class="nav-link" data-bs-toggle="pill" href="#papas">Papas Fritas</a>
-        </li>
-        <li class="nav-item mustard-bg">
-            <a class="nav-link" data-bs-toggle="pill" href="#pizzas">Pizzas</a>
-        </li>
-        <li class="nav-item mustard-bg">
-            <a class="nav-link" data-bs-toggle="pill" href="#bebidas">Bebidas</a>
-        </li>
-    </ul>
+<!--CARRITO-->
+<div class="cart-container">
+  <!-- Botón del carrito para dispositivos móviles -->
+  <button id="mobileCartButton" class="mobile-cart-button">Carrito</button>
 
-    <!-- Tab panes -->
-    <div class="tab-content">
-        <div id="completo" class="container tab-pane active"><br>
-            <h3>Completo</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
+  <!-- Panel del carrito para dispositivos de escritorio -->
+  <div id="desktopCartPanel" class="desktop-cart-panel">
+      <!-- Contenido del carrito -->
+      <ul id="cartItems" class="cart-items">
+          <!-- Aquí van los elementos del carrito -->
+      </ul>
+      <button onclick="vaciarCarrito()" class="vaciar-carrito-button">Vaciar Carrito</button>
+  </div>
+</div>
+
+
+<!-- Nav pills -->
+<ul class="nav nav-pills">
+
+  <li class="nav-item mustard-bg">
+    <a class="nav-link active" data-bs-toggle="pill" href="#completo">Completos</a>
+  </li>
+  <li class="nav-item mustard-bg">
+    <a class="nav-link" data-bs-toggle="pill" href="#hamburgesas">Hamburgesas</a>
+  </li>
+  <li class="nav-item mustard-bg">
+    <a class="nav-link" data-bs-toggle="pill" href="#pizzas">Pizzas</a>
+  </li>
+  <li class="nav-item mustard-bg">
+    <a class="nav-link" data-bs-toggle="pill" href="#papas">Papas Fritas</a>
+  </li>
+  <li class="nav-item mustard-bg">
+    <a class="nav-link" data-bs-toggle="pill" href="#bebidas">Bebidas</a>
+  </li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+  <div id="completo" class="container tab-pane active"><br>
+    <div class="container">
+      <h3>Completos</h3>
+      <div class="row">
+        <div class="col-md-9">
+          <!-- Esta columna ocupa tres cuartos de la página en dispositivos medianos y grandes -->
+          <div class="row">
+            <div class="col-md-4 col-sm-6 mt-3">
+              <!-- Las tarjetas se muestran en tres columnas en dispositivos medianos y grandes -->
+              <div class="card p-3 shadow border border-white rounded">
+                <img class="card-img-top img-fluid" src="img/citaliano.png" alt="citaliano" style="max-height: 200px;">
+                <div class="card-body">
+                  <h4 class="card-title">Completo Italiano</h4>
+                  <p class="card-text">Tomate-Palta-Mayo<br><br></p>
+                  <a href="#" class="btn btn-primary">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mt-3">
+              <div class="card p-3 shadow border border-white rounded">
+                <img class="card-img-top img-fluid" src="img/guacamole.png" alt="guacamole" style="max-height: 200px;">
+                <div class="card-body">
+                  <h4 class="card-title">El goloso</h4>
+                  <p class="card-text">Chucrut-Palta-Morrón o tomate-cebolla picados-Mayonesa<br><br>
+                  </p>
+                  <a href="#" class="btn btn-primary">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mt-3">
+              <div class="card p-3 shadow border border-white rounded">
+                <img class="card-img-top img-fluid" src="img/chucrut.jpg" alt="Chucrut" style="max-height: 200px;">
+                <div class="card-body">
+                  <h4 class="card-title">Completo Chucrut</h4>
+                  <p class="card-text">Tomate-Chucrut<br><br></p>
+                  <a href="#" class="btn btn-primary">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="hamburgesas" class="container tab-pane fade"><br>
-            <h3>Hamburgesas</h3>
-            <img src="img/hamburgesas.jfif" alt="Imagen" width="154" height="172">
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.</p>
-        </div>
-        <div id="papas" class="container tab-pane fade"><br>
-            <h3>Papas Fritas</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                rem aperiam.</p>
-        </div>
-        <div id="pizzas" class="container tab-pane fade"><br>
-            <h3>Pizzas</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                rem aperiam.</p>
-        </div>
-        <div id="bebidas" class="container tab-pane fade"><br>
-            <h3>Bebidas</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                rem aperiam.</p>
-        </div>
+        <div class="col-md-3"></div>
+        <!-- Esta columna vacía ocupa aproximadamente un cuarto de la página en dispositivos medianos y grandes -->
+      </div>
     </div>
+  </div>
+</div>
+<!-- hamburguesas -->
+<div id="hamburgesas" class="container tab-pane fade"><br>
+  <div class="container">
+    <h3>Hamburguesas</h3>
+    <!-- Aquí puedes agregar el contenido de hamburguesas -->
+    <div class="row">
+      <div class="col-md-4 col-sm-6 mt-3">
+        <div class="card p-2 shadow border border-white rounded">
+          <img class="card-img-top img-fluid" src="img/hitaliana.png" alt="hitaliana" style="max-height: 150px;">
+          <div class="card-body">
+            <h4 class="card-title">Hamburguesa Italana</h4>
+            <p class="card-text">Tomate-palta-mayo<br><br></p>
+            <a href="#" class="btn btn-primary">Ver detalles</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-
+</div>
+<div id="pizzas" class="container tab-pane fade"><br>
+  <div class="container mt-3">
+    <h3>Pizzas</h3>
+    <!-- Aquí puedes agregar el contenido de pizzas -->
+    <div class="row">
+      <div class="col-md-4 col-sm-6 mt-3">
+        <div class="card p-2 shadow border border-white rounded">
+          <img class="card-img-top img-fluid" src="img/pitaliiana.jpg" alt="pitaliiana" style="max-height: 150px;">
+          <div class="card-body">
+            <h4 class="card-title">Pizza Italiana</h4>
+            <p class="card-text">Tomate-queso<br><br></p>
+            <a href="#" class="btn btn-primary">Ver detalles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="papas" class="container tab-pane fade"><br>
+    <h3>Papas Fritas</h3>
+    <div class="separacion-imagenes">
+      <img src="img/papas2.jpg" alt="Imagen" width="184" height="184">
+      <h3>Medianas</h3>
+      <p>Precio: $5.000</p>
+    </div>
+    <div id="bebidas" class="container tab-pane fade"><br>
+      <h3>Bebidas</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+        totam
+        rem aperiam.</p>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>
