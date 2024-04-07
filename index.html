@@ -2,13 +2,15 @@
 <html lang="es">
 
 <head>
-    <title>LostBurger</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="CSS/bootstrap.css" rel="stylesheet">
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <title>LostBurger</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="CSS/bootstrap.css" rel="stylesheet">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="icon" type="image/png" href="img/Logo.png">
+
 </head>
 
 <body>
@@ -36,103 +38,226 @@
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item text-light"><a href="login.html"class="btn">Registrarse</a>
+          <li class="nav-item text-light"><a href="login.html" class="btn">Registrarse</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  
 
-<!--Imagenes-->
-<section>
-  <img src="img/salchipapa.webp">
-  <img src="img/pizza.png">
-  <img src="img/chucrut.jpg">
-  <img src="img/coca1.jpg">
-</section>
 
-<!--CARRITO-->
-<div class="cart-container">
-  <!-- Botón del carrito para dispositivos móviles -->
-  <button id="mobileCartButton" class="mobile-cart-button">Carrito</button>
+  <!--Imagenes-->
+  <section>
+    <img src="img/chucrut.jpg">
+    <img src="img/burger.png">
+    <img src="img/pizza2.jpeg">
+    <img src="img/salchipapa.webp">
+  </section>
 
-  <!-- Panel del carrito para dispositivos de escritorio -->
-  <div id="desktopCartPanel" class="desktop-cart-panel">
+  <!--CARRITO-->
+  <div class="cart-container">
+    <!-- Botón del carrito para dispositivos móviles -->
+    <button id="mobileCartButton" class="mobile-cart-button">Carrito</button>
+
+    <!-- Panel del carrito para dispositivos de escritorio -->
+    <div id="desktopCartPanel" class="desktop-cart-panel">
       <!-- Contenido del carrito -->
       <ul id="cartItems" class="cart-items">
-          <!-- Aquí van los elementos del carrito -->
+        <!-- Aquí van los elementos del carrito -->
       </ul>
+      <hr>
+      <h2>Tu orden</h2>
+      <hr>
       <button onclick="vaciarCarrito()" class="vaciar-carrito-button">Vaciar Carrito</button>
+    </div>
   </div>
-</div>
 
-<!-- Nav pills -->
-<ul class="nav nav-pills">
+  <!-- Nav pills -->
+  <ul class="nav nav-pills">
 
-  <li class="nav-item mustard-bg">
-    <a class="nav-link active" data-bs-toggle="pill" href="#completo">
-      <i class="fas fa-hotdog"></i> Completos
-    </a>
-  <li class="nav-item mustard-bg">
-    <a class="nav-link" data-bs-toggle="pill" href="#hamburgesas">
-      <i class="fas fa-hamburger"></i> Hamburgesas
-    </a>
-  </li>
-  <li class="nav-item mustard-bg">
-    <a class="nav-link" data-bs-toggle="pill" href="#pizzas">
-      <i class="fas fa-pizza-slice"></i> Pizzas
-    </a>
-  </li>
-  <li class="nav-item mustard-bg">
-    <a class="nav-link" data-bs-toggle="pill" href="#papas">
-      <i class="fas fa-utensils"></i> Papas Fritas
-    </a>
-  </li>
-  <li class="nav-item mustard-bg">
-    <a class="nav-link" data-bs-toggle="pill" href="#bebidas">
-      <i class="fas fa-glass-whiskey"></i> Bebidas
-    </a>
-  </li>
-</ul>
+    <li class="nav-item mustard-bg">
+      <a class="nav-link active" data-bs-toggle="pill" href="#completo">
+        <i class="fas fa-hotdog"></i> Completos
+      </a>
+    </li>
+    <li class="nav-item mustard-bg">
+      <a class="nav-link" data-bs-toggle="pill" href="#hamburgesas">
+        <i class="fas fa-hamburger"></i> Hamburgesas
+      </a>
+    </li>
+    <li class="nav-item mustard-bg">
+      <a class="nav-link" data-bs-toggle="pill" href="#pizzas">
+        <i class="fas fa-pizza-slice"></i> Pizzas
+      </a>
+    </li>
+    <li class="nav-item mustard-bg">
+      <a class="nav-link" data-bs-toggle="pill" href="#papas">
+        <i class="fas fa-utensils"></i> Papas Fritas
+      </a>
+    </li>
+    <li class="nav-item mustard-bg">
+      <a class="nav-link" data-bs-toggle="pill" href="#bebidas">
+        <i class="fas fa-glass-whiskey"></i> Bebidas
+      </a>
+    </li>
+  </ul>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div id="completo" class="container tab-pane active"><br>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="completo" class="container tab-pane active"><br>
+      <div class="container">
+        <h3>Completos</h3>
+        <div class="row">
+          <div class="col-md-9">
+            <!-- Esta columna ocupa tres cuartos de la página en dispositivos medianos y grandes -->
+            <div class="row">
+              <div class="col-md-4 col-sm-6 mt-3">
+                <!-- Las tarjetas se muestran en tres columnas en dispositivos medianos y grandes -->
+                <div class="card p-3 shadow border border-white rounded">
+                  <img class="card-img-top img-fluid" src="img/citaliano.png" alt="citaliano"
+                    style="max-height: 200px;">
+                  <div class="card-body">
+                    <h4 class="card-title">Completo Italiano</h4>
+                    <p class="card-text">Tomate-Palta-Mayo<br><br></p>
+                    <a href="#" class="btn">Ver detalles</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mt-3">
+                <div class="card p-3 shadow border border-white rounded">
+                  <img class="card-img-top img-fluid" src="img/guacamole.png" alt="guacamole"
+                    style="max-height: 200px;">
+                  <div class="card-body">
+                    <h4 class="card-title">El goloso</h4>
+                    <p class="card-text">Chucrut-Palta-Morrón o tomate-cebolla picados-Mayonesa<br><br>
+                    </p>
+                    <a href="#" class="btn">Ver detalles</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mt-3">
+                <div class="card p-3 shadow border border-white rounded">
+                  <img class="card-img-top img-fluid" src="img/chucrut.jpg" alt="Chucrut">
+                  <div class="card-body">
+                    <h4 class="card-title">Completo Aleman</h4>
+                    <p class="card-text">Tomate-Chucrut<br><br></p>
+                    <a href="#" class="btn">Ver detalles</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+          <!-- Esta columna vacía ocupa aproximadamente un cuarto de la página en dispositivos medianos y grandes -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- hamburguesas -->
+  <div class="tab-content">
+  <div id="hamburgesas" class="container tab-pane fade"><br>
     <div class="container">
-      <h3>Completos</h3>
+      <h3>Hamburguesas</h3>
       <div class="row">
         <div class="col-md-9">
           <!-- Esta columna ocupa tres cuartos de la página en dispositivos medianos y grandes -->
           <div class="row">
             <div class="col-md-4 col-sm-6 mt-3">
-              <!-- Las tarjetas se muestran en tres columnas en dispositivos medianos y grandes -->
               <div class="card p-3 shadow border border-white rounded">
-                <img class="card-img-top img-fluid" src="img/citaliano.png" alt="citaliano" style="max-height: 200px;">
+                <img class="card-img-top img-fluid" src="img/hbbq.png" alt="hbbq">
                 <div class="card-body">
-                  <h4 class="card-title">Completo Italiano</h4>
-                  <p class="card-text">Tomate-Palta-Mayo<br><br></p>
+                  <h4 class="card-title">Hamburguesa BBQ</h4>
+                  <p class="card-text">carne de res-BBQ-aros de cebolla-tocino-queso cheddar<br><br></p>
                   <a href="#" class="btn">Ver detalles</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 mt-3">
               <div class="card p-3 shadow border border-white rounded">
-                <img class="card-img-top img-fluid" src="img/guacamole.png" alt="guacamole" style="max-height: 200px;">
+                <img class="card-img-top img-fluid" src="img/gclasica.png" alt="Hclasica">
                 <div class="card-body">
-                  <h4 class="card-title">El goloso</h4>
-                  <p class="card-text">Chucrut-Palta-Morrón o tomate-cebolla picados-Mayonesa<br><br>
-                  </p>
+                  <h4 class="card-title">Hamburguesa Clasica</h4>
+                  <p class="card-text">carne de res-cebolla-tomate-lechuga-salsa especial de la casa-queso
+                    cheddar<br><br></p>
                   <a href="#" class="btn">Ver detalles</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 mt-3">
               <div class="card p-3 shadow border border-white rounded">
-                <img class="card-img-top img-fluid" src="img/chucrut.jpg" alt="Chucrut" style="max-height: 200px;">
+                <img class="card-img-top img-fluid" src="img/hpollo.png" alt="hpollo">
                 <div class="card-body">
-                  <h4 class="card-title">Completo Aleman</h4>
-                  <p class="card-text">Tomate-Chucrut<br><br></p>
+                  <h4 class="card-title">Hamburguesa Pollo</h4>
+                  <p class="card-text">pechuga de pollo marinada-especias y hierbas-lechuga-tomate-mayonesa<br><br></p>
+                  <a href="#" class="btn">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mt-3">
+              <div class="card p-3 shadow border border-white rounded">
+                <img class="card-img-top img-fluid" src="img/hpavo.png" alt="hpavo">
+                <div class="card-body">
+                  <h4 class="card-title">Hamburguesa Pavo</h4>
+                  <p class="card-text">carne de pavo-lechuga-tomate-salsa de yogur griego <br><br></p>
+                  <a href="#" class="btn">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mt-3">
+              <div class="card p-3 shadow border border-white rounded">
+                <img class="card-img-top img-fluid" src="img/hvegana.png" alt="hvegana">
+                <div class="card-body">
+                  <h4 class="card-title">Hamburguesa Vegana</h4>
+                  <p class="card-text">hamburguesa vegana(mezcla de garbanzos, remolacha y avena)-pan
+                    integral-lechuga-tomate-pepinillos<br><br></p>
+                  <a href="#" class="btn">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3"></div>
+            <!-- Esta columna vacía ocupa aproximadamente un cuarto de la página en dispositivos medianos y grandes -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tab-content">
+  <div id="pizzas" class="container tab-pane fade"><br>
+    <div class="container">
+      <h3>Pizzas</h3>
+      <div class="row">
+        <div class="col-md-9">
+          <!-- Esta columna ocupa tres cuartos de la página en dispositivos medianos y grandes -->
+          <div class="row">
+            <div class="col-md-4 col-sm-6 mt-3">
+              <div class="card p-3 shadow border border-white rounded">
+                <img class="card-img-top img-fluid" src="img/Pepperoni.png" alt="Pepperoni">
+                <div class="card-body">
+                  <h4 class="card-title">Pizza Pepperoni</h4>
+                  <p class="card-text">Pepperoni, queso mozzarella, salsa de tomate</p>
+                  <a href="#" class="btn">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+            <!-- Agrega aquí más tarjetas de pizza -->
+            <div class="col-md-4 col-sm-6 mt-3">
+              <div class="card p-3 shadow border border-white rounded">
+                <img class="card-img-top img-fluid" src="img/Pizzaveg.jpg" alt="Pizzaveg">
+                <div class="card-body">
+                  <h4 class="card-title">Pizza Vegetariana</h4>
+                  <p class="card-text">Pimientos, champiñones, cebollas, aceitunas, tomates, queso
+                    mozzarella</p>
+                  <a href="#" class="btn">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mt-3">
+              <div class="card p-3 shadow border border-white rounded">
+                <img class="card-img-top img-fluid" src="img/Phawaian.jpg" alt="Phawaian">
+                <div class="card-body">
+                  <h4 class="card-title">Pizza Hawaiana</h4>
+                  <p class="card-text">Jamón, piña, queso mozzarella, salsa de tomate</p>
                   <a href="#" class="btn">Ver detalles</a>
                 </div>
               </div>
@@ -145,108 +270,58 @@
     </div>
   </div>
 </div>
-<!-- hamburguesas -->
-<div id="hamburgesas" class="container tab-pane fade"><br>
-  <div class="container">
-    <h3>Hamburguesas</h3>
+
+<div class="tab-content">
+  <div id="papas" class="container tab-pane fade"><br>
+    <h3>Papas Fritas</h3>
     <div class="row">
       <div class="col-md-9">
         <!-- Esta columna ocupa tres cuartos de la página en dispositivos medianos y grandes -->
         <div class="row">
           <div class="col-md-4 col-sm-6 mt-3">
+            <!-- Las tarjetas se muestran en tres columnas en dispositivos medianos y grandes -->
             <div class="card p-3 shadow border border-white rounded">
-              <img class="card-img-top img-fluid" src="img/hbbq.png" alt="hbbq" style="max-height: 200px;">
+              <img class="card-img-top img-fluid" src="img/caritas.jpg" alt="caritas"
+                style="max-height: 200px;">
               <div class="card-body">
-                <h4 class="card-title">Hamburguesa BBQ</h4>
-                <p class="card-text">carne de res-BBQ-aros de cebolla-tocino-queso cheddar<br><br></p>
+                <h4 class="card-title">Papita smiley</h4>
+                <p class="card-text">deliciosamente crujientes por fuera, con un interior blando que casi se deshace en la boca<br><br></p>
                 <a href="#" class="btn">Ver detalles</a>
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 mt-3">
+            <!-- Las tarjetas se muestran en tres columnas en dispositivos medianos y grandes -->
             <div class="card p-3 shadow border border-white rounded">
-              <img class="card-img-top img-fluid" src="img/gclasica.png" alt="Hclasica" style="max-height: 200px;">
+              <img class="card-img-top img-fluid" src="img/salchipapa.webp" alt="salchipapa"
+                style="max-height: 200px;">
               <div class="card-body">
-                <h4 class="card-title">Hamburguesa Clasica</h4>
-                <p class="card-text">carne de res-cebolla-tomate-lechuga-salsa especial de la casa-queso
-                  cheddar<br><br></p>
+                <h4 class="card-title">Salchipapa</h4>
+                <p class="card-text">Plato de papas y salchichas fritas, que se puede acompañar con mayonesa o salsa de tomate<br><br></p>
                 <a href="#" class="btn">Ver detalles</a>
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 mt-3">
+            <!-- Las tarjetas se muestran en tres columnas en dispositivos medianos y grandes -->
             <div class="card p-3 shadow border border-white rounded">
-              <img class="card-img-top img-fluid" src="img/hpollo.png" alt="hpollo" style="max-height: 200px;">
+              <img class="card-img-top img-fluid" src="img/tocino.jpg" alt="tocino"
+                style="max-height: 200px;">
               <div class="card-body">
-                <h4 class="card-title">Hamburguesa Pollo</h4>
-                <p class="card-text">pechuga de pollo marinada-especias y hierbas-lechuga-tomate-mayonesa<br><br></p>
+                <h4 class="card-title">Papas fritas con queso y tocino</h4>
+                <p class="card-text">Papas fritas con queso cheddar fundido, tocino crujiente y cebollín<br><br></p>
                 <a href="#" class="btn">Ver detalles</a>
               </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 mt-3">
+            <!-- Las tarjetas se muestran en tres columnas en dispositivos medianos y grandes -->
             <div class="card p-3 shadow border border-white rounded">
-              <img class="card-img-top img-fluid" src="img/hpavo.png" alt="hpavo" style="max-height: 200px;">
+              <img class="card-img-top img-fluid" src="img/rusticas.png" alt="rusticas"
+                style="max-height: 200px;">
               <div class="card-body">
-                <h4 class="card-title">Hamburguesa Pavo</h4>
-                <p class="card-text">carne de pavo-lechuga-tomate-salsa de yogur griego <br><br></p>
-                <a href="#" class="btn">Ver detalles</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mt-3">
-            <div class="card p-3 shadow border border-white rounded">
-              <img class="card-img-top img-fluid" src="img/hvegana.png" alt="hvegana" style="max-height: 200px;">
-              <div class="card-body">
-                <h4 class="card-title">Hamburguesa Vegana</h4>
-                <p class="card-text">hamburguesa vegana(mezcla de garbanzos, remolacha y avena)-pan
-                  integral-lechuga-tomate-pepinillos<br><br></p>
-                <a href="#" class="btn">Ver detalles</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3"></div>
-          <!-- Esta columna vacía ocupa aproximadamente un cuarto de la página en dispositivos medianos y grandes -->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="pizzas" class="container tab-pane fade"><br>
-  <div class="container">
-    <h3>Pizzas</h3>
-    <div class="row">
-      <div class="col-md-9">
-        <!-- Esta columna ocupa tres cuartos de la página en dispositivos medianos y grandes -->
-        <div class="row">
-          <div class="col-md-4 col-sm-6 mt-3">
-            <div class="card p-3 shadow border border-white rounded">
-              <img class="card-img-top img-fluid" src="img/Pepperoni.png" alt="Pepperoni" style="max-height: 200px;">
-              <div class="card-body">
-                <h4 class="card-title">Pizza Pepperoni</h4>
-                <p class="card-text">Pepperoni, queso mozzarella, salsa de tomate</p>
-                <a href="#" class="btn">Ver detalles</a>
-              </div>
-            </div>
-          </div>
-          <!-- Agrega aquí más tarjetas de pizza -->
-          <div class="col-md-4 col-sm-6 mt-3">
-            <div class="card p-3 shadow border border-white rounded">
-              <img class="card-img-top img-fluid" src="img/Pizzaveg.jpg" alt="Pizzaveg" style="max-height: 200px;">
-              <div class="card-body">
-                <h4 class="card-title">Pizza Vegetariana</h4>
-                <p class="card-text">Pimientos, champiñones, cebollas, aceitunas, tomates, queso
-                  mozzarella</p>
-                <a href="#" class="btn">Ver detalles</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mt-3">
-            <div class="card p-3 shadow border border-white rounded">
-              <img class="card-img-top img-fluid" src="img/Phawaian.jpg" alt="Phawaian" style="max-height: 200px;">
-              <div class="card-body">
-                <h4 class="card-title">Pizza Hawaiana</h4>
-                <p class="card-text">Jamón, piña, queso mozzarella, salsa de tomate</p>
+                <h4 class="card-title">Papas fritas rusticas</h4>
+                <p class="card-text">Papas fritas condimentadas con aceite, ajo, sal , pimienta , paprika, curry o perejil.<br><br></p>
                 <a href="#" class="btn">Ver detalles</a>
               </div>
             </div>
@@ -254,16 +329,102 @@
         </div>
       </div>
       <div class="col-md-3"></div>
-      <!-- Esta columna vacía ocupa aproximadamente un cuarto de la página en dispositivos medianos y grandes -->
+        <!-- Esta columna vacía ocupa aproximadamente un cuarto de la página en dispositivos medianos y grandes -->
+    </div>
+  </div>
+</div>
+<div class="tab-content">
+  <div id="bebidas" class="container tab-pane fade"><br>
+    <h3>Bebidas</h3>
+    <div class="row">
+      <div class="col-md-9">
+        <!-- Esta columna ocupa tres cuartos de la página en dispositivos medianos y grandes -->
+        <div class="row">
+          <div class="col-md-4 col-sm-6 mt-3">
+            <!-- Las tarjetas se muestran en tres columnas en dispositivos medianos y grandes -->
+            <div class="card p-3 shadow border border-white rounded">
+              <img class="card-img-top img-fluid" src="img/cocarosalia.png" alt="cocarosalia"
+                style="max-height: 200px;">
+              <div class="card-body">
+                <h4 class="card-title">Coca Cola Movement by Rosalía</h4>
+                <p class="card-text">Coca-Cola con una "explosión de notas refrescantes de frambuesa y sabores especiados".<br><br></p>
+                <a href="#" class="btn">Ver detalles</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt-3">
+            <!-- Las tarjetas se muestran en tres columnas en dispositivos medianos y grandes -->
+            <div class="card p-3 shadow border border-white rounded">
+              <img class="card-img-top img-fluid" src="img/sprite.png" alt="sprite"
+                style="max-height: 200px;">
+              <div class="card-body">
+                <h4 class="card-title">Sprite</h4>
+                <p class="card-text">Lata Sprite 350 ML<br><br></p>
+                <a href="#" class="btn">Ver detalles</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt-3">
+            <!-- Las tarjetas se muestran en tres columnas en dispositivos medianos y grandes -->
+            <div class="card p-3 shadow border border-white rounded">
+              <img class="card-img-top img-fluid" src="img/cooca.jpg" alt="coca"
+                style="max-height: 200px;">
+              <div class="card-body">
+                <h4 class="card-title">Coca-Cola</h4>
+                <p class="card-text">Lata Coca-Cola 350 ML<br><br></p>
+                <a href="#" class="btn">Ver detalles</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt-3">
+            <!-- Las tarjetas se muestran en tres columnas en dispositivos medianos y grandes -->
+            <div class="card p-3 shadow border border-white rounded">
+              <img class="card-img-top img-fluid" src="img/fanta.jpg" alt="fanta"
+                style="max-height: 200px;">
+              <div class="card-body">
+                <h4 class="card-title">Fanta</h4>
+                <p class="card-text">Lata Fanta 350 ML<br><br></p>
+                <a href="#" class="btn">Ver detalles</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt-3">
+            <!-- Las tarjetas se muestran en tres columnas en dispositivos medianos y grandes -->
+            <div class="card p-3 shadow border border-white rounded">
+              <img class="card-img-top img-fluid" src="img/pepsi.png" alt="pepsi"
+                style="max-height: 200px;">
+              <div class="card-body">
+                <h4 class="card-title">Pepsi</h4>
+                <p class="card-text">Lata Pepsi 350 ML<br><br></p>
+                <a href="#" class="btn">Ver detalles</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+        <!-- Esta columna vacía ocupa aproximadamente un cuarto de la página en dispositivos medianos y grandes -->
     </div>
   </div>
 </div>
 
-
-<div id="papas" class="container tab-pane fade"><br>
-  <h3>Papas Fritas</h3>
+<div class="servicios">
+  <div class="servicio">
+    <i class="fas fa-carrot"></i>
+    <h2>COMIDA FRESCA</h2>
+    <p>Usamos solo los mejores ingredientes para cocinar la comida fresca y sabrosa para ti.</p>
+  </div>
+  <div class="servicio">
+    <i class="fas fa-user-tie"></i>
+    <h2>CHEFS EXPERIMENTADOS</h2>
+    <p>Nuestro personal consiste en chefs y cocineros con años de experiencia.</p>
+  </div>
+  <div class="servicio">
+    <i class="fas fa-utensils"></i>
+    <h2>VARIEDAD DE PLATOS</h2>
+    <p>En nuestro menú encontrarás una amplia variedad de platos, y bebidas.</p>
+  </div>
 </div>
-
 </body>
 
 </html>
