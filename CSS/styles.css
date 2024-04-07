@@ -1,9 +1,13 @@
 p {
   color: rgb(14, 13, 13);
 }
+/* Color de botones de la barra de navegacion */
+.btn-light{
+  color: white;
+}
 
 .mustard-bg {
-  background-color: #ffc258!important;
+  background-color: #ffc258 !important;
 }
 
 .mustard-bg a {
@@ -53,6 +57,11 @@ section img:hover {
 
 /* Estilos para pantallas más pequeñas, como teléfonos */
 @media only screen and (max-width: 768px) {
+
+  .login {
+    padding-top: 5rem;
+  }
+
   section {
     flex-direction: column;
     align-items: center;
@@ -75,6 +84,15 @@ section img:hover {
 
 /*CARRITO DE COMPRAS*/
 /* Estilos generales */
+#cartButton i {
+  padding: 4px 4px;
+  /* Ajusta el relleno según sea necesario */
+  font-size: 12px;
+  color: #333;
+  /* Color del icono */
+}
+
+
 .cart-container {
   position: relative;
 }
@@ -93,14 +111,15 @@ section img:hover {
 
 .desktop-cart-panel {
   display: none;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 50%;
   right: 0;
   width: 300px;
   background-color: #f8f9fa;
   border: 1px solid #dee2e6;
   border-radius: 5px;
   padding: 20px;
+  transform: translate(0, -50%);
 }
 
 .vaciar-carrito-button {
@@ -130,58 +149,73 @@ section img:hover {
   background-color: #f4511e;
   border: none;
   color: white;
-  padding: 12px 28px;
+  padding: 8px 24px;
   text-align: center;
   font-size: 16px;
   margin: 4px 2px;
   opacity: 1;
   transition: 0.3s;
-  text-decoration: none;
-  /* Agregado para eliminar el subrayado */
-  display: inline-block;
-  /* Agregado para que el enlace se comporte como un botón */
 }
 
 .btn:hover {
   opacity: 0.6;
 }
+
 /*botones comida*/
 .nav-pills {
   display: flex;
   justify-content: center;
   padding: 0;
-  position: sticky; /* Fija la posición de la barra de navegación */
-  top: 0; /* Coloca la barra en la parte superior de la página */
-  width: 100%; /* Ancho completo */
-  background-color: #ffc258; /* Fondo blanco para evitar transparencias */
-  z-index: 1000; /* Asegura que la barra esté sobre otros elementos */
+  position: sticky;
+  /* Fija la posición de la barra de navegación */
+  top: 0;
+  /* Coloca la barra en la parte superior de la página */
+  width: 100%;
+  /* Ancho completo */
+  background-color: #ffc258;
+  /* Fondo blanco para evitar transparencias */
+  z-index: 1000;
+  /* Asegura que la barra esté sobre otros elementos */
 }
+
 .nav-item {
-  margin: 0; /* Ajusta el espacio entre los botones */
+  margin: 0;
+  /* Ajusta el espacio entre los botones */
 }
+
 .nav-link {
-  text-align: left; /* Alinea el texto de los botones a la izquierda */
+  text-align: left;
+  /* Alinea el texto de los botones a la izquierda */
 }
+
 .main-content {
-  padding-top: 50px; /* Añade un espacio en la parte superior del contenido principal */
+  padding-top: 50px;
+  /* Añade un espacio en la parte superior del contenido principal */
 }
+
 /* Estilos generales */
 .cart-container {
   /*position: relative;*/
-  position: sticky; /* Fija la posición de la barra de navegación */
-  top: 0; /* Coloca la barra en la parte superior de la página */
-  width: 98%; /* Ancho completo */
-  background-color: #FFDB58; /* Fondo blanco para evitar transparencias */
-  z-index: 1000; /* Asegura que la barra esté sobre otros elementos */
+  position: sticky;
+  /* Fija la posición de la barra de navegación */
+  top: 0;
+  /* Coloca la barra en la parte superior de la página */
+  width: 98%;
+  /* Ancho completo */
+  background-color: #FFDB58;
+  /* Fondo blanco para evitar transparencias */
+  z-index: 1000;
+  /* Asegura que la barra esté sobre otros elementos */
 }
+
 /*=============== LOGIN ===============*/
-.login__form, 
+.login__form,
 .login__group {
   display: grid;
 }
 
 .login__form {
-  background-color:#f2f2f2e7;
+  background-color: #f2f2f2e7;
   padding: 2rem 1.5rem 2.5rem;
   box-shadow: 0 8px 32px hsla(230, 75%, 15%, .2);
   border-radius: 1rem;
@@ -210,7 +244,7 @@ section img:hover {
 
 .login__input {
   width: 100%;
-  background-color:rgb(209, 209, 209);
+  background-color: rgb(209, 209, 209);
   border: 2px so;
   padding: 1rem;
   border-radius: .5rem;
@@ -226,20 +260,20 @@ section img:hover {
 }
 
 .login__signup a {
-  color:#007bff;
+  color: #007bff;
 }
 
 .login__forgot {
   display: inline-block;
-  color:#007bff;
+  color: #007bff;
   margin-bottom: 1.25rem;
 }
 
 .login__button {
   display: inline-block;
-  background-color:#f4511e;
+  background-color: #f4511e;
   width: 90%;
-  color:white;
+  color: white;
   padding: 1rem;
   border-radius: .5rem;
   cursor: pointer;
@@ -264,7 +298,7 @@ section img:hover {
 /* For medium devices */
 @media screen and (min-width: 576px) {
   .login {
-    padding-top: 10rem;
+    padding-top: 5rem;
   }
 
 
@@ -300,10 +334,11 @@ section img:hover {
     margin-inline: auto;
   }
 }
-/* Imagen de fondo */
+
+/* Imagen de fondo en login */
 
 .main__bg {
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -312,6 +347,7 @@ section img:hover {
   object-position: center;
   z-index: -1;
 }
+
 .login {
   background-size: cover;
   background-position: center;
@@ -322,30 +358,42 @@ section img:hover {
 
 /*contenedor de horarios */
 .horarios-retiro {
-  background-color: #f2f2f2; /* Color de fondo gris claro */
-  padding: 20px; /* Espacio interno de 20 píxeles en todos los lados */
-  border-radius: 5px; /* Esquinas redondeadas con un radio de 5 píxeles */
-  max-width: 500px; /* Ancho máximo del contenedor limitado a 500 píxeles */
-  margin: 1cm auto 0; /* Margen superior de 2cm, centrado horizontalmente, margen inferior de 0 */
+  background-color: #f2f2f2;
+  /* Color de fondo gris claro */
+  padding: 20px;
+  /* Espacio interno de 20 píxeles en todos los lados */
+  border-radius: 5px;
+  /* Esquinas redondeadas con un radio de 5 píxeles */
+  max-width: 500px;
+  /* Ancho máximo del contenedor limitado a 500 píxeles */
+  margin: 1cm auto 0;
+  /* Margen superior de 2cm, centrado horizontalmente, margen inferior de 0 */
 }
 
 /* Estilo para la lista dentro del contenedor de horarios */
 .horarios-retiro ul {
-  list-style-type: none; /* Sin puntos por defecto en la lista */
-  padding: 0; /* Sin espacio interno */
-  margin: 0; /* Sin margen exterior */
+  list-style-type: none;
+  /* Sin puntos por defecto en la lista */
+  padding: 0;
+  /* Sin espacio interno */
+  margin: 0;
+  /* Sin margen exterior */
 }
 
 /* Estilo para los elementos de la lista */
 .horarios-retiro ul li {
-  margin-bottom: 10px; /* Margen inferior de 10 píxeles entre elementos de la lista */
+  margin-bottom: 10px;
+  /* Margen inferior de 10 píxeles entre elementos de la lista */
 }
 
 /* Estilo para el párrafo dentro del contenedor de horarios */
 .horarios-retiro p {
-  text-align: center; /* Texto alineado al centro */
-  margin-top: 20px; /* Margen superior de 20 píxeles */
+  text-align: center;
+  /* Texto alineado al centro */
+  margin-top: 20px;
+  /* Margen superior de 20 píxeles */
 }
+
 /* Estilo para el mapa */
 .map-container {
   overflow: hidden;
@@ -359,8 +407,9 @@ section img:hover {
   width: 100%;
   position: absolute;
 }
+
 /*MAPA*/
-.map-container{
+.map-container {
   margin-top: 2cm;
   margin-right: 1cm;
 }
@@ -368,7 +417,8 @@ section img:hover {
 /* Estilos base para la sección de servicios */
 .servicios {
   display: flex;
-  flex-wrap: wrap; /* Para envolver los elementos en pantallas pequeñas */
+  flex-wrap: wrap;
+  /* Para envolver los elementos en pantallas pequeñas */
   justify-content: space-around;
   background-color: #ecebe1;
   padding: 20px 0;
@@ -379,8 +429,10 @@ section img:hover {
 /* Estilos para cada servicio */
 .servicio {
   text-align: center;
-  width: calc(100% - 20px); /* Ancho completo menos el padding (para teléfonos) */
-  margin-bottom: 20px; /* Espacio entre servicios */
+  width: calc(100% - 20px);
+  /* Ancho completo menos el padding (para teléfonos) */
+  margin-bottom: 20px;
+  /* Espacio entre servicios */
   padding: 10px;
   box-sizing: border-box;
 }
@@ -398,6 +450,7 @@ section img:hover {
 /* Media query para tabletas y PCs */
 @media (min-width: 768px) {
   .servicio {
-    width: calc(33.333% - 20px); /* Ancho del tercio de la pantalla menos el padding */
+    width: calc(33.333% - 20px);
+    /* Ancho del tercio de la pantalla menos el padding */
   }
 }
