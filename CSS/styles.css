@@ -255,7 +255,7 @@ section img:hover {
 }
 
 .login__signup {
-  margin-bottom: .5rem;
+  margin-bottom: .1rem;
 }
 
 .login__signup a {
@@ -452,4 +452,41 @@ section img:hover {
     width: calc(33.333% - 20px);
     /* Ancho del tercio de la pantalla menos el padding */
   }
+}
+/* Iconos Redes Sociales */
+footer {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000000;
+  margin-right: 20px;
+}
+
+footer p {
+  color: #000000;
+  font-size: 14px;
+  margin-top: 10px;
+}
+footer i.fab.fa-tiktok {
+  color: #000000; 
+  font-size: 25px; 
+}
+footer i.fab.fa-facebook {
+  color: black; 
+  font-size: 30px; 
+}
+footer i.fab.fa-instagram{
+  color: black; 
+  font-size: 30px; 
+}
+footer i.far.fa-envelope {
+  color: #000000; /* Color del ícono de correo */
+  font-size: 24px; /* Tamaño del ícono de correo */
+}
+.logo-container {
+  margin: 0 auto; /* Centra el contenedor del logo horizontalmente */
 }
