@@ -5,7 +5,29 @@ p {
 .btn-light{
   color: white;
 }
-
+/* Color de Nombre de Lostburger en barra de nav*/
+.navbar-brand{
+  color:#FFDB58;
+}
+/* Ajuste Sobre Las Card-Img-top*/
+.card-img-top{
+  max-height: 200px;
+  border: 1px solid #ccc; /* Borde delgado */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+  transition: transform 0.3s ease;
+}
+.card-img-top:hover {
+  transform: scale(1.05); /* Hace que la imagen se agrande ligeramente al pasar el mouse sobre ella */
+}
+/* Tamaño Logo en Footer*/
+.logo-container {
+  width: 100px;
+  height: 100px;
+}
+.logo-container img.rounded-pill {
+  width: 100%;
+  height: 100%;
+}
 .mustard-bg {
   background-color: #ffc258 !important;
 }
@@ -92,57 +114,23 @@ section img:hover {
   /* Color del icono */
 }
 
-
-.cart-container {
-  position: relative;
+#carrito {
+  float: left;
 }
-
-.mobile-cart-button {
-  display: block;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+.floating-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: none; /* Inicialmente oculto */
 }
-
-.desktop-cart-panel {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 300px;
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 5px;
-  padding: 20px;
-}
-
-.vaciar-carrito-button {
-  background-color: #dc3545;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-/* Media query para mostrar u ocultar el panel del carrito según el tamaño de la pantalla */
-@media screen and (min-width: 768px) {
-  .mobile-cart-button {
-    display: none;
-  }
-
-  .desktop-cart-panel {
-    display: block;
-  }
-}
-
 /* Estilos del botón */
 .btn {
   background-color: #f4511e;
@@ -495,3 +483,5 @@ footer i.far.fa-envelope {
   height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción */
   max-height: 200px; /* Establecer una altura máxima */
 }
+
+/* Carrito de compras */
