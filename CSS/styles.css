@@ -9,6 +9,11 @@ p {
 .navbar-brand{
   color:#FFDB58;
 }
+/* Tamaño rendondo del Logo*/
+.rounded-pill{
+  width:40px; 
+  height:40px;
+}
 /* Ajuste Sobre Las Card-Img-top*/
 .card-img-top{
   max-height: 200px;

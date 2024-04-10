@@ -1,0 +1,34 @@
+HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suma y Resta</title>
+</head>
+<body>
+  <h1>Contador</h1>
+  <p>Valor actual: <span id="valor-actual">0</span></p>
+  <button onclick="sumar()">Sumar 1</button>
+  <button onclick="restar()">Restar 1</button>
+
+  <script>
+    let valorActual = 0;
+
+    function sumar() {
+      valorActual++;
+      actualizarValor();
+    }
+
+    function restar() {
+      valorActual--;
+      actualizarValor();
+    }
+
+    function actualizarValor() {
+      const valorActualElement = document.getElementById("valor-actual");
+      valorActualElement.textContent = valorActual;
+    }
+  </script>
+</body>
+</html>

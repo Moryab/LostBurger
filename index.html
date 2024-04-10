@@ -16,7 +16,7 @@
   <!-- Titulo Pag -->
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
-      <img src="img/Logo.png" alt="Logo" style="width:40px; height:40px;" class="rounded-pill">
+      <img src="img/Logo.png" alt="Logo" class="rounded-pill">
       <a class="navbar-brand" href="index.html">LostBurger</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -102,8 +102,10 @@
                   <img class="card-img-top img-fluid" src="img/citaliano.png" alt="citaliano">
                   <div class="card-body">
                     <h4 class="card-title">Completo Italiano</h4>
-                    <p class="card-text">Tomate-Palta-Mayo<br><br></p>
+                    <p class="card-text">Tomate-Palta-Mayo<br><br><span id="valor-actual">0</span></p>
                     <a href="#" class="btn">Ver detalles</a>
+                    <button class="btn"onclick="sumar()">Agregar</button>
+                    <button class="btn"onclick="restar()">Quitar</button>
                   </div>
                 </div>
               </div>
@@ -407,18 +409,39 @@
   <footer>
     <div class="logo-container">
       <img src="img/logofooter.png" alt="Logo" class="rounded-pill">
-  </div>
+    </div>
     <a href="https://www.instagram.com/tu_usuario" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="https://www.facebook.com/tu_usuario" target="_blank"><i class="fab fa-facebook"></i></a>
     <a href="https://www.tiktok.com/@tu_usuario" target="_blank"><i class="fab fa-tiktok"></i></a>
     <div>
       <a href="mailto:info@tudominio.com"><i class="far fa-envelope"></i> LostBurger@gmail.com</a>
-  </div>
+    </div>
     <div>
       <a href="contacto.html"><i class="fas fa-phone"></i> Contáctanos +56 9 85764312</a>
     </div>
     <p>© 2024 LostBurger. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    let valorActual = 0;
+
+    function sumar() {
+      valorActual++;
+      actualizarValor();
+    }
+
+    function restar() {
+      valorActual--;
+      actualizarValor();
+    }
+
+    function actualizarValor() {
+      const valorActualElement = document.getElementById("valor-actual");
+      valorActualElement.textContent = valorActual;
+    }
+  </script>
+
+
 
 </body>
 
