@@ -109,19 +109,6 @@ section img:hover {
   }
 }
 
-/*CARRITO DE COMPRAS*/
-/* Estilos generales */
-#cartButton i {
-  padding: 4px 4px;
-  /* Ajusta el relleno según sea necesario */
-  font-size: 12px;
-  color: #333;
-  /* Color del icono */
-}
-
-#carrito {
-  float: left;
-}
 .floating-popup {
   position: fixed;
   bottom: 20px;
@@ -197,7 +184,7 @@ section img:hover {
   /* Ancho completo */
   background-color: #ffc258;
   /* Fondo blanco para evitar transparencias */
-  z-index: 1000;
+  z-index: 999;
   /* Asegura que la barra esté sobre otros elementos */
 }
 
@@ -909,4 +896,54 @@ nav,
 
 .cssbuttons-io-button:active .icon {
   transform: scale(0.95);
+}
+
+/*Estilo de Carrito de Compras*/
+.item img {
+  max-width: 200px;
+  /* Tamaño máximo de las imágenes */
+  height: auto;
+  /* Mantener la proporción */
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  /* Posición inicial del carrito fuera de la pantalla */
+  width: 300px;
+  /* Ancho del carrito */
+  height: 100%;
+  background-color: #f9f9f9;
+  border-left: 1px solid #ddd;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000; /* Asegura que el carrito esté encima de todo */
+
+  /* Transición suave para el movimiento */
+}
+
+.cart-toggle {
+  position: static;
+  top: 20px;
+  right: 160px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-toggle:hover {
+  background-color: #0056b3;
+  /* Cambia el color al pasar el ratón */
+}
+
+/* Cuando el botón se hace clic */
+#cart-toggle:focus+.cart {
+  right: 0;
 }
