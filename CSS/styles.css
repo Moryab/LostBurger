@@ -136,7 +136,7 @@ section img:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   display: none; /* Inicialmente oculto */
 }
-/* Estilos del botón */
+/* Estilos de botónes */
 .btn {
   background-color: #f4511e;
   border: none;
@@ -150,6 +150,37 @@ section img:hover {
 }
 
 .btn:hover {
+  opacity: 0.6;
+}
+
+.btn-editar {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 8px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.btn-editar:hover {
+  opacity: 0.6;
+}
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 8px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.btn-danger:hover {
   opacity: 0.6;
 }
 
@@ -706,22 +737,6 @@ background-color: #f3f3f3;
 .tabla-usuarios tbody tr:last-of-type {
 border-bottom: 2px solid #009879;
 }
-/* Estilos para los botones editar-eliminar */
-.boton-accion {
-padding: 5px 10px;
-margin: 0 5px;
-border: none;
-border-radius: 3px;
-cursor: pointer;
-}
-.editar {
-background-color: #ffc107;
-color: #fff;
-}
-.eliminar {
-background-color: #dc3545;
-color: #fff;
-} 
 
 @media screen and (max-width: 768px) {
 .tabla-usuarios, .tabla-usuarios thead, .tabla-usuarios tbody, .tabla-usuarios th, .tabla-usuarios td, .tabla-usuarios tr {
@@ -749,3 +764,94 @@ color: #fff;
   content: attr(data-title);
 }
 }
+
+/*Boton Subir Archivo*/
+.uploadButton {
+  border: none;
+  display: flex;
+  padding: 0.75rem 1.5rem;
+  background-color: #488aec;
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  user-select: none;
+  gap: 0.75rem;
+  box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+  transition: all .6s ease;
+  margin-left: auto; /* Alinea el botón a la derecha */
+}
+
+.uploadButton:hover {
+  box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+}
+
+.uploadButton:focus, .uploadButton:active {
+  opacity: .85;
+  box-shadow: none;
+}
+
+.uploadButton svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/*Estilo de Registrar Usuario*/
+.cssbuttons-io-button {
+      background: #607fd4;
+      color: white;
+      font-family: inherit;
+      padding: 0.35em;
+      padding-left: 1.2em;
+      font-size: 17px;
+      font-weight: 500;
+      border-radius: 0.9em;
+      border: none;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      box-shadow: inset 0 0 1.6em -0.6em #607fd4;
+      overflow: hidden;
+      position: relative;
+      height: 2.8em;
+      padding-right: 3.3em;
+      cursor: pointer;
+    }
+
+    .cssbuttons-io-button .icon {
+      background: white;
+      margin-left: 1em;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.2em;
+      width: 2.2em;
+      border-radius: 0.7em;
+      box-shadow: 0.1em 0.1em 0.6em 0.2em #526db9;
+      right: 0.3em;
+      transition: all 0.3s;
+    }
+
+    .cssbuttons-io-button:hover .icon {
+      width: calc(100% - 0.6em);
+    }
+
+    .cssbuttons-io-button .icon svg {
+      width: 1.1em;
+      transition: transform 0.3s;
+      color: #607fd4;
+    }
+
+    .cssbuttons-io-button:hover .icon svg {
+      transform: translateX(0.1em);
+    }
+
+    .cssbuttons-io-button:active .icon {
+      transform: scale(0.95);
+    }
