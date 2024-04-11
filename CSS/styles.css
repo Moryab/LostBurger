@@ -601,7 +601,7 @@ nav,
 
 
 
-/* Estilos CSS */
+/* Estilos GRAFICO */
 :root {
   --color_completo: #3b5998;
   --color_hamburgesas: #00acce;
@@ -706,63 +706,118 @@ nav,
   border-radius: 3px;
   background-color: rgba(122, 121, 118, 0.616);
 }
+/* Para tablets */
+@media (max-width: 768px) {
+  .content-grafico {
+    width: 70%; /* Ocupa más espacio para tabletas */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+  }
 
-/*tabla usuarios*/
+  .grafico {
+    width: 300px; /* Tamaño más pequeño para el gráfico */
+    height: 300px;
+    margin-bottom: 20px; /* Espacio debajo del gráfico */
+  }
+
+  .container_leyenda {
+    align-items: flex-start;
+  }
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 480px) {
+  .content-grafico {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Menos padding */
+  }
+
+  .grafico {
+    width: 250px; /* Tamaño aún más pequeño para el gráfico */
+    height: 250px;
+  }
+
+  .title_grafico {
+    margin-top: 20px; /* Menos espacio superior */
+    font-size: 20px; /* Texto más pequeño */
+  }
+}
+
+/* Estilos de la Tabla */
 .tabla-usuarios {
-width: 100%;
-border-collapse: collapse;
-margin: 25px 0;
-font-size: 0.9em;
-min-width: 400px;
-border-radius: 5px 5px 0 0;
-overflow: hidden;
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-.tabla-usuarios thead tr {
-background-color: #009879;
-color: #ffffff;
-text-align: left;
-font-weight: bold;
-}
-.tabla-usuarios th,
-.tabla-usuarios td {
-padding: 12px 15px;
-}
-.tabla-usuarios tbody tr {
-border-bottom: 1px solid #dddddd;
-}
-.tabla-usuarios tbody tr:nth-of-type(even) {
-background-color: #f3f3f3;
-}
-.tabla-usuarios tbody tr:last-of-type {
-border-bottom: 2px solid #009879;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-@media screen and (max-width: 768px) {
-.tabla-usuarios, .tabla-usuarios thead, .tabla-usuarios tbody, .tabla-usuarios th, .tabla-usuarios td, .tabla-usuarios tr {
-  display: block;
-}
 .tabla-usuarios thead tr {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
 }
-.tabla-usuarios tr { border: 1px solid #ccc; }
-.tabla-usuarios td {
-  border: none;
-  border-bottom: 1px solid #eee;
-  position: relative;
-  padding-left: 50%;
+
+.tabla-usuarios th, .tabla-usuarios td {
+  padding: 12px 15px;
 }
-.tabla-usuarios td:before {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 45%;
-  padding-right: 10px;
-  white-space: nowrap;
-  content: attr(data-title);
+
+.tabla-usuarios tbody tr {
+  border-bottom: 1px solid #dddddd;
 }
+
+.tabla-usuarios tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.tabla-usuarios tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+  .tabla-usuarios, .tabla-usuarios thead, .tabla-usuarios tbody, .tabla-usuarios th, .tabla-usuarios td, .tabla-usuarios tr {
+    display: block;
+  }
+
+  .tabla-usuarios thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .tabla-usuarios td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .tabla-usuarios td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-title);
+  }
+
+  .cssbuttons-io-button {
+    padding: 0.35em;
+    font-size: 14px; /* Tamaño de fuente más pequeño para móviles */
+    padding-left: 1em; /* Espacio interior más ajustado */
+    padding-right: 2.5em; /* Ajuste para mantener el icono correctamente */
+  }
+
+  .cssbuttons-io-button .icon {
+    height: 2em; /* Tamaño del icono ajustado para dispositivos más pequeños */
+    width: 2em; /* Ancho del icono ajustado */
+  }
 }
 
 /*Boton Subir Archivo*/
@@ -801,57 +856,57 @@ border-bottom: 2px solid #009879;
   height: 1.25rem;
 }
 
-/*Estilo de Registrar Usuario*/
+/*Estilo de boton Registrar Usuario*/
 .cssbuttons-io-button {
-      background: #607fd4;
-      color: white;
-      font-family: inherit;
-      padding: 0.35em;
-      padding-left: 1.2em;
-      font-size: 17px;
-      font-weight: 500;
-      border-radius: 0.9em;
-      border: none;
-      letter-spacing: 0.05em;
-      display: flex;
-      align-items: center;
-      box-shadow: inset 0 0 1.6em -0.6em #607fd4;
-      overflow: hidden;
-      position: relative;
-      height: 2.8em;
-      padding-right: 3.3em;
-      cursor: pointer;
-    }
+  background: #607fd4;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #607fd4;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
 
-    .cssbuttons-io-button .icon {
-      background: white;
-      margin-left: 1em;
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 2.2em;
-      width: 2.2em;
-      border-radius: 0.7em;
-      box-shadow: 0.1em 0.1em 0.6em 0.2em #526db9;
-      right: 0.3em;
-      transition: all 0.3s;
-    }
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #526db9;
+  right: 0.3em;
+  transition: all 0.3s;
+}
 
-    .cssbuttons-io-button:hover .icon {
-      width: calc(100% - 0.6em);
-    }
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
 
-    .cssbuttons-io-button .icon svg {
-      width: 1.1em;
-      transition: transform 0.3s;
-      color: #607fd4;
-    }
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #607fd4;
+}
 
-    .cssbuttons-io-button:hover .icon svg {
-      transform: translateX(0.1em);
-    }
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
 
-    .cssbuttons-io-button:active .icon {
-      transform: scale(0.95);
-    }
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
