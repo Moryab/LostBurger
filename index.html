@@ -80,13 +80,13 @@
   <ul class="nav nav-pills">
 
     <li class="nav-item mustard-bg">
-      <a class="nav-link" data-bs-toggle="pill" href="#hamburgesas">
-        <i class="fas fa-hamburger"></i> Hamburgesas
+      <a class="nav-link active" data-bs-toggle="pill" href="#completos">
+        <i class="fas fa-hotdog"></i> Completos
       </a>
     </li>
     <li class="nav-item mustard-bg">
-      <a class="nav-link active" data-bs-toggle="pill" href="#completos">
-        <i class="fas fa-hotdog"></i> Completos
+      <a class="nav-link" data-bs-toggle="pill" href="#hamburgesas">
+        <i class="fas fa-hamburger"></i> Hamburgesas
       </a>
     </li>
     <li class="nav-item mustard-bg">
@@ -107,17 +107,61 @@
   </ul>
 
   <!-- TARJETAS-->
-  <!-- hamburguesas -->
+    <!--COMPLETOS-->
+    <div class="tab-content">
+      <div id="completos" class="container tab-pane active"><br>
+        <div class="container">
+          <h3>Completos</h3>
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Las tarjetas se muestran en 4 columnas en dispositivos medianos y grandes -->
+              <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3">
+                  <!-- Las tarjetas se muestran en cuatro columnas en todos los dispositivos -->
+                  <div class="card p-3 shadow border border-white rounded">
+                    <img class="card-img-top img-fluid" src="img/citaliano.png" alt="citaliano">
+                    <div class="card-body">
+                      <h4 class="card-title">Completo Italiano</h4>
+                      <p class="card-text">Tomate-Palta-Mayo<br><br></p>
+                      <label for="cart-toggle" class="btn">Agregar <i class="fas fa-shopping-cart"></i></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3">
+                  <div class="card p-3 shadow border border-white rounded">
+                    <img class="card-img-top img-fluid" src="img/guacamole.png" alt="guacamole">
+                    <div class="card-body">
+                      <h4 class="card-title">El goloso</h4>
+                      <p class="card-text">Chucrut-Palta-Morrón o tomate-cebolla picados-Mayonesa<br><br>
+                      </p>
+                      <label for="cart-toggle" class="btn">Agregar <i class="fas fa-shopping-cart"></i></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3">
+                  <div class="card p-3 shadow border border-white rounded">
+                    <img class="card-img-top img-fluid" src="img/chucrut1.jpg" alt="Chucrut">
+                    <div class="card-body">
+                      <h4 class="card-title">Completo Aleman</h4>
+                      <p class="card-text">Tomate-Chucrut<br><br></p>
+                      <label for="cart-toggle" class="btn">Agregar <i class="fas fa-shopping-cart"></i></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- hamburguesas -->
   <div class="tab-content">
     <div id="hamburgesas" class="container tab-pane fade"><br>
       <div class="container">
         <h3>Hamburguesas</h3>
         <div class="row">
           <div class="col-md-12">
-           <!-- Las tarjetas se muestran en 4 columnas en dispositivos medianos y grandes -->
             <div class="row">
               <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3">
-                <!-- Las tarjetas se muestran en cuatro columnas en todos los dispositivos -->
                 <div class="card p-3 shadow border border-white rounded">
                   <img class="card-img-top img-fluid" src="img/hbbq.png" alt="hbbq">
                   <div class="card-body">
@@ -175,50 +219,6 @@
         </div>
       </div>
     </div>
-    <!--COMPLETOS-->
-    <div class="tab-content">
-      <div id="completos" class="container tab-pane active"><br>
-        <div class="container">
-          <h3>Completos</h3>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3">
-                  <div class="card p-3 shadow border border-white rounded">
-                    <img class="card-img-top img-fluid" src="img/citaliano.png" alt="citaliano">
-                    <div class="card-body">
-                      <h4 class="card-title">Completo Italiano</h4>
-                      <p class="card-text">Tomate-Palta-Mayo<br><br></p>
-                      <label for="cart-toggle" class="btn">Agregar <i class="fas fa-shopping-cart"></i></label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3">
-                  <div class="card p-3 shadow border border-white rounded">
-                    <img class="card-img-top img-fluid" src="img/guacamole.png" alt="guacamole">
-                    <div class="card-body">
-                      <h4 class="card-title">El goloso</h4>
-                      <p class="card-text">Chucrut-Palta-Morrón o tomate-cebolla picados-Mayonesa<br><br>
-                      </p>
-                      <label for="cart-toggle" class="btn">Agregar <i class="fas fa-shopping-cart"></i></label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3">
-                  <div class="card p-3 shadow border border-white rounded">
-                    <img class="card-img-top img-fluid" src="img/chucrut1.jpg" alt="Chucrut">
-                    <div class="card-body">
-                      <h4 class="card-title">Completo Aleman</h4>
-                      <p class="card-text">Tomate-Chucrut<br><br></p>
-                      <label for="cart-toggle" class="btn">Agregar <i class="fas fa-shopping-cart"></i></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <!--PIZZAS-->
       <div class="tab-content">
         <div id="pizzas" class="container tab-pane fade"><br>
