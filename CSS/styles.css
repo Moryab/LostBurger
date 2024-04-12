@@ -170,6 +170,59 @@ section img:hover {
 .btn-danger:hover {
   opacity: 0.6;
 }
+.btnpagar {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(15, 15, 15);
+  border: none;
+  color: white;
+  font-weight: 600;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+.svgIcon {
+  width: 16px;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.btnpagar::before {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: .3s;
+  mix-blend-mode: difference;
+}
+
+.btnpagar:hover::before {
+  transition-duration: .3s;
+  transform: translate(100%,-50%);
+  border-radius: 0;
+}
+
+.btnpagar:active {
+  transform: translate(5px,5px);
+  transition-duration: .3s;
+}
+
+
+
+
 
 /*botones comida*/
 .nav-pills {
@@ -900,7 +953,7 @@ nav,
 
 /*Estilo de Carrito de Compras*/
 .item img {
-  max-width: 200px;
+  max-width: 160px;
   /* Tamaño máximo de las imágenes */
   height: auto;
   /* Mantener la proporción */
@@ -909,16 +962,17 @@ nav,
 .cart {
   position: fixed;
   top: 0;
-  right: -300px;
+  right: -250px;
   /* Posición inicial del carrito fuera de la pantalla */
-  width: 300px;
+  width: 250px;
   /* Ancho del carrito */
   height: 100%;
   background-color: #f9f9f9;
   border-left: 1px solid #ddd;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  transition: right 0.3s ease;
+  transition: right 0.1s step-end;
+   /*transition: right 0.9s ease;*/
   z-index: 1000; /* Asegura que el carrito esté encima de todo */
 
   /* Transición suave para el movimiento */
