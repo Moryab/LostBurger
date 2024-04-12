@@ -170,59 +170,6 @@ section img:hover {
 .btn-danger:hover {
   opacity: 0.6;
 }
-.btn-pagar {
-  width: 130px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(15, 15, 15);
-  border: none;
-  color: white;
-  font-weight: 600;
-  gap: 8px;
-  cursor: pointer;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
-  position: relative;
-  overflow: hidden;
-  transition-duration: .3s;
-}
-
-.svgIcon {
-  width: 16px;
-}
-
-.svgIcon path {
-  fill: white;
-}
-
-.btn-pagar::before {
-  width: 130px;
-  height: 130px;
-  position: absolute;
-  content: "";
-  background-color: white;
-  border-radius: 50%;
-  left: -100%;
-  top: 0;
-  transition-duration: .3s;
-  mix-blend-mode: difference;
-}
-
-.btn-pagar:hover::before {
-  transition-duration: .3s;
-  transform: translate(100%,-50%);
-  border-radius: 0;
-}
-
-.btn-pagar:active {
-  transform: translate(5px,5px);
-  transition-duration: .3s;
-}
-
-
-
-
 
 /*botones comida*/
 .nav-pills {
@@ -1000,3 +947,20 @@ nav,
 #cart-toggle:focus+.cart{
   right: 0;
 }
+
+/*Pagina Nosotros*/
+.container-somos {
+  margin-top: 70px; /* Aumentado de 1px a 70px para dar más espacio */
+  display: flex;
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  justify-content: center;
+  height: calc(100vh - 70px); /* Reduce el alto total del contenedor */
+  padding-top: 20px; /* Añade un poco de espacio en la parte superior si es necesario */
+}
+.half {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+
