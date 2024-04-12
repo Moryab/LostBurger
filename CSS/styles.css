@@ -1059,3 +1059,20 @@ nav,
 #cart-toggle:focus+.cart{
   right: 0;
 }
+
+/*Pagina Nosotros*/
+.container-somos {
+  margin-top: 70px; /* Aumentado de 1px a 70px para dar más espacio */
+  display: flex;
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  justify-content: center;
+  height: calc(100vh - 70px); /* Reduce el alto total del contenedor */
+  padding-top: 20px; /* Añade un poco de espacio en la parte superior si es necesario */
+}
+.half {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+
