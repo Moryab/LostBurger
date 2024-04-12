@@ -575,38 +575,38 @@ section img:hover {
     /* Ancho del tercio de la pantalla menos el padding */
   }
 }
-/* Iconos Redes Sociales */
+/* footer */
 footer {
-  background-color: #ffffff;
+  background-color: #1e1d1d;
   padding: 20px;
   text-align: center;
 }
 
 footer a {
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
   margin-right: 20px;
 }
 
 footer p {
-  color: #000000;
+  color: #ffffff;
   font-size: 14px;
   margin-top: 10px;
 }
 footer i.fab.fa-tiktok {
-  color: #000000; 
+  color: #ffffff; 
   font-size: 25px; 
 }
 footer i.fab.fa-facebook {
-  color: black; 
+  color: ffffff; 
   font-size: 30px; 
 }
 footer i.fab.fa-instagram{
-  color: black; 
+  color: ffffff; 
   font-size: 30px; 
 }
 footer i.far.fa-envelope {
-  color: #000000; /* Color del ícono de correo */
+  color: #ffffff; /* Color del ícono de correo */
   font-size: 24px; /* Tamaño del ícono de correo */
 }
 .logo-container {
