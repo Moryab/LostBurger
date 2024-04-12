@@ -220,8 +220,10 @@ section img:hover {
   transition-duration: .3s;
 }
 /* Boton de añadir producto en Admin */
-.button {
-  position: relative;
+.btnadd {
+  position: absolute; /* Cambiado a fixed para fijar el botón en la ventana del navegador */
+  top: 80px; /* Ajusta este valor según sea necesario para la distancia desde la parte superior */
+  right: 10px; /* Ajusta este valor según sea necesario para la distancia desde la derecha */
   width: 150px;
   height: 40px;
   cursor: pointer;
@@ -231,17 +233,18 @@ section img:hover {
   background-color: #3aa856;
 }
 
-.button, .button__icon, .button__text {
+
+.btnadd, .btnadd__icon, .btnadd__text {
   transition: all 0.3s;
 }
 
-.button .button__text {
+.btnadd .btnadd__text {
   transform: translateX(30px);
   color: #fff;
   font-weight: 600;
 }
 
-.button .button__icon {
+.btnadd .btnadd__icon {
   position: absolute;
   transform: translateX(109px);
   height: 100%;
@@ -252,29 +255,29 @@ section img:hover {
   justify-content: center;
 }
 
-.button .svg {
+.btnadd .svg {
   width: 30px;
   stroke: #fff;
 }
 
-.button:hover {
+.btnadd:hover {
   background: #34974d;
 }
 
-.button:hover .button__text {
+.btnadd:hover .btnadd__text {
   color: transparent;
 }
 
-.button:hover .button__icon {
+.btnadd:hover .btnadd__icon {
   width: 148px;
   transform: translateX(0);
 }
 
-.button:active .button__icon {
+.btnadd:active .btnadd__icon {
   background-color: #2e8644;
 }
 
-.button:active {
+.btnadd:active {
   border: 1px solid #2e8644;
 }
 
@@ -916,42 +919,6 @@ nav,
     height: 2em; /* Tamaño del icono ajustado para dispositivos más pequeños */
     width: 2em; /* Ancho del icono ajustado */
   }
-}
-
-/*Boton Subir Archivo*/
-.uploadButton {
-  border: none;
-  display: flex;
-  padding: 0.75rem 1.5rem;
-  background-color: #488aec;
-  color: #ffffff;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: middle;
-  align-items: center;
-  border-radius: 0.5rem;
-  user-select: none;
-  gap: 0.75rem;
-  box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
-  transition: all .6s ease;
-  margin-left: auto; /* Alinea el botón a la derecha */
-}
-
-.uploadButton:hover {
-  box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
-}
-
-.uploadButton:focus, .uploadButton:active {
-  opacity: .85;
-  box-shadow: none;
-}
-
-.uploadButton svg {
-  width: 1.25rem;
-  height: 1.25rem;
 }
 
 /*Estilo de boton Registrar Usuario*/
