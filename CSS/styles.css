@@ -170,7 +170,7 @@ section img:hover {
 .btn-danger:hover {
   opacity: 0.6;
 }
-.btn-pagar {
+.btnpagar {
   width: 130px;
   height: 40px;
   display: flex;
@@ -196,7 +196,7 @@ section img:hover {
   fill: white;
 }
 
-.btn-pagar::before {
+.btnpagar::before {
   width: 130px;
   height: 130px;
   position: absolute;
@@ -209,13 +209,13 @@ section img:hover {
   mix-blend-mode: difference;
 }
 
-.btn-pagar:hover::before {
+.btnpagar:hover::before {
   transition-duration: .3s;
   transform: translate(100%,-50%);
   border-radius: 0;
 }
 
-.btn-pagar:active {
+.btnpagar:active {
   transform: translate(5px,5px);
   transition-duration: .3s;
 }
@@ -953,7 +953,7 @@ nav,
 
 /*Estilo de Carrito de Compras*/
 .item img {
-  max-width: 200px;
+  max-width: 160px;
   /* Tamaño máximo de las imágenes */
   height: auto;
   /* Mantener la proporción */
@@ -962,16 +962,17 @@ nav,
 .cart {
   position: fixed;
   top: 0;
-  right: -300px;
+  right: -250px;
   /* Posición inicial del carrito fuera de la pantalla */
-  width: 300px;
+  width: 250px;
   /* Ancho del carrito */
   height: 100%;
   background-color: #f9f9f9;
   border-left: 1px solid #ddd;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  transition: right 0.3s ease;
+  transition: right 0.1s step-end;
+   /*transition: right 0.9s ease;*/
   z-index: 1000; /* Asegura que el carrito esté encima de todo */
 
   /* Transición suave para el movimiento */
