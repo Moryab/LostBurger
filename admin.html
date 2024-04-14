@@ -161,7 +161,9 @@
             <td>Doe</td>
             <td>john@example.com</td>
             <td class="text-right">
-              <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+              <a href="editaruser.html?id=1" role="button" class="btn btn-warning text-light">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              </a>
               <label for="modal-check-1" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></label>
               <input type="checkbox" class="checkbox" id="modal-check-1">
               <div class="modal">
@@ -180,14 +182,21 @@
             <td>Moe</td>
             <td>mary@example.com</td>
             <td class="text-right">
-              <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+              <!-- Enlace para editar usuario -->
+              <a href="editaruser.html?id=2" role="button" class="btn btn-warning text-light">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              </a>
+              <!-- Botón para eliminar usuario -->
               <label for="modal-check-2" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></label>
+              <!-- Checkbox oculto que controla la visualización del modal -->
               <input type="checkbox" class="checkbox" id="modal-check-2">
+              <!-- Modal para confirmación de eliminación -->
               <div class="modal">
                 <div class="modal-content">
-                  <span the close" onclick="window.location='admin.html#usuarios';">&times;</span>
+                  <!-- Botón de cerrar con corrección en la sintaxis -->
+                  <span class="close" onclick="window.location='admin.html#usuarios';">&times;</span>
                   <p>¿Estás seguro de que deseas eliminar este usuario?</p>
-                  <button>Eliminar</button>
+                  <button onclick="borrarUsuario('2');">Eliminar</button>
                   <button onclick="document.getElementById('modal-check-2').checked=false;">Cancelar</button>
                 </div>
               </div>
@@ -199,7 +208,9 @@
             <td>Dooley</td>
             <td>july@example.com</td>
             <td class="text-right">
-              <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+              <a href="editaruser.html?id=3" role="button" class="btn btn-warning text-light">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              </a>
               <label for="modal-check-3" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></label>
               <input type="checkbox" class="checkbox" id="modal-check-3">
               <div class="modal">
@@ -240,21 +251,31 @@
         <table class="table table-hover">
           <thead>
             <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Imagen</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
               <td>Hamburguesa de Pavo</td>
-              <td><img src="img/hpavo.png" alt="" height="50"></td>
-              <td>carne de pavo-lechuga-tomate-salsa de yogur griego</td>
+              <td><img src="img/hpavo.png" alt="Hamburguesa de Pavo" height="50"></td>
+              <td>carne de pavo, lechuga, tomate, salsa de yogur griego</td>
               <td>$5000</td>
               <td>
-                <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                
-                <!-- Botón de eliminar que activa el checkbox -->
-                <label class="btn btn-danger" for="delete-confirm-hpavo"><i class="fa fa-trash" aria-hidden="true"></i></label>
+                <a href="editarprod.html?productoID=1" role="button" class="btn btn-warning text-light"><i
+                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                <label class="btn btn-danger" for="delete-confirm-hpavo"><i class="fa fa-trash"
+                    aria-hidden="true"></i></label>
                 <input type="checkbox" id="delete-confirm-hpavo" class="checkbox">
-                
-                <!-- Modal para confirmar eliminación -->
                 <div class="modal">
                   <div class="modal-content">
-                    <span class="close" onclick="document.getElementById('delete-confirm-hpavo').checked = false;">&times;</span>
+                    <span class="close"
+                      onclick="document.getElementById('delete-confirm-hpavo').checked = false;">&times;</span>
                     <p>¿Estás seguro de que deseas eliminar este producto?</p>
                     <button onclick="deleteProduct('hpavo')">Eliminar</button>
                     <button onclick="document.getElementById('delete-confirm-hpavo').checked = false;">Cancelar</button>
@@ -262,23 +283,22 @@
                 </div>
               </td>
             </tr>
-            
             <tr>
+              <td>2</td>
               <td>Hamburguesa BBQ</td>
-              <td><img src="img/hbbq.png" alt="" height="50"></td>
-              <td>carne de res-BBQ-aros de cebolla-tocino-queso cheddar</td>
+              <td><img src="img/hbbq.png" alt="Hamburguesa BBQ" height="50"></td>
+              <td>carne de res, BBQ, aros de cebolla, tocino, queso cheddar</td>
               <td>$5000</td>
               <td>
-                <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                
-                <!-- Botón de eliminar que activa el checkbox -->
-                <label class="btn btn-danger" for="delete-confirm-hbbq"><i class="fa fa-trash" aria-hidden="true"></i></label>
+                <a href="editarprod.html?productoID=2" role="button" class="btn btn-warning text-light"><i
+                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                <label class="btn btn-danger" for="delete-confirm-hbbq"><i class="fa fa-trash"
+                    aria-hidden="true"></i></label>
                 <input type="checkbox" id="delete-confirm-hbbq" class="checkbox">
-                
-                <!-- Modal para confirmar eliminación -->
                 <div class="modal">
                   <div class="modal-content">
-                    <span class="close" onclick="document.getElementById('delete-confirm-hbbq').checked = false;">&times;</span>
+                    <span the="close"
+                      onclick="document.getElementById('delete-confirm-hbbq').checked = false;">&times;</span>
                     <p>¿Estás seguro de que deseas eliminar este producto?</p>
                     <button onclick="deleteProduct('hbbq')">Eliminar</button>
                     <button onclick="document.getElementById('delete-confirm-hbbq').checked = false;">Cancelar</button>
@@ -286,34 +306,33 @@
                 </div>
               </td>
             </tr>
-            
             <tr>
+              <td>3</td>
               <td>Hamburguesa Vegana</td>
-              <td><img src="img/hvegana.png" alt="" height="50"></td>
-              <td>hamburguesa vegana (mezcla de garbanzos, remolacha y avena)-pan integral-lechuga-tomate-pepinillos</td>
+              <td><img src="img/hvegana.png" alt="Hamburguesa Vegana" height="50"></td>
+              <td>hamburguesa vegana (mezcla de garbanzos, remolacha y avena), pan integral, lechuga, tomate, pepinillos
+              </td>
               <td>$5000</td>
               <td>
-                <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                
-                <!-- Botón de eliminar que activa el checkbox -->
-                <label class="btn btn-danger" for="delete-confirm-hvegana"><i class="fa fa-trash" aria-hidden="true"></i></label>
+                <a href="editarprod.html?productoID=3" role="button" class="btn btn-warning text-light"><i
+                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                <label class="btn btn-danger" for="delete-confirm-hvegana"><i class="fa fa-trash"
+                    aria-hidden="true"></i></label>
                 <input type="checkbox" id="delete-confirm-hvegana" class="checkbox">
-                
-                <!-- Modal para confirmar eliminación -->
                 <div class="modal">
-                  <div class="modal-content">
-                    <span class="close" onclick="document.getElementById('delete-confirm-hvegana').checked = false;">&times;</span>
+                  <div the="modal-content">
+                    <span class="close"
+                      onclick="document.getElementById('delete-confirm-hvegana').checked = false;">&times;</span>
                     <p>¿Estás seguro de que deseas eliminar este producto?</p>
                     <button onclick="deleteProduct('hvegana')">Eliminar</button>
-                    <button onclick="document.getElementById('delete-confirm-hvegana').checked = false;">Cancelar</button>
+                    <button
+                      onclick="document.getElementById('delete-confirm-hvegana').checked = false;">Cancelar</button>
                   </div>
                 </div>
               </td>
             </tr>
-            
           </tbody>
         </table>
-
         <ul class="pagination text-center">
           <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
           <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -323,15 +342,13 @@
         </ul>
       </div>
     </div><!--main container ends-->
-    <script>
-      function borrarProducto(idProducto) {
-        // Lógica para borrar producto
-        console.log("Borrar producto con ID:", idProducto);
-        // Aquí puedes agregar código para hacer una petición al servidor o manejar la lógica de eliminación
-      }
-    </script>
-    
   </div>
+  <script>
+    function deleteProduct(productId) {
+      console.log("Deleting product with ID:", productId);
+      // Add server request logic or other deletion logic here
+    }
+  </script>
 
 
 </body>
