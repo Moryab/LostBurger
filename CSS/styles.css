@@ -1063,6 +1063,12 @@ nav,
   right: 0;
 }
 
+.navbar-toggler {
+  margin-left: auto; /* Mueve el botón navbar-toggler al extremo derecho */
+}
+
+
+
 /*Pagina Nosotros*/
 .container-somos {
   margin-top: 70px; /* Aumentado de 1px a 70px para dar más espacio */

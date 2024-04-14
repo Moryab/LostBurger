@@ -58,18 +58,6 @@ label {
   font-size: 24px;
 }
 
-.btn {
-  width: 100%;
-}
-
-a {
-  color: #2196F3;
-}
-
-hr {
-  border: 1px solid lightgrey;
-}
-
 span.price {
   float: right;
   color: grey;
