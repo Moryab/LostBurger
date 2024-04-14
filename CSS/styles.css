@@ -1107,4 +1107,19 @@ nav,
 }
 
 
+/*pedidos*/
+#pedidosContainer .list-group-item {
+  background-color: #fff; /* Fondo claro para los ítems de la lista */
+  margin-bottom: 10px; /* Espaciado entre ítems */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+#pedidosContainer h5 {
+  color: #333; /* Color oscuro para mejor lectura */
+}
+
+#pedidosContainer small {
+  display: block; /* Hace que cada small vaya en su propia línea para claridad */
+}
+
 
