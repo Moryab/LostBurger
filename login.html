@@ -18,7 +18,7 @@
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
       <img src="img/Logo.png" alt="Logo" class="rounded-pill">
-      <a class="navbar-brand" href="index.html" >LostBurger</a>
+      <a class="navbar-brand" href="index.html">LostBurger</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,6 +33,9 @@
           <li class="nav-item">
             <a class="nav-link btn-light" href="ubicacion.html">Local</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link btn-light" href="pedidos.html">Pedidos</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -43,35 +46,35 @@
       <div class="back-to-previous">
         <a href="index.html" class="login__back"><i class="fas fa-arrow-left"></i></a>
       </div>
-    <form action="" class="login__form">
-      <h2 class="login__title">Iniciar Sesion</h2>
+      <form action="" class="login__form">
+        <h2 class="login__title">Iniciar Sesion</h2>
 
-      <div class="login__group">
-        <div>
-          <label for="email" class="login__label">Correo</label>
-          <input type="email" placeholder="Escriba su Correo Aqui" id="email" class="login__input"required>
-        </div>
+        <div class="login__group">
+          <div>
+            <label for="email" class="login__label">Correo</label>
+            <input type="email" placeholder="Escriba su Correo Aqui" id="email" class="login__input">
+          </div>
 
         <div>
           <label for="password" class="login__label">Contraseña</label>
-          <input type="password" placeholder="Escriba su Contraseña Aqui" id="password" class="login__input"required>
+          <input type="password" placeholder="Escriba su Contraseña Aqui" id="password" class="login__input">
         </div>
       </div>
 
-      <div>
-        <p class="login__signup">
-          Aun no tienes Cuenta? <a href="registrar.html">Registrate</a>
-        </p>
-        
-        <p class="login__signup">
-          <a href="recuperar.html">¿Olvido su contraseña?</a>
-        </p>
+        <div>
+          <p class="login__signup">
+            Aun no tienes Cuenta? <a href="registrar.html">Registrate</a>
+          </p>
 
-        <button type="submit" class="login__button">Continuar</button>
-      </div>
-    </form>
+          <p class="login__signup">
+            <a href="recuperar.html">¿Olvido su contraseña?</a>
+          </p>
 
-    <i class="ri-close-line login__close" id="login-close"></i>
+          <button type="submit" class="login__button">Continuar</button>
+        </div>
+      </form>
+
+      <i class="ri-close-line login__close" id="login-close"></i>
   </div>
 
   <!--==================== MAIN ====================-->
@@ -81,14 +84,14 @@
   <footer>
     <div class="logo-container">
       <img src="img/Logo.png" alt="Logo" class="rounded-pill">
-  </div>
-  <p></p>
+    </div>
+    <p></p>
     <a href="https://www.instagram.com/tu_usuario" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="https://www.facebook.com/tu_usuario" target="_blank"><i class="fab fa-facebook"></i></a>
     <a href="https://www.tiktok.com/@tu_usuario" target="_blank"><i class="fab fa-tiktok"></i></a>
     <div>
       <a href="mailto:info@tudominio.com"><i class="far fa-envelope"></i> LostBurger@gmail.com</a>
-  </div>
+    </div>
     <div>
       <a href="contacto.html"><i class="fas fa-phone"></i> Contáctanos +56 9 85764312</a>
     </div>
@@ -97,19 +100,19 @@
 
   <!--Ingresar admin con correo-->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       var loginForm = document.querySelector('.login__form');
-      
-      loginForm.addEventListener('submit', function(event) {
+
+      loginForm.addEventListener('submit', function (event) {
         event.preventDefault(); // Previene el envío tradicional del formulario
-        
+
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
-        
+
         // Establece las credenciales correctas aquí
         var correctEmail = 'lostburger@gmail.com';
         var correctPassword = 'burger123';
-  
+
         // Comprueba si las credenciales son correctas
         if (email === correctEmail && password === correctPassword) {
           window.location.href = 'admin.html#panel'; // Redirecciona a admin.html
@@ -119,7 +122,7 @@
       });
     });
   </script>
-  
+
 </body>
 
 </html>

@@ -36,6 +36,9 @@
             <li class="nav-item p-3 py-md-1">
               <a href="#panel" class="nav-link"><i class="fas fa-columns"></i> Administración</a>
             </li>
+            <li class="nav-item p-3 py-md-1">
+              <a href="#pedidos" class="nav-link"><i class="fas fa-shopping-cart"></i></i> Pedidos</a>
+            </li>
             <!-- Dropdown for Productos -->
             <li class="nav-item dropdown p-3 py-md-1">
               <a class="nav-link dropdown-toggle" href="#productos" id="navbarDropdownProductos" role="button"
@@ -70,285 +73,347 @@
 
   <!-- Contenido de Panel -->
   <div id="panel" class="content-section">
-    <h2>Panel de administración</h2>
-    <div class="dashboard-container">
-      <!-- Cuadro de Mensajes -->
-      <div class="info-box">
-        <i class="fas fa-comments" style="color: orange;"></i>
-        <p class="numbers">859</p>
-        <p>MENSAJES</p>
-      </div>
-      <!-- Cuadro de Ingresos Hoy -->
-      <div class="info-box">
-        <i class="fas fa-dollar-sign" style="color: green;"></i>
-        <p class="numbers">$3,521</p>
-        <p>INGRESOS HOY</p>
-      </div>
-      <!-- Cuadro de Clientes -->
-      <div class="info-box">
-        <i class="fas fa-users" style="color: blue;"></i>
-        <p class="numbers">562</p>
-        <p>CLIENTES</p>
-      </div>
-      <!-- Cuadro de Pedidos de Hoy -->
-      <div class="info-box">
-        <i class="fas fa-truck" style="color: red;"></i>
-        <p class="numbers">30</p>
-        <p>PEDIDOS DE HOY</p>
+    <div class="container mt-5">
+      <h1>Panel de administración</h1>
+
+      <div class="dashboard-container">
+        <!-- Cuadro de Mensajes -->
+        <div class="info-box">
+          <i class="fas fa-comments" style="color: orange;"></i>
+          <p class="numbers">859</p>
+          <p>MENSAJES</p>
+        </div>
+        <!-- Cuadro de Ingresos Hoy -->
+        <div class="info-box">
+          <i class="fas fa-dollar-sign" style="color: green;"></i>
+          <p class="numbers">$3,521</p>
+          <p>INGRESOS HOY</p>
+        </div>
+        <!-- Cuadro de Clientes -->
+        <div class="info-box">
+          <i class="fas fa-users" style="color: blue;"></i>
+          <p class="numbers">562</p>
+          <p>CLIENTES</p>
+        </div>
+        <!-- Cuadro de Pedidos de Hoy -->
+        <div class="info-box">
+          <i class="fas fa-truck" style="color: red;"></i>
+          <p class="numbers">30</p>
+          <p>PEDIDOS DE HOY</p>
+        </div>
       </div>
     </div>
-    <!--GRAFICOO-->
-    <h1 class="title_grafico">Preferencias de clientes</h1>
-    <section class="content-grafico">
-      <div class="grafico"></div>
-      <div class="container_leyenda">
-        <span class="leyenda_all">
-          <span class="color_hamburgesas"></span>
-          <p class="social">40% Hamburguesas</p>
-        </span>
-        <span class="leyenda_all">
-          <span class="color_pizza"></span>
-          <p class="social">30% Pizzas</p>
-        </span>
-        <span class="leyenda_all">
-          <span class="color_completo"></span>
-          <p class="social">18% Completos</p>
-        </span>
-        <span class="leyenda_all">
-          <span class="color_papas"></span>
-          <p class="social">12% Papas fritas</p>
-        </span>
-        <span class="leyenda_all">
-          <span class="color_bebidas"></span>
-          <p class="social">0% Bebidas</p>
-        </span>
-        <p class="total">Total: 1.000.000.000</p>
-      </div>
-    </section>
-  </div>
-  <!--Listado y boton usuarios-->
-  <div id="usuarios" class="content-section table-responsive">
-    <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <h2>Lista de usuarios</h2>
-
-        <button class="cssbuttons-io-button" onclick="window.location.href='usuarios.html';">
-          Registrar un usuario
-          <div class="icon">
-            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                fill="currentColor"></path>
-            </svg>
+      <!--GRAFICOO-->
+      <h2 class="title_grafico">Preferencias de clientes</h2>
+      <section class="dashboard">
+        <div class="content-grafico">
+          <div class="grafico"></div>
+          <div class="container_leyenda">
+            <span class="leyenda_all">
+              <span class="color_hamburguesas"></span>
+              <p class="social">40% Hamburguesas</p>
+            </span>
+            <span class="leyenda_all">
+              <span class="color_pizza"></span>
+              <p class="social">30% Pizzas</p>
+            </span>
+            <span class="leyenda_all">
+              <span class="color_completo"></span>
+              <p class="social">18% Completos</p>
+            </span>
+            <span class="leyenda_all">
+              <span class="color_papas"></span>
+              <p class="social">12% Papas fritas</p>
+            </span>
+            <span class="leyenda_all">
+              <span class="color_bebidas"></span>
+              <p class="social">0% Bebidas</p>
+            </span>
+            <p class="total">Total: 1.000.000.000</p>
           </div>
-        </button>
+        </div>
+      </section>
+    </div>
+    <!--Pedidos-->
+    <div id="pedidos" class="content-section">
+      <div class="container mt-5">
+        <h1>Gestión de Pedidos</h1>
+        <input class="form-control mb-4" id="tableSearch" type="text" placeholder="Buscar pedidos...">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID Pedido</th>
+              <th>Cliente</th>
+              <th>Fecha</th>
+              <th>Total</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="pedidosTable">
+            <!-- Ejemplo de filas -->
+            <tr>
+              <td>#1234</td>
+              <td>Juan Pérez</td>
+              <td>2024-04-10</td>
+              <td>$15.500</td>
+              <td>Entregado</td>
+              <td>
+                <button class="btn btn-info btn-sm">Ver</button>
+                <button class="btn btn-success btn-sm">Actualizar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#1235</td>
+              <td>Maria López</td>
+              <td>2024-04-12</td>
+              <td>$8.300</td>
+              <td>En Proceso</td>
+              <td>
+                <button class="btn btn-info btn-sm">Ver</button>
+                <button class="btn btn-success btn-sm">Actualizar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#1236</td>
+              <td>Carlos Gómez</td>
+              <td>2024-04-14</td>
+              <td>$12.000</td>
+              <td>Pendiente</td>
+              <td>
+                <button class="btn btn-info btn-sm">Ver</button>
+                <button class="btn btn-success btn-sm">Actualizar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <!-- TABLA DE USUARIOOOOOOOOOOOOOOS -->
-      <table class="table mt-2 table-responsive">
-        <thead class="table-dark">
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Email</th>
-            <th class="text-right">Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-            <td class="text-right">
-              <a href="editaruser.html?id=1" role="button" class="btn btn-warning text-light">
-                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-              </a>
-              <label for="modal-check-1" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></label>
-              <input type="checkbox" class="checkbox" id="modal-check-1">
-              <div class="modal">
-                <div class="modal-content">
-                  <span class="close" onclick="window.location='admin.html#usuarios';">&times;</span>
-                  <p>¿Estás seguro de que deseas eliminar este usuario?</p>
-                  <button>Eliminar</button>
-                  <button onclick="document.getElementById('modal-check-1').checked=false;">Cancelar</button>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Mary</td>
-            <td>Moe</td>
-            <td>mary@example.com</td>
-            <td class="text-right">
-              <!-- Enlace para editar usuario -->
-              <a href="editaruser.html?id=2" role="button" class="btn btn-warning text-light">
-                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-              </a>
-              <!-- Botón para eliminar usuario -->
-              <label for="modal-check-2" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></label>
-              <!-- Checkbox oculto que controla la visualización del modal -->
-              <input type="checkbox" class="checkbox" id="modal-check-2">
-              <!-- Modal para confirmación de eliminación -->
-              <div class="modal">
-                <div class="modal-content">
-                  <!-- Botón de cerrar con corrección en la sintaxis -->
-                  <span class="close" onclick="window.location='admin.html#usuarios';">&times;</span>
-                  <p>¿Estás seguro de que deseas eliminar este usuario?</p>
-                  <button onclick="borrarUsuario('2');">Eliminar</button>
-                  <button onclick="document.getElementById('modal-check-2').checked=false;">Cancelar</button>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-            <td class="text-right">
-              <a href="editaruser.html?id=3" role="button" class="btn btn-warning text-light">
-                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-              </a>
-              <label for="modal-check-3" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></label>
-              <input type="checkbox" class="checkbox" id="modal-check-3">
-              <div class="modal">
-                <div class="modal-content">
-                  <span class="close" onclick="window.location='admin.html#usuarios';">&times;</span>
-                  <p>¿Estás seguro de que deseas eliminar este usuario?</p>
-                  <button>Eliminar</button>
-                  <button onclick="document.getElementById('modal-check-3').checked=false;">Cancelar</button>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
     </div>
 
-    <script>
-      function editarUsuario(id) {
-        // Lógica para editar usuario
-        console.log("Editar usuario con ID:", id);
-      }
+    <!--Listado y boton usuarios-->
+    <div id="usuarios" class="content-section table-responsive">
+      <div class="container mt-5">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h1>Lista de usuarios</h1>
 
-      function borrarUsuario(id) {
-        // Lógica para borrar usuario
-        console.log("Borrar usuario con ID:", id);
-      }
-    </script>
-  </div>
-
-
-  <!--LISTA DE PRODUCTOS-->
-  <div id="lista" class="content-section">
-    <div class="container"><!--main container-->
-      <div class="mt-3">
-        <h1 class="h4">Listado de Productos</h1>
-      </div>
-      <div class="mt-2 table-responsive">
-        <table class="table table-hover">
-          <thead>
+          <button class="cssbuttons-io-button" onclick="window.location.href='usuarios.html';">
+            Registrar un usuario
+            <div class="icon">
+              <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                  fill="currentColor"></path>
+              </svg>
+            </div>
+          </button>
+        </div>
+        <!-- TABLA DE USUARIOOOOOOOOOOOOOOS -->
+        <table class="table mt-2 table-responsive">
+          <thead class="table-dark">
             <tr>
               <th>ID</th>
               <th>Nombre</th>
-              <th>Imagen</th>
-              <th>Descripción</th>
-              <th>Precio</th>
-              <th>Acciones</th>
+              <th>Apellido</th>
+              <th>Email</th>
+              <th class="text-right">Acciones</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>1</td>
-              <td>Hamburguesa de Pavo</td>
-              <td><img src="img/hpavo.png" alt="Hamburguesa de Pavo" height="50"></td>
-              <td>carne de pavo, lechuga, tomate, salsa de yogur griego</td>
-              <td>$5000</td>
-              <td>
-                <a href="editarprod.html?productoID=1" role="button" class="btn btn-warning text-light"><i
-                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                <label class="btn btn-danger" for="delete-confirm-hpavo"><i class="fa fa-trash"
-                    aria-hidden="true"></i></label>
-                <input type="checkbox" id="delete-confirm-hpavo" class="checkbox">
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+              <td class="text-right">
+                <a href="editaruser.html?id=1" role="button" class="btn btn-warning text-light">
+                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </a>
+                <label for="modal-check-1" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></label>
+                <input type="checkbox" class="checkbox" id="modal-check-1">
                 <div class="modal">
                   <div class="modal-content">
-                    <span class="close"
-                      onclick="document.getElementById('delete-confirm-hpavo').checked = false;">&times;</span>
-                    <p>¿Estás seguro de que deseas eliminar este producto?</p>
-                    <button onclick="deleteProduct('hpavo')">Eliminar</button>
-                    <button onclick="document.getElementById('delete-confirm-hpavo').checked = false;">Cancelar</button>
+                    <span class="close" onclick="window.location='admin.html#usuarios';">&times;</span>
+                    <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+                    <button>Eliminar</button>
+                    <button onclick="document.getElementById('modal-check-1').checked=false;">Cancelar</button>
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
               <td>2</td>
-              <td>Hamburguesa BBQ</td>
-              <td><img src="img/hbbq.png" alt="Hamburguesa BBQ" height="50"></td>
-              <td>carne de res, BBQ, aros de cebolla, tocino, queso cheddar</td>
-              <td>$5000</td>
-              <td>
-                <a href="editarprod.html?productoID=2" role="button" class="btn btn-warning text-light"><i
-                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                <label class="btn btn-danger" for="delete-confirm-hbbq"><i class="fa fa-trash"
-                    aria-hidden="true"></i></label>
-                <input type="checkbox" id="delete-confirm-hbbq" class="checkbox">
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+              <td class="text-right">
+                <!-- Enlace para editar usuario -->
+                <a href="editaruser.html?id=2" role="button" class="btn btn-warning text-light">
+                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </a>
+                <!-- Botón para eliminar usuario -->
+                <label for="modal-check-2" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></label>
+                <!-- Checkbox oculto que controla la visualización del modal -->
+                <input type="checkbox" class="checkbox" id="modal-check-2">
+                <!-- Modal para confirmación de eliminación -->
                 <div class="modal">
                   <div class="modal-content">
-                    <span the="close"
-                      onclick="document.getElementById('delete-confirm-hbbq').checked = false;">&times;</span>
-                    <p>¿Estás seguro de que deseas eliminar este producto?</p>
-                    <button onclick="deleteProduct('hbbq')">Eliminar</button>
-                    <button onclick="document.getElementById('delete-confirm-hbbq').checked = false;">Cancelar</button>
+                    <!-- Botón de cerrar con corrección en la sintaxis -->
+                    <span class="close" onclick="window.location='admin.html#usuarios';">&times;</span>
+                    <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+                    <button onclick="borrarUsuario('2');">Eliminar</button>
+                    <button onclick="document.getElementById('modal-check-2').checked=false;">Cancelar</button>
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
               <td>3</td>
-              <td>Hamburguesa Vegana</td>
-              <td><img src="img/hvegana.png" alt="Hamburguesa Vegana" height="50"></td>
-              <td>hamburguesa vegana (mezcla de garbanzos, remolacha y avena), pan integral, lechuga, tomate, pepinillos
-              </td>
-              <td>$5000</td>
-              <td>
-                <a href="editarprod.html?productoID=3" role="button" class="btn btn-warning text-light"><i
-                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                <label class="btn btn-danger" for="delete-confirm-hvegana"><i class="fa fa-trash"
-                    aria-hidden="true"></i></label>
-                <input type="checkbox" id="delete-confirm-hvegana" class="checkbox">
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+              <td class="text-right">
+                <a href="editaruser.html?id=3" role="button" class="btn btn-warning text-light">
+                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </a>
+                <label for="modal-check-3" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></label>
+                <input type="checkbox" class="checkbox" id="modal-check-3">
                 <div class="modal">
-                  <div the="modal-content">
-                    <span class="close"
-                      onclick="document.getElementById('delete-confirm-hvegana').checked = false;">&times;</span>
-                    <p>¿Estás seguro de que deseas eliminar este producto?</p>
-                    <button onclick="deleteProduct('hvegana')">Eliminar</button>
-                    <button
-                      onclick="document.getElementById('delete-confirm-hvegana').checked = false;">Cancelar</button>
+                  <div class="modal-content">
+                    <span class="close" onclick="window.location='admin.html#usuarios';">&times;</span>
+                    <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+                    <button>Eliminar</button>
+                    <button onclick="document.getElementById('modal-check-3').checked=false;">Cancelar</button>
                   </div>
                 </div>
               </td>
             </tr>
           </tbody>
         </table>
-        <ul class="pagination text-center">
-          <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item active"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
-        </ul>
       </div>
-    </div><!--main container ends-->
-  </div>
-  <script>
-    function deleteProduct(productId) {
-      console.log("Deleting product with ID:", productId);
-      // Add server request logic or other deletion logic here
-    }
-  </script>
+
+      <script>
+        function editarUsuario(id) {
+          // Lógica para editar usuario
+          console.log("Editar usuario con ID:", id);
+        }
+
+        function borrarUsuario(id) {
+          // Lógica para borrar usuario
+          console.log("Borrar usuario con ID:", id);
+        }
+      </script>
+    </div>
+
+
+    <!--LISTA DE PRODUCTOS-->
+    <div id="lista" class="content-section">
+      <div class="container mt-5"><!--main container-->
+        <h1>Listado de Productos</h1>
+        <div class="mt-2 table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Imagen</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Hamburguesa de Pavo</td>
+                <td><img src="img/hpavo.png" alt="Hamburguesa de Pavo" height="50"></td>
+                <td>carne de pavo, lechuga, tomate, salsa de yogur griego</td>
+                <td>$5000</td>
+                <td>
+                  <a href="editarprod.html?productoID=1" role="button" class="btn btn-warning text-light"><i
+                      class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                  <label class="btn btn-danger" for="delete-confirm-hpavo"><i class="fa fa-trash"
+                      aria-hidden="true"></i></label>
+                  <input type="checkbox" id="delete-confirm-hpavo" class="checkbox">
+                  <div class="modal">
+                    <div class="modal-content">
+                      <span class="close"
+                        onclick="document.getElementById('delete-confirm-hpavo').checked = false;">&times;</span>
+                      <p>¿Estás seguro de que deseas eliminar este producto?</p>
+                      <button onclick="deleteProduct('hpavo')">Eliminar</button>
+                      <button
+                        onclick="document.getElementById('delete-confirm-hpavo').checked = false;">Cancelar</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Hamburguesa BBQ</td>
+                <td><img src="img/hbbq.png" alt="Hamburguesa BBQ" height="50"></td>
+                <td>carne de res, BBQ, aros de cebolla, tocino, queso cheddar</td>
+                <td>$5000</td>
+                <td>
+                  <a href="editarprod.html?productoID=2" role="button" class="btn btn-warning text-light"><i
+                      class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                  <label class="btn btn-danger" for="delete-confirm-hbbq"><i class="fa fa-trash"
+                      aria-hidden="true"></i></label>
+                  <input type="checkbox" id="delete-confirm-hbbq" class="checkbox">
+                  <div class="modal">
+                    <div class="modal-content">
+                      <span the="close"
+                        onclick="document.getElementById('delete-confirm-hbbq').checked = false;">&times;</span>
+                      <p>¿Estás seguro de que deseas eliminar este producto?</p>
+                      <button onclick="deleteProduct('hbbq')">Eliminar</button>
+                      <button
+                        onclick="document.getElementById('delete-confirm-hbbq').checked = false;">Cancelar</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Hamburguesa Vegana</td>
+                <td><img src="img/hvegana.png" alt="Hamburguesa Vegana" height="50"></td>
+                <td>hamburguesa vegana (mezcla de garbanzos, remolacha y avena), pan integral, lechuga, tomate,
+                  pepinillos
+                </td>
+                <td>$5000</td>
+                <td>
+                  <a href="editarprod.html?productoID=3" role="button" class="btn btn-warning text-light"><i
+                      class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                  <label class="btn btn-danger" for="delete-confirm-hvegana"><i class="fa fa-trash"
+                      aria-hidden="true"></i></label>
+                  <input type="checkbox" id="delete-confirm-hvegana" class="checkbox">
+                  <div class="modal">
+                    <div the="modal-content">
+                      <span class="close"
+                        onclick="document.getElementById('delete-confirm-hvegana').checked = false;">&times;</span>
+                      <p>¿Estás seguro de que deseas eliminar este producto?</p>
+                      <button onclick="deleteProduct('hvegana')">Eliminar</button>
+                      <button
+                        onclick="document.getElementById('delete-confirm-hvegana').checked = false;">Cancelar</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="pagination text-center">
+            <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+          </ul>
+        </div>
+      </div><!--main container ends-->
+    </div>
+    <script>
+      function deleteProduct(productId) {
+        console.log("Deleting product with ID:", productId);
+        // Add server request logic or other deletion logic here
+      }
+    </script>
 
 
 </body>
