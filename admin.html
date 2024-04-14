@@ -36,6 +36,9 @@
             <li class="nav-item p-3 py-md-1">
               <a href="#panel" class="nav-link"><i class="fas fa-columns"></i> Administración</a>
             </li>
+            <li class="nav-item p-3 py-md-1">
+              <a href="#pedidos" class="nav-link"><i class="fas fa-shopping-cart"></i></i> Pedidos</a>
+            </li>
             <!-- Dropdown for Productos -->
             <li class="nav-item dropdown p-3 py-md-1">
               <a class="nav-link dropdown-toggle" href="#productos" id="navbarDropdownProductos" role="button"
@@ -126,8 +129,62 @@
           <p class="total">Total: 1.000.000.000</p>
         </div>
       </div>
-  
-     
+    </section>
+  </div>
+  <div id="pedidos" class="content-section">
+    <div class="container mt-5">
+      <h1>Gestión de Pedidos</h1>
+      <input class="form-control mb-4" id="tableSearch" type="text" placeholder="Buscar pedidos...">
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>ID Pedido</th>
+                  <th>Cliente</th>
+                  <th>Fecha</th>
+                  <th>Total</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+              </tr>
+          </thead>
+          <tbody id="pedidosTable">
+              <!-- Ejemplo de filas -->
+              <tr>
+                  <td>#1234</td>
+                  <td>Juan Pérez</td>
+                  <td>2024-04-10</td>
+                  <td>$15.500</td>
+                  <td>Entregado</td>
+                  <td>
+                      <button class="btn btn-info btn-sm">Ver</button>
+                      <button class="btn btn-success btn-sm">Actualizar</button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>#1235</td>
+                  <td>Maria López</td>
+                  <td>2024-04-12</td>
+                  <td>$8.300</td>
+                  <td>En Proceso</td>
+                  <td>
+                      <button class="btn btn-info btn-sm">Ver</button>
+                      <button class="btn btn-success btn-sm">Actualizar</button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>#1236</td>
+                  <td>Carlos Gómez</td>
+                  <td>2024-04-14</td>
+                  <td>$12.000</td>
+                  <td>Pendiente</td>
+                  <td>
+                      <button class="btn btn-info btn-sm">Ver</button>
+                      <button class="btn btn-success btn-sm">Actualizar</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  </div>
 
   <!--Listado y boton usuarios-->
   <div id="usuarios" class="content-section table-responsive">
