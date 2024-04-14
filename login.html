@@ -37,6 +37,10 @@
   <!--==================== LOGIN ====================-->
   <div class="login" id="login">
     <form action="" class="login__form">
+      <div class="back-to-previous">
+        <a href="index.html" class="login__back"><i class="fas fa-arrow-left"></i></a>
+      </div>
+    <form action="" class="login__form">
       <h2 class="login__title">Iniciar Sesion</h2>
 
       <div class="login__group">
@@ -57,7 +61,7 @@
         </p>
         
         <p class="login__signup">
-          <a href="admin.html#panel">Ingreso Admin</a>
+          <a href="recuperar.html">¿Olvido su contraseña?</a>
         </p>
 
         <button type="submit" class="login__button">Continuar</button>
@@ -88,7 +92,31 @@
     <p>© 2024 LostBurger. Todos los derechos reservados.</p>
   </footer>
 
-
+  <!--Ingresar admin con correo-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var loginForm = document.querySelector('.login__form');
+      
+      loginForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Previene el envío tradicional del formulario
+        
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        
+        // Establece las credenciales correctas aquí
+        var correctEmail = 'lostburger@gmail.com';
+        var correctPassword = 'burger123';
+  
+        // Comprueba si las credenciales son correctas
+        if (email === correctEmail && password === correctPassword) {
+          window.location.href = 'admin.html#panel'; // Redirecciona a admin.html
+        } else {
+          alert('Credenciales incorrectas, intente de nuevo.'); // Muestra un mensaje de error
+        }
+      });
+    });
+  </script>
+  
 </body>
 
 </html>

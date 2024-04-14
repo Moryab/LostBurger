@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Pago</title>
+    <style>
+       body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+}
+
+form {
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #4cae4c;
+}
+
+
+    </style>
+</head>
+
+<body class="pagina-pago">
+    
+    <div class="container">
+        <h2>Formulario de Pago</h2>
+        <form action="procesar_pago.php" method="post">
+            <label for="nombre">Nombre Completo:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="monto">Monto a Pagar:</label><br>
+            <input type="number" id="monto" name="monto" required><br>
+            <label for="tarjeta">Número de Tarjeta:</label><br>
+            <input type="text" id="tarjeta" name="tarjeta" required><br>
+            <label for="cvv">CVV:</label><br>
+            <input type="text" id="cvv" name="cvv" required><br>
+            <label for="nota">Nota (opcional):</label><br>
+            <textarea id="nota" name="nota" rows="4" cols="50"></textarea><br>
+            <input type="submit" value="Realizar Pago">
+        </form>
+    </div>
+</body>
+</body>
+
+</html>

@@ -45,7 +45,7 @@ p {
 .mustard-bg .nav-link.active,
 .mustard-bg .nav-link:hover,
 .mustard-bg .nav-link:focus {
-  background-color: #ff9238 !important;
+  background-color: #ffc258 !important;
   /* Color de fondo */
   color: black !important;
   /* Color del texto */
@@ -1041,5 +1041,23 @@ nav,
   text-align: center;
   padding: 20px;
 }
+
+/*volver atras*/
+.login__form {
+  position: relative; /* Permite el posicionamiento absoluto dentro del formulario */
+}
+
+.back-to-previous {
+  position: absolute; /* Posicionamiento absoluto */
+  top: 10px; /* Espaciado desde la parte superior del formulario */
+  left: 10px; /* Espaciado desde el lado izquierdo del formulario */
+}
+
+.login__back {
+  color: #000; /* Color del icono, ajusta según tu diseño */
+  font-size: 24px; /* Tamaño del icono */
+  text-decoration: none;
+}
+
 
 

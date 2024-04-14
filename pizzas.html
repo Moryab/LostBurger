@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="CSS/styles.css">
   <script src="js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <link rel="icon" type="image/png" href="img/logo admin.jpg">
+  <link rel="icon" type="image/png" href="img/admin.png">
 
 </head>
 <body>
@@ -59,115 +59,52 @@
     </div>
   </nav>
 
-
-
-
-  <!-- Contenido de Panel -->
-  <div id="panel" class="content-section">
-    <h2>Panel de administración</h2>
-    <div class="dashboard-container">
-      <!-- Cuadro de Mensajes -->
-      <div class="info-box">
-        <i class="fas fa-comments" style="color: orange;"></i>
-        <p class="numbers">859</p>
-        <p>MENSAJES</p>
-      </div>
-      <!-- Cuadro de Ingresos Hoy -->
-      <div class="info-box">
-        <i class="fas fa-dollar-sign" style="color: green;"></i>
-        <p class="numbers">$3,521</p>
-        <p>INGRESOS HOY</p>
-      </div>
-      <!-- Cuadro de Clientes -->
-      <div class="info-box">
-        <i class="fas fa-users" style="color: blue;"></i>
-        <p class="numbers">562</p>
-        <p>CLIENTES</p>
-      </div>
-      <!-- Cuadro de Pedidos de Hoy -->
-      <div class="info-box">
-        <i class="fas fa-truck" style="color: red;"></i>
-        <p class="numbers">30</p>
-        <p>PEDIDOS DE HOY</p>
-      </div>
-    </div>
-
-    <h1 class="title_grafico">Preferencias de clientes</h1>
-    <section class="content-grafico">
-      <div class="grafico"></div>
-      <div class="container_leyenda">
-        <span class="leyenda_all">
-          <span class="color_hamburgesas"></span>
-          <p class="social">40% Hamburguesas</p>
-        </span>
-        <span class="leyenda_all">
-          <span class="color_pizza"></span>
-          <p class="social">30% Pizzas</p>
-        </span>
-        <span class="leyenda_all">
-          <span class="color_completo"></span>
-          <p class="social">18% Completos</p>
-        </span>
-        <span class="leyenda_all">
-          <span class="color_papas"></span>
-          <p class="social">12% Papas fritas</p>
-        </span>
-        <span class="leyenda_all">
-            <span class="color_bebidas"></span>
-            <p class="social">0% Bebidas</p>
-          </span>
-        <p class="total">Total: 1.000.000.000</p>
-      </div>
-    </section>
-  </div>
-
 <!-- Contenido de Productos -->
-<div class="tab-content">
-    <div id="pizzas" class="container tab-pane active"><br>
-      <div class="container">
-        <h3>Pizzas</h3>
-        <div class="row">
-          <div class="col-md-9">
-            <!-- Esta columna ocupa tres cuartos de la página en dispositivos medianos y grandes -->
-            <div class="row">
-              <div class="col-md-4 col-sm-6 mt-3">
-                <div class="card p-3 shadow border border-white rounded">
-                  <img class="card-img-top img-fluid" src="img/Pepperoni.png" alt="Pepperoni">
-                  <div class="card-body">
-                    <h4 class="card-title">Pizza Pepperoni</h4>
-                    <p class="card-text">Pepperoni, queso mozzarella, salsa de tomate</p>
-                  </div>
+ <!--PIZZAS-->
+ <div class="tab-content">
+  <div id="pizzas" class="container tab-pane active"><br>
+    <div class="container">
+      <h3>Pizzas</h3>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3">
+              <div class="card p-3 shadow border border-white rounded">
+                <img class="card-img-top img-fluid" src="img/Pepperoni.png" alt="Pepperoni">
+                <div class="card-body">
+                  <h4 class="card-title">Pizza Pepperoni</h4>
+                  <p class="card-text">Pepperoni, queso mozzarella, salsa de tomate</p>
+                  <label for="cart-toggle" class="btn">Agregar <i class="fas fa-shopping-cart"></i></label>
                 </div>
               </div>
-              <!-- Agrega aquí más tarjetas de pizza -->
-              <div class="col-md-4 col-sm-6 mt-3">
-                <div class="card p-3 shadow border border-white rounded">
-                  <img class="card-img-top img-fluid" src="img/Pizzaveg.jpg" alt="Pizzaveg">
-                  <div class="card-body">
-                    <h4 class="card-title">Pizza Vegetariana</h4>
-                    <p class="card-text">Pimientos, champiñones, cebollas, aceitunas, tomates, queso
-                      mozzarella</p>
-                  </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3">
+              <div class="card p-3 shadow border border-white rounded">
+                <img class="card-img-top img-fluid" src="img/Pizzaveg.jpg" alt="Pizzaveg">
+                <div class="card-body">
+                  <h4 class="card-title">Pizza Vegetariana</h4>
+                  <p class="card-text">Pimientos, champiñones, cebollas, aceitunas, tomates, queso
+                    mozzarella</p>
+                  <label for="cart-toggle" class="btn">Agregar <i class="fas fa-shopping-cart"></i></label>
                 </div>
               </div>
-              <div class="col-md-4 col-sm-6 mt-3">
-                <div class="card p-3 shadow border border-white rounded">
-                  <img class="card-img-top img-fluid" src="img/Phawaian.jpg" alt="Phawaian">
-                  <div class="card-body">
-                    <h4 class="card-title">Pizza Hawaiana</h4>
-                    <p class="card-text">Jamón, piña, queso mozzarella, salsa de tomate</p>
-                  </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3">
+              <div class="card p-3 shadow border border-white rounded">
+                <img class="card-img-top img-fluid" src="img/Phawaian.jpg" alt="Phawaian">
+                <div class="card-body">
+                  <h4 class="card-title">Pizza Hawaiana</h4>
+                  <p class="card-text">Jamón, piña, queso mozzarella, salsa de tomate</p>
+                  <label for="cart-toggle" class="btn">Agregar <i class="fas fa-shopping-cart"></i></label>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-3"></div>
-          <!-- Esta columna vacía ocupa aproximadamente un cuarto de la página en dispositivos medianos y grandes -->
         </div>
       </div>
     </div>
   </div>
-  
+</div>
   <button type="btnadd" class="btnadd" onclick="window.location.href='addproduc.html';">
     <span class="btnadd__text">Añadir</span>
     <span class="btnadd__icon">
