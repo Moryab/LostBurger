@@ -52,28 +52,38 @@
       <div class="login__group">
         <div>
             <label for="text" class="login__label">Nombre</label>
-            <input type="text" placeholder="Escriba su nombre Aqui" id="nombre" class="login__input">
+            <input type="text" placeholder="Escriba su nombre Aqui" id="nombre" class="login__input"required>
         </div>
 
         <div>
           <label for="email" class="login__label">Correo</label>
-          <input type="email" placeholder="Escriba su Correo Aqui" id="email" class="login__input">
+          <input type="email" placeholder="Escriba su Correo Aqui" id="email" class="login__input"required>
         </div>
 
         <div>
           <label for="password" class="login__label">Contraseña</label>
-          <input type="password" placeholder="Escriba su Contraseña Aqui" id="password" class="login__input">
+          <input type="password" placeholder="Escriba su Contraseña Aqui" id="password" class="login__input"required>
         </div>
       </div>
     
       <div>
-        <button type="submit" class="login__button">Registrar</button>
+        <button type="submit" class="login__button" formaction="index.html">Registrar</button>
       </div>
     </form>
 
     <i class="ri-close-line login__close" id="login-close"></i>
   </div>
-
+  <!--==================== Confirmacion script ====================-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var form = document.querySelector(".login__form");
+      form.addEventListener("submit", function(e) {
+        e.preventDefault(); // Evitar que el formulario se envíe realmente
+        alert("Se registrado con exito!.");
+        window.location.href = 'index.html'; // Redirigir a la página index.html después de aceptar el alerta
+      });
+    });
+  </script>
   <!--==================== MAIN ====================-->
   <main class="main">
     <img src="img/fondo6.png" alt="Fondo" class="main__bg">

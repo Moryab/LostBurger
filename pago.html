@@ -43,44 +43,80 @@
         </ul>
   </nav>
 
-  <div class="container">
-    <h1>Proceso de Pago</h1>
-    <form action="procesar_pago.php" method="POST">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
-      <label for="tarjeta">Número de Tarjeta:</label>
-      <input type="text" id="tarjeta" name="tarjeta" maxlength="19" placeholder="0000 0000 0000 0000" required>
-      <label for="fecha">Fecha de Expiración:</label>
-      <input type="text" id="fecha" name="fecha" placeholder="MM/AA" required>
-      <label for="cvv">CVV:</label>
-      <input type="text" id="cvv" name="cvv" placeholder="124" required>
+  <div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form id="Metodo_pago">
 
-      <label for="metodo">Método de Pago:</label>
-      <select class="form-select" id="metodo" name="metodo">
-        <option value="visa">Visa</option>
-        <option value="mastercard">Mastercard</option>
-        <option value="paypal">PayPal</option>
-        <!-- Agrega más opciones de métodos de pago según sea necesario -->
-      </select>
-      
-      <div class="productos">
-        <h2>Productos Seleccionados:</h2>
+          <div class="row">
+            <div class="col-50">
+              <h3>Direccion de Envio</h3>
+              <label for="fname"><i class="fa fa-user"></i> Nombre Completo</label>
+              <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+              <label for="email"><i class="fa fa-envelope"></i> Correo</label>
+              <input type="text" id="email" name="email" placeholder="john@example.com"required>
+              <label for="adr"><i class="fa fa-address-card-o"></i> Direccion</label>
+              <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"required>
+              <label for="city"><i class="fa fa-institution"></i> Ciudad</label>
+              <input type="text" id="city" name="city" placeholder="Concepcion"required>
+            </div>
+
+            <div class="col-50">
+              <h3>Pago</h3>
+              <label for="fname">Tarjetas Aceptadas</label>
+              <div class="icon-container">
+                <i class="fab fa-cc-visa" style="color:navy;"></i>
+                <i class="fab fa-cc-paypal" style="color:blue;"></i>
+                <i class="fab fa-cc-mastercard" style="color:red;"></i>
+              </div>
+              <label for="cname">Nombre:</label>
+              <input type="text" id="cname" name="cardname" placeholder="John More Doe"required>
+              <label for="tarjeta">Número de Tarjeta:</label>
+              <input type="text" id="tarjeta" name="tarjeta" maxlength="19" placeholder="0000 0000 0000 0000" required>
+              <label for="metodo">Método de Pago:</label>
+              <select class="form-select" id="metodo" name="metodo"required>
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="paypal">PayPal</option>
+                <!-- Agrega más opciones de métodos de pago según sea necesario -->
+              </select>
+              <div class="row">
+                <div class="col-50">
+                  <label for="expyear">Fecha de Expiración:</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="07/12">
+                </div>
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="352">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Direccion de Envio igual que la facturacion
+          </label>
+          <button type="submit" class="btn">Pagar</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-25">
+      <div class="container">
+        <h4>Carrito <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>2</b></span></h4>
         <div class="item">
           <img src="img/hpavo.png" alt="Producto 1">
-          <p>Hamburguesa Pavo</p>
-          <p>$5.500</p>
+          <p>Hamburguesa Pavo<span class="price">$5.500</span></p>
         </div>
         <div class="item">
           <img src="img/hpavo.png" alt="Producto 2">
-          <p>Hamburguesa Pavo</p>
-          <p>$5.500</p>
+          <p>Hamburguesa Pavo<span class="price">$5.500</span></p>
         </div>
+        <hr>
+        <p>Total <span class="price" style="color:black"><b>$11.000</b></span></p>
       </div>
-      <p class="total">Total: $11.000</p>
-
-      <button type="submit" class="btn">Pagar</button>
-    </form>
+    </div>
   </div>
+  <!-- Script numero de tarjeta -->
   <script>
     document.getElementById('tarjeta').addEventListener('input', function (e) {
       var target = e.target;
@@ -88,7 +124,19 @@
       target.value = input.replace(/([0-9]{4})/g, '$1 ').trim();
     });
   </script>
-  
+  <!-- Script Mensaje de paga con existo -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var form = document.querySelector("#Metodo_pago"); // Corrige la selección del formulario
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Evitar que el formulario se envíe realmente
+        alert("Su pago se ha realizado con éxito.");
+        window.location.href = 'index.html'; // Redirigir a la página index.html después de aceptar la alerta
+      });
+    });
+  </script>
+
+
   <footer>
     <div class="logo-container">
       <img src="img/Logo.png" class="rounded-pill">
