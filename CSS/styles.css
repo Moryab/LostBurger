@@ -1,6 +1,12 @@
 p {
   color: rgb(14, 13, 13);
 }
+.precio {
+  font-size: 1.2em; /* Tamaño de fuente */
+  color: #4CAF50; /* Color del precio */
+  font-weight: bold; /* Negrita */
+}
+
 /* Color de botones de la barra de navegacion */
 .btn-light{
   color: white;
@@ -669,7 +675,7 @@ nav,
   outline: none;
   box-shadow: none;
 }
-
+/* Color de navbar-nav dentro del collapsibleNavBar(=)en modo celular*/
 @media (max-width: 768px) {
   .navbar-nav>li:hover {
     background-color: #0dcaf0;
