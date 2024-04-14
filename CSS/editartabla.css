@@ -84,7 +84,5 @@ button:hover {
     .form-header, .form-group, .form-actions {
         padding: 0 10px;
     }
-    button {
-        width: 100%; /* Botón más ancho para facilitar la interacción en móviles */
-    }
+
 }

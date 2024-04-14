@@ -139,6 +139,40 @@ section img:hover {
 .btn:hover {
   opacity: 0.6;
 }
+/* Estilo botones de pedidos en admin */
+.btn-info {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 8px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  border-radius: 10px; /* Ajusta el valor según el grado de redondez que desees*/
+}
+
+.btn-info:hover {
+  opacity: 0.6;
+}
+
+.btn-success {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 8px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  border-radius: 10px; /* Ajusta el valor según el grado de redondez que desees*/
+}
+
+.btn-success:hover {
+  opacity: 0.6;
+}
 
 .btn-editar {
   background-color: green;
