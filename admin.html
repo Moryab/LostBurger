@@ -147,51 +147,69 @@
       <table class="table mt-2 table-responsive">
         <thead class="table-dark">
           <tr>
-            <th>ID</th> <!-- Encabezado para la columna de ID -->
+            <th>ID</th>
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Email</th>
-            <th class="text-right">Acciones</th> <!-- Encabezado para la columna de acciones -->
+            <th class="text-right">Acciones</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1</td> <!-- ID del usuario -->
+            <td>1</td>
             <td>John</td>
             <td>Doe</td>
             <td>john@example.com</td>
-            <td class="text-right" colspan="4">
-              <!-- Utilizamos colspan para que la celda abarque el ancho de la tabla -->
-              <!-- Botones de editar y borrar -->
-              <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o"
-                  aria-hidden="true"></i></a>
-              <a href="#" role="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+            <td class="text-right">
+              <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+              <label for="modal-check-1" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></label>
+              <input type="checkbox" class="checkbox" id="modal-check-1">
+              <div class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="window.location='admin.html#usuarios';">&times;</span>
+                  <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+                  <button>Eliminar</button>
+                  <button onclick="document.getElementById('modal-check-1').checked=false;">Cancelar</button>
+                </div>
+              </div>
             </td>
           </tr>
           <tr>
-            <td>2</td> <!-- ID del usuario -->
+            <td>2</td>
             <td>Mary</td>
             <td>Moe</td>
             <td>mary@example.com</td>
-            <td class="text-right" colspan="4">
-              <!-- Utilizamos colspan para que la celda abarque el ancho de la tabla -->
-              <!-- Botones de editar y borrar -->
-              <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o"
-                  aria-hidden="true"></i></a>
-              <a href="#" role="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+            <td class="text-right">
+              <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+              <label for="modal-check-2" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></label>
+              <input type="checkbox" class="checkbox" id="modal-check-2">
+              <div class="modal">
+                <div class="modal-content">
+                  <span the close" onclick="window.location='admin.html#usuarios';">&times;</span>
+                  <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+                  <button>Eliminar</button>
+                  <button onclick="document.getElementById('modal-check-2').checked=false;">Cancelar</button>
+                </div>
+              </div>
             </td>
           </tr>
           <tr>
-            <td>3</td> <!-- ID del usuario -->
+            <td>3</td>
             <td>July</td>
             <td>Dooley</td>
             <td>july@example.com</td>
-            <td class="text-right" colspan="4">
-              <!-- Utilizamos colspan para que la celda abarque el ancho de la tabla -->
-              <!-- Botones de editar y borrar -->
-              <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o"
-                  aria-hidden="true"></i></a>
-              <a href="#" role="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+            <td class="text-right">
+              <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+              <label for="modal-check-3" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></label>
+              <input type="checkbox" class="checkbox" id="modal-check-3">
+              <div class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="window.location='admin.html#usuarios';">&times;</span>
+                  <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+                  <button>Eliminar</button>
+                  <button onclick="document.getElementById('modal-check-3').checked=false;">Cancelar</button>
+                </div>
+              </div>
             </td>
           </tr>
         </tbody>
@@ -211,6 +229,8 @@
     </script>
   </div>
 
+
+  <!--LISTA DE PRODUCTOS-->
   <div id="lista" class="content-section">
     <div class="container"><!--main container-->
       <div class="mt-3">
@@ -220,51 +240,77 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>Producto</th>
-              <th>Imagen</th>
-              <th>Descripción</th>
-              <th>Valor</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Hamburgesa de Pavo</td>
+              <td>Hamburguesa de Pavo</td>
               <td><img src="img/hpavo.png" alt="" height="50"></td>
               <td>carne de pavo-lechuga-tomate-salsa de yogur griego</td>
               <td>$5000</td>
               <td>
-                <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o"
-                    aria-hidden="true"></i></a>
-                <a href="#" role="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                
+                <!-- Botón de eliminar que activa el checkbox -->
+                <label class="btn btn-danger" for="delete-confirm-hpavo"><i class="fa fa-trash" aria-hidden="true"></i></label>
+                <input type="checkbox" id="delete-confirm-hpavo" class="checkbox">
+                
+                <!-- Modal para confirmar eliminación -->
+                <div class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="document.getElementById('delete-confirm-hpavo').checked = false;">&times;</span>
+                    <p>¿Estás seguro de que deseas eliminar este producto?</p>
+                    <button onclick="deleteProduct('hpavo')">Eliminar</button>
+                    <button onclick="document.getElementById('delete-confirm-hpavo').checked = false;">Cancelar</button>
+                  </div>
+                </div>
               </td>
-
             </tr>
-
+            
             <tr>
               <td>Hamburguesa BBQ</td>
               <td><img src="img/hbbq.png" alt="" height="50"></td>
               <td>carne de res-BBQ-aros de cebolla-tocino-queso cheddar</td>
               <td>$5000</td>
               <td>
-                <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o"
-                    aria-hidden="true"></i></a>
-                <a href="#" role="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                
+                <!-- Botón de eliminar que activa el checkbox -->
+                <label class="btn btn-danger" for="delete-confirm-hbbq"><i class="fa fa-trash" aria-hidden="true"></i></label>
+                <input type="checkbox" id="delete-confirm-hbbq" class="checkbox">
+                
+                <!-- Modal para confirmar eliminación -->
+                <div class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="document.getElementById('delete-confirm-hbbq').checked = false;">&times;</span>
+                    <p>¿Estás seguro de que deseas eliminar este producto?</p>
+                    <button onclick="deleteProduct('hbbq')">Eliminar</button>
+                    <button onclick="document.getElementById('delete-confirm-hbbq').checked = false;">Cancelar</button>
+                  </div>
+                </div>
               </td>
-
             </tr>
+            
             <tr>
               <td>Hamburguesa Vegana</td>
               <td><img src="img/hvegana.png" alt="" height="50"></td>
-              <td>hamburguesa vegana(mezcla de garbanzos, remolacha y avena)-pan integral-lechuga-tomate-pepinillos</td>
+              <td>hamburguesa vegana (mezcla de garbanzos, remolacha y avena)-pan integral-lechuga-tomate-pepinillos</td>
               <td>$5000</td>
               <td>
-                <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o"
-                    aria-hidden="true"></i></a>
-                <a href="#" role="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                <a href="#" role="button" class="btn btn-warning text-light"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                
+                <!-- Botón de eliminar que activa el checkbox -->
+                <label class="btn btn-danger" for="delete-confirm-hvegana"><i class="fa fa-trash" aria-hidden="true"></i></label>
+                <input type="checkbox" id="delete-confirm-hvegana" class="checkbox">
+                
+                <!-- Modal para confirmar eliminación -->
+                <div class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="document.getElementById('delete-confirm-hvegana').checked = false;">&times;</span>
+                    <p>¿Estás seguro de que deseas eliminar este producto?</p>
+                    <button onclick="deleteProduct('hvegana')">Eliminar</button>
+                    <button onclick="document.getElementById('delete-confirm-hvegana').checked = false;">Cancelar</button>
+                  </div>
+                </div>
               </td>
-
             </tr>
+            
           </tbody>
         </table>
 
@@ -276,11 +322,15 @@
           <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
         </ul>
       </div>
-
-
-
     </div><!--main container ends-->
-
+    <script>
+      function borrarProducto(idProducto) {
+        // Lógica para borrar producto
+        console.log("Borrar producto con ID:", idProducto);
+        // Aquí puedes agregar código para hacer una petición al servidor o manejar la lógica de eliminación
+      }
+    </script>
+    
   </div>
 
 
