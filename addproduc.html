@@ -12,8 +12,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="icon" type="image/png" href="img/admin.png">
 </head>
+
 <body>
-    <!-- MENU START -->
+  <!-- MENU START -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <!-- NAV CONTAINER START -->
     <div class="container-fluid">
@@ -59,11 +60,11 @@
     </div>
   </nav>
 
-  <!-- Contenido de Panel -->
+  <!-- Formulario añadir -->
   <div class="card">
     <div class="back-to-previous">
       <a href="admin.html#panel" class="login__back"><i class="fas fa-arrow-left"></i></a>
-  </div>
+    </div>
     <span class="title">Añadir Producto</span>
     <form class="form">
       <div class="group">
@@ -78,13 +79,27 @@
         <textarea placeholder="‎" id="comment" name="comment" rows="5" required=""></textarea>
         <label for="comment">Descripción</label>
       </div>
+      <!--Seleccionar menu con categorías -->
+      <div class="container-fluid mt-3">
+        <form action="/action_page.php">
+          <label for="sel1" class="form-label">Seleccion Categoria:</label>
+          <select class="form-select" id="sel1" name="sellist1">
+            <option>Completo</option>
+            <option>Hamburgesa</option>
+            <option>Pizza</option>
+            <option>Papas Fritas</option>
+            <option>Bebida</option>
+          </select>
+          <br>
+      </div>
+      <!-- Fin del segundo botón desplegable -->
       <form class="file-upload-form">
         <label for="file" class="file-upload-label">
           <div class="file-upload-design">
             <svg viewBox="0 0 640 512" height="1em">
               <path
-                d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"
-              ></path>
+                d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z">
+              </path>
             </svg>
           </div>
           <input id="file" type="file" />
@@ -93,8 +108,10 @@
       <a href="completos.html" class="btn">Aceptar</a>
     </form>
   </div>
-  
 
-  
+
+
+
 </body>
+
 </html>
