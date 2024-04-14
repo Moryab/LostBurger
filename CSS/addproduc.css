@@ -56,7 +56,6 @@
   }
   
   .form .group input:focus+label, .form .group textarea:focus+label {
-    top: -10px;
     left: 10px;
     background-color: #fff;
     color: #3366cc;
@@ -87,6 +86,7 @@
     height: 50px;
     fill: rgb(82, 82, 82);
     margin-bottom: 20px;
+    
   }
   .file-upload-label {
     cursor: pointer;
@@ -95,6 +95,7 @@
     border-radius: 40px;
     border: 2px dashed rgb(82, 82, 82);
     box-shadow: 0px 0px 200px -50px rgba(0, 0, 0, 0.719);
+    
   }
   .file-upload-design {
     display: flex;
@@ -102,6 +103,31 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
+    
   }
+
+/* Estilos para el segundo botón desplegable */
+@media only screen and (max-width: 600px) {
+  .form-select {
+    width: 60%;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}
+.form-label {
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-select {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+
+
+
+
 
   
