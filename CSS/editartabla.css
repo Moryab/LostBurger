@@ -2,29 +2,29 @@
     background: white;
     padding: 20px;
     margin: auto;
-    width: 50%; /* Ajusta esto según sea necesario */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%; /* Ajusta para usar todo el ancho en pantallas pequeñas */
+    max-width: 600px; /* Máximo ancho en pantallas grandes */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-header {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Alinea horizontalmente al inicio */
+    justify-content: flex-start;
     margin-bottom: 20px;
 }
 
 .back-arrow {
-    margin-right: 20px; /* Ajusta el espacio entre la flecha y el título */
+    margin-right: 20px;
     text-decoration: none;
-    font-size: 24px; /* Ajusta según sea necesario */
+    font-size: 24px;
     color: #000000;
     display: flex;
     align-items: center;
 }
 
-
 h2 {
-    margin: 0; /* Elimina márgenes predeterminados para ajustar mejor */
+    margin: 0;
 }
 
 .form-group {
@@ -37,26 +37,54 @@ label {
 }
 
 input[type="text"],
-input[type="email"] {
-    width: calc(100% - 22px);
+input[type="number"],
+textarea,
+select {
+    width: 100%; /* Asegura que ocupe todo el espacio disponible */
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     font-size: 16px;
 }
+
 .form-actions {
     margin-top: 20px;
+    text-align: right; /* Alineación a la derecha para pantallas grandes */
 }
 
 button {
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #00bfff; /* Color celeste */
+    background-color: #00bfff;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 20px; /* Bordes redondeados */
-    width: 50%; /* Ancho relativo al contenedor */
+    border-radius: 20px;
+    width: auto; /* Ajuste automático del ancho */
 }
 
 button:hover {
-    background-color: #0094cc; /* Oscurece el color al pasar el mouse */
+    background-color: #0094cc;
+}
+
+@media (max-width: 768px) { /* Ajustar para tabletas */
+    .edit-form-container {
+        padding: 15px;
+    }
+    .form-actions {
+        text-align: center; /* Centra los botones en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) { /* Ajustar para teléfonos móviles */
+    .edit-form-container {
+        width: 90%; /* Uso más eficiente del espacio disponible */
+        margin: 10px auto;
+    }
+    .form-header, .form-group, .form-actions {
+        padding: 0 10px;
+    }
+    button {
+        width: 100%; /* Botón más ancho para facilitar la interacción en móviles */
+    }
 }
