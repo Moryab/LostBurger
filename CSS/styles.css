@@ -1010,7 +1010,7 @@ nav,
   background-color: #272626;
   color: #fff;
   border: none;
-  border-radius: 0%;
+  border-radius: 100%;
   padding: 10px;
   cursor: pointer;
   font-size: 14px;
@@ -1018,7 +1018,7 @@ nav,
 }
 
 .cart-toggle:hover {
-  background-color: #49331d;
+  background-color: #05860d;
   /* Cambia el color al pasar el ratón */
 }
 
