@@ -914,6 +914,16 @@ nav,
 }
 
 /*Estilo de boton Registrar Usuario*/
+.header-section {
+  display: flex;
+  justify-content: space-between; /* Alinea el título a la izquierda y el botón a la derecha */
+  align-items: center;
+  padding: 0 15px;
+}
+.header-section h1 {
+  margin-bottom: 10px; /* Espacio entre el título y el botón en móviles */
+}
+
 .cssbuttons-io-button {
   background: #607fd4;
   color: white;
@@ -1099,19 +1109,5 @@ nav,
 }
 
 
-/*pedidos*/
-#pedidosContainer .list-group-item {
-  background-color: #fff; /* Fondo claro para los ítems de la lista */
-  margin-bottom: 10px; /* Espaciado entre ítems */
-  border-radius: 5px; /* Bordes redondeados */
-}
-
-#pedidosContainer h5 {
-  color: #333; /* Color oscuro para mejor lectura */
-}
-
-#pedidosContainer small {
-  display: block; /* Hace que cada small vaya en su propia línea para claridad */
-}
 
 

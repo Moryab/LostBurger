@@ -103,51 +103,53 @@
         </div>
       </div>
     </div>
-      <!--GRAFICOO-->
-      <h2 class="title_grafico">Preferencias de clientes</h2>
-      <section class="dashboard">
-        <div class="content-grafico">
-          <div class="grafico"></div>
-          <div class="container_leyenda">
-            <span class="leyenda_all">
-              <span class="color_hamburguesas"></span>
-              <p class="social">40% Hamburguesas</p>
-            </span>
-            <span class="leyenda_all">
-              <span class="color_pizza"></span>
-              <p class="social">30% Pizzas</p>
-            </span>
-            <span class="leyenda_all">
-              <span class="color_completo"></span>
-              <p class="social">18% Completos</p>
-            </span>
-            <span class="leyenda_all">
-              <span class="color_papas"></span>
-              <p class="social">12% Papas fritas</p>
-            </span>
-            <span class="leyenda_all">
-              <span class="color_bebidas"></span>
-              <p class="social">0% Bebidas</p>
-            </span>
-            <p class="total">Total: 1.000.000.000</p>
-          </div>
+    <!--GRAFICOO-->
+    <h2 class="title_grafico">Preferencias de clientes</h2>
+    <section class="dashboard">
+      <div class="content-grafico">
+        <div class="grafico"></div>
+        <div class="container_leyenda">
+          <span class="leyenda_all">
+            <span class="color_hamburguesas"></span>
+            <p class="social">40% Hamburguesas</p>
+          </span>
+          <span class="leyenda_all">
+            <span class="color_pizza"></span>
+            <p class="social">30% Pizzas</p>
+          </span>
+          <span class="leyenda_all">
+            <span class="color_completo"></span>
+            <p class="social">18% Completos</p>
+          </span>
+          <span class="leyenda_all">
+            <span class="color_papas"></span>
+            <p class="social">12% Papas fritas</p>
+          </span>
+          <span class="leyenda_all">
+            <span class="color_bebidas"></span>
+            <p class="social">0% Bebidas</p>
+          </span>
+          <p class="total">Total: 1.000.000.000</p>
         </div>
-      </section>
-    </div>
-    <!--Pedidos-->
-    <div id="pedidos" class="content-section">
-      <div class="container mt-5">
-        <h1>Gestión de Pedidos</h1>
-        <input class="form-control mb-4" id="tableSearch" type="text" placeholder="Buscar pedidos...">
-        <table class="table table-striped">
-          <thead>
+      </div>
+    </section>
+  </div>
+  <!--Pedidos-->
+  <div id="pedidos" class="content-section">
+    <div class="container mt-5">
+      <h1>Gestión de Pedidos</h1>
+      <input class="form-control mb-4" id="tableSearch" type="text" placeholder="Buscar pedidos...">
+      <div class="table-responsive">
+        <table class="table mt-2">
+          <thead class="table-dark">
             <tr>
               <th>ID Pedido</th>
               <th>Cliente</th>
               <th>Fecha</th>
+              <th>Dirección</th>
               <th>Total</th>
               <th>Estado</th>
-              <th>Acciones</th>
+              <th class="text-right">Acciones</th>
             </tr>
           </thead>
           <tbody id="pedidosTable">
@@ -156,59 +158,86 @@
               <td>#1234</td>
               <td>Juan Pérez</td>
               <td>2024-04-10</td>
+              <td>Calle Falsa 123</td>
               <td>$15.500</td>
               <td>Entregado</td>
-              <td>
-                <button class="btn btn-info btn-sm">Ver</button>
-                <button class="btn btn-success btn-sm">Actualizar</button>
+              <td class="text-right">
+                <button class="btn btn-info btn-sm" data-id="1234">Ver</button>
+                <button class="btn btn-success btn-sm" data-id="1234">Actualizar</button>
               </td>
             </tr>
             <tr>
               <td>#1235</td>
               <td>Maria López</td>
               <td>2024-04-12</td>
+              <td>Avenida Siempreviva 456</td>
               <td>$8.300</td>
               <td>En Proceso</td>
-              <td>
-                <button class="btn btn-info btn-sm">Ver</button>
-                <button class="btn btn-success btn-sm">Actualizar</button>
+              <td class="text-right">
+                <button class="btn btn-info btn-sm" data-id="1235">Ver</button>
+                <button class="btn btn-success btn-sm" data-id="1234">Actualizar</button>
               </td>
             </tr>
             <tr>
               <td>#1236</td>
               <td>Carlos Gómez</td>
               <td>2024-04-14</td>
+              <td>Rincón Quieto 789</td>
               <td>$12.000</td>
               <td>Pendiente</td>
-              <td>
-                <button class="btn btn-info btn-sm">Ver</button>
-                <button class="btn btn-success btn-sm">Actualizar</button>
+              <td class="text-right">
+                <button class="btn btn-info btn-sm" data-id="1236">Ver</button>
+                <button class="btn btn-success btn-sm" data-id="1234">Actualizar</button>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
+  </div>
 
-    <!--Listado y boton usuarios-->
-    <div id="usuarios" class="content-section table-responsive">
-      <div class="container mt-5">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <h1>Lista de usuarios</h1>
+  <!--Boton ver-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const viewButtons = document.querySelectorAll('button.btn-info');
+      const updateButtons = document.querySelectorAll('button.btn-success');
 
-          <button class="cssbuttons-io-button" onclick="window.location.href='usuarios.html';">
-            Registrar un usuario
-            <div class="icon">
-              <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                  fill="currentColor"></path>
-              </svg>
-            </div>
-          </button>
-        </div>
-        <!-- TABLA DE USUARIOOOOOOOOOOOOOOS -->
-        <table class="table mt-2 table-responsive">
+      viewButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const orderId = this.getAttribute('data-id');
+          window.location.href = `ver.html?pedido=${orderId}`;
+        });
+      });
+
+      updateButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const orderId = this.getAttribute('data-id');
+          window.location.href = `actualizar.html?pedido=${orderId}`;
+        });
+      });
+    });
+  </script>
+
+
+
+  <!--Listado y boton usuarios-->
+  <div id="usuarios" class="content-section">
+    <div class="container mt-5">
+      <div class="header-section"> <!-- Clase agregada para manejar el título y el botón -->
+        <h1>Lista de usuarios</h1>
+        <button class="cssbuttons-io-button" onclick="window.location.href='usuarios.html';">
+          Registrar un usuario
+          <div class="icon">
+            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                fill="currentColor"></path>
+            </svg>
+          </div>
+        </button>
+      </div>
+      <div class="table-responsive mt-2"> <!-- Solo la tabla es responsive -->
+        <table class="table">
           <thead class="table-dark">
             <tr>
               <th>ID</th>
@@ -303,117 +332,116 @@
         }
       </script>
     </div>
+  </div>
 
 
-    <!--LISTA DE PRODUCTOS-->
-    <div id="lista" class="content-section">
-      <div class="container mt-5"><!--main container-->
-        <h1>Listado de Productos</h1>
-        <div class="mt-2 table-responsive">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Imagen</th>
-                <th>Descripción</th>
-                <th>Precio</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Hamburguesa de Pavo</td>
-                <td><img src="img/hpavo.png" alt="Hamburguesa de Pavo" height="50"></td>
-                <td>carne de pavo, lechuga, tomate, salsa de yogur griego</td>
-                <td>$5000</td>
-                <td>
-                  <a href="editarprod.html?productoID=1" role="button" class="btn btn-warning text-light"><i
-                      class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                  <label class="btn btn-danger" for="delete-confirm-hpavo"><i class="fa fa-trash"
-                      aria-hidden="true"></i></label>
-                  <input type="checkbox" id="delete-confirm-hpavo" class="checkbox">
-                  <div class="modal">
-                    <div class="modal-content">
-                      <span class="close"
-                        onclick="document.getElementById('delete-confirm-hpavo').checked = false;">&times;</span>
-                      <p>¿Estás seguro de que deseas eliminar este producto?</p>
-                      <button onclick="deleteProduct('hpavo')">Eliminar</button>
-                      <button
-                        onclick="document.getElementById('delete-confirm-hpavo').checked = false;">Cancelar</button>
-                    </div>
+  <!--LISTA DE PRODUCTOS-->
+  <div id="lista" class="content-section">
+    <div class="container mt-5"><!--main container-->
+      <h1>Listado de Productos</h1>
+      <div class="mt-2 table-responsive">
+        <table class="table table-hover">
+          <thead class="table-dark">
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Imagen</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Hamburguesa de Pavo</td>
+              <td><img src="img/hpavo.png" alt="Hamburguesa de Pavo" height="50"></td>
+              <td>carne de pavo, lechuga, tomate, salsa de yogur griego</td>
+              <td>$5000</td>
+              <td>
+                <a href="editarprod.html?productoID=1" role="button" class="btn btn-warning text-light"><i
+                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                <label class="btn btn-danger" for="delete-confirm-hpavo"><i class="fa fa-trash"
+                    aria-hidden="true"></i></label>
+                <input type="checkbox" id="delete-confirm-hpavo" class="checkbox">
+                <div class="modal">
+                  <div class="modal-content">
+                    <span class="close"
+                      onclick="document.getElementById('delete-confirm-hpavo').checked = false;">&times;</span>
+                    <p>¿Estás seguro de que deseas eliminar este producto?</p>
+                    <button onclick="deleteProduct('hpavo')">Eliminar</button>
+                    <button onclick="document.getElementById('delete-confirm-hpavo').checked = false;">Cancelar</button>
                   </div>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Hamburguesa BBQ</td>
-                <td><img src="img/hbbq.png" alt="Hamburguesa BBQ" height="50"></td>
-                <td>carne de res, BBQ, aros de cebolla, tocino, queso cheddar</td>
-                <td>$5000</td>
-                <td>
-                  <a href="editarprod.html?productoID=2" role="button" class="btn btn-warning text-light"><i
-                      class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                  <label class="btn btn-danger" for="delete-confirm-hbbq"><i class="fa fa-trash"
-                      aria-hidden="true"></i></label>
-                  <input type="checkbox" id="delete-confirm-hbbq" class="checkbox">
-                  <div class="modal">
-                    <div class="modal-content">
-                      <span the="close"
-                        onclick="document.getElementById('delete-confirm-hbbq').checked = false;">&times;</span>
-                      <p>¿Estás seguro de que deseas eliminar este producto?</p>
-                      <button onclick="deleteProduct('hbbq')">Eliminar</button>
-                      <button
-                        onclick="document.getElementById('delete-confirm-hbbq').checked = false;">Cancelar</button>
-                    </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Hamburguesa BBQ</td>
+              <td><img src="img/hbbq.png" alt="Hamburguesa BBQ" height="50"></td>
+              <td>carne de res, BBQ, aros de cebolla, tocino, queso cheddar</td>
+              <td>$5000</td>
+              <td>
+                <a href="editarprod.html?productoID=2" role="button" class="btn btn-warning text-light"><i
+                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                <label class="btn btn-danger" for="delete-confirm-hbbq"><i class="fa fa-trash"
+                    aria-hidden="true"></i></label>
+                <input type="checkbox" id="delete-confirm-hbbq" class="checkbox">
+                <div class="modal">
+                  <div class="modal-content">
+                    <span the="close"
+                      onclick="document.getElementById('delete-confirm-hbbq').checked = false;">&times;</span>
+                    <p>¿Estás seguro de que deseas eliminar este producto?</p>
+                    <button onclick="deleteProduct('hbbq')">Eliminar</button>
+                    <button onclick="document.getElementById('delete-confirm-hbbq').checked = false;">Cancelar</button>
                   </div>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Hamburguesa Vegana</td>
-                <td><img src="img/hvegana.png" alt="Hamburguesa Vegana" height="50"></td>
-                <td>hamburguesa vegana (mezcla de garbanzos, remolacha y avena), pan integral, lechuga, tomate,
-                  pepinillos
-                </td>
-                <td>$5000</td>
-                <td>
-                  <a href="editarprod.html?productoID=3" role="button" class="btn btn-warning text-light"><i
-                      class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                  <label class="btn btn-danger" for="delete-confirm-hvegana"><i class="fa fa-trash"
-                      aria-hidden="true"></i></label>
-                  <input type="checkbox" id="delete-confirm-hvegana" class="checkbox">
-                  <div class="modal">
-                    <div the="modal-content">
-                      <span class="close"
-                        onclick="document.getElementById('delete-confirm-hvegana').checked = false;">&times;</span>
-                      <p>¿Estás seguro de que deseas eliminar este producto?</p>
-                      <button onclick="deleteProduct('hvegana')">Eliminar</button>
-                      <button
-                        onclick="document.getElementById('delete-confirm-hvegana').checked = false;">Cancelar</button>
-                    </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Hamburguesa Vegana</td>
+              <td><img src="img/hvegana.png" alt="Hamburguesa Vegana" height="50"></td>
+              <td>hamburguesa vegana (mezcla de garbanzos, remolacha y avena), pan integral, lechuga, tomate,
+                pepinillos
+              </td>
+              <td>$5000</td>
+              <td>
+                <a href="editarprod.html?productoID=3" role="button" class="btn btn-warning text-light"><i
+                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                <label class="btn btn-danger" for="delete-confirm-hvegana"><i class="fa fa-trash"
+                    aria-hidden="true"></i></label>
+                <input type="checkbox" id="delete-confirm-hvegana" class="checkbox">
+                <div class="modal">
+                  <div the="modal-content">
+                    <span class="close"
+                      onclick="document.getElementById('delete-confirm-hvegana').checked = false;">&times;</span>
+                    <p>¿Estás seguro de que deseas eliminar este producto?</p>
+                    <button onclick="deleteProduct('hvegana')">Eliminar</button>
+                    <button
+                      onclick="document.getElementById('delete-confirm-hvegana').checked = false;">Cancelar</button>
                   </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <ul class="pagination text-center">
-            <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item active"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
-          </ul>
-        </div>
-      </div><!--main container ends-->
-    </div>
-    <script>
-      function deleteProduct(productId) {
-        console.log("Deleting product with ID:", productId);
-        // Add server request logic or other deletion logic here
-      }
-    </script>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="pagination text-center">
+          <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+        </ul>
+      </div>
+    </div><!--main container ends-->
+  </div>
+  <script>
+    function deleteProduct(productId) {
+      console.log("Deleting product with ID:", productId);
+      // Add server request logic or other deletion logic here
+    }
+  </script>
 
 
 </body>
