@@ -30,6 +30,11 @@ p {
 .card-img-top:hover {
   transform: scale(1.05); /* Hace que la imagen se agrande ligeramente al pasar el mouse sobre ella */
 }
+.card-body {
+  font-size: 1em; /* Tamaño de fuente relativo */
+}
+
+
 /* Tamaño Logo en Footer*/
 .logo-container {
   width: 100px;
