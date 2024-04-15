@@ -3,7 +3,7 @@ p {
 }
 .precio {
   font-size: 1.2em; /* Tamaño de fuente */
-  color: #4CAF50; /* Color del precio */
+  color: #000; /* Color del precio */
   font-weight: bold; /* Negrita */
 }
 
