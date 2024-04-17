@@ -1,7 +1,12 @@
 p {
   color: rgb(14, 13, 13);
 }
-.precio {
+.precio-card {
+  font-size: 1.2em; /* Tamaño de fuente */
+  color: #000; /* Color del precio */
+  font-weight: bold; /* Negrita */
+}
+.precio-carrito {
   font-size: 1.2em; /* Tamaño de fuente */
   color: #000; /* Color del precio */
   font-weight: bold; /* Negrita */
@@ -33,6 +38,19 @@ p {
 .card-body {
   font-size: 1em; /* Tamaño de fuente relativo */
 }
+.card {
+  position: relative;
+}
+/* Posicion del boton agregar dentro de la card */
+.card .btn {
+  position: absolute;
+  bottom: -1px; /* Ajusta esta propiedad según sea necesario */
+  left: 50%; /* Coloca el botón en el centro horizontalmente */
+  transform: translateX(-50%); /* Ajusta la posición horizontal */
+  padding: 6px 16px; /* Ajusta el padding del botón */
+}
+
+
 
 
 /* Tamaño Logo en Footer*/
