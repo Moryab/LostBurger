@@ -25,9 +25,15 @@ p {
   width:40px; 
   height:40px;
 }
-/* Ajuste Sobre Las Card-Img-top*/
+/* Ajuste de altura y ancho las Imagenes en las tarjetas */
+.tab-content .card-img-top {
+  width: 100%; /* Establecer el ancho al 100% para que ocupe todo el ancho de su contenedor */
+  height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción */
+  max-height: 200px; /* Establecer una altura máxima */
+  height: 200px;
+}
+/* Ajuste de animaciones de las imagenes de las tarjetas */
 .card-img-top{
-  max-height: 200px;
   border: 1px solid #ccc; /* Borde delgado */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombreado suave */
   transition: transform 0.3s ease;
@@ -678,12 +684,6 @@ footer i.far.fa-envelope {
 .logo-container {
   margin: 0 auto; /* Centra el contenedor del logo horizontalmente */
 }
-.tab-content .card-img-top {
-  width: 100%; /* Establecer el ancho al 100% para que ocupe todo el ancho de su contenedor */
-  height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción */
-  max-height: 200px; /* Establecer una altura máxima */
-}
-
 /* Estilo Admin */
 nav,
 .offcanvas {
