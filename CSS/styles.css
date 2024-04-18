@@ -298,8 +298,8 @@ section img:hover {
   cursor: pointer;
   display: flex;
   align-items: center;
-  border: 1px solid #34974d;
-  background-color: #3aa856;
+  border: 1px solid #00bfff;
+  background-color: #00bfff;
 }
 
 
@@ -318,7 +318,7 @@ section img:hover {
   transform: translateX(109px);
   height: 100%;
   width: 39px;
-  background-color: #34974d;
+  background-color: #00bfff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -330,7 +330,7 @@ section img:hover {
 }
 
 .btnadd:hover {
-  background: #34974d;
+  background: #00bfff;
 }
 
 .btnadd:hover .btnadd__text {
