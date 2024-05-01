@@ -66,8 +66,7 @@
         <a href="completos.html" class="back-arrow"><i class="fas fa-arrow-left"></i></a>
         <h2>Añadir Producto</h2>
     </div>
-    <form action="submit_edited_product.php" method="post" enctype="multipart/form-data" class="was-validated">
-        <input type="hidden" id="productId" name="productId" value="001">
+    <form action="submit_add_product.php" method="post" class="was-validated">
         
         <div class="form-group">
             <label for="nombre">Nombre:</label>
@@ -101,7 +100,8 @@
 
         <div class="form-group">
             <label for="imagen">Imagen del Producto:</label>
-            <input type="file" id="imagen" name="imagen">
+            <input type="file" id="imagen" name="imagen" required>
+            <div class="invalid-feedback">Seleccione una imagen antes de enviar.</div>
         </div>
 
         <div class="form-actions">
@@ -109,6 +109,7 @@
         </div>
     </form>
 </div>
+  <script src="js/scripts.js"></script>
 
 
 

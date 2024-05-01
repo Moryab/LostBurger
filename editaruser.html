@@ -71,19 +71,22 @@
             <a href="admin.html#usuarios" class="back-arrow"><i class="fas fa-arrow-left"></i></a>
             <h2>Editar Usuario</h2>
         </div>
-        <form action="submit_edited_user.php" method="post">
+        <form action="submit_edited_user.php" method="post" class="was-validated">
             <input type="hidden" id="userId" name="userId" value="">
             <div class="form-group">
                 <label for="nombre"class="form-label">Nombre:</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" required>
+                <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
             </div>
             <div class="form-group">
                 <label for="apellido"class="form-label">Apellido:</label>
                 <input type="text" class="form-control" id="apellido" name="apellido" required>
+                <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
             </div>
             <div class="form-group">
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" class="form-control" id="email" name="email" required>
+                <div class="invalid-feedback">Rellene el campo debe tener @ antes de enviar.</div>
             </div>
             
             <div class="form-actions">

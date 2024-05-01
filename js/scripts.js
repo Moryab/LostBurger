@@ -18,4 +18,21 @@ function formatTarjeta() {
       });
     });
   }
+
+// validacion tipo texto
+function validar()
+{
+    let texto=document.getElementById("idnombre").value;
+    if(texto=="")
+    {
+        document.getElementById("mensaje").className="text-danger"
+        document.getElementById("mensaje").innerHTML="Debe ingresar el nombre ❌";
+    }
+    else
+    {
+        document.getElementById("mensaje").className="text-success"
+        document.getElementById("mensaje").innerHTML="Nombre correcto👌 ";
+    }
+
+}
   
