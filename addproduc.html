@@ -66,22 +66,25 @@
         <a href="completos.html" class="back-arrow"><i class="fas fa-arrow-left"></i></a>
         <h2>Añadir Producto</h2>
     </div>
-    <form action="submit_edited_product.php" method="post" enctype="multipart/form-data">
+    <form action="submit_edited_product.php" method="post" enctype="multipart/form-data" class="was-validated">
         <input type="hidden" id="productId" name="productId" value="001">
         
         <div class="form-group">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" value="Completo" required>
+            <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
         </div>
 
         <div class="form-group">
             <label for="descripcion">Descripción:</label>
             <textarea id="descripcion" name="descripcion" required>Descripción del producto añadido.</textarea>
+            <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
         </div>
 
         <div class="form-group">
           <label for="precio">Precio:</label>
           <input type="text" id="precio" name="precio" value="$2.000" required>
+          <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
         </div>
         
 
