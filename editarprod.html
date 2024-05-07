@@ -76,20 +76,20 @@
             
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" value="Hamburguesa Clásica" required>
+                <input type="text" id="nombre" name="nombre" value="Hamburguesa Clásica" required oninput="validarNombre()">
                 <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
             </div>
     
             <div class="form-group">
                 <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" required>Una deliciosa hamburguesa con carne, queso y salsa especial</textarea>
+                <textarea id="descripcion" name="descripcion" required oninput="validarDescripcion()">Una deliciosa hamburguesa con carne, queso y salsa especial</textarea>
                 <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
             </div>
     
             <div class="form-group">
                 <label for="precio">Precio:</label>
-                <input type="text" id="precio" name="precio" value="$2.000" required>
-                <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
+                <input type="text" id="precio" name="precio" value="$2.000" required oninput="validarPrecio()">
+                <div class="invalid-feedback">Rellene el solo con $ y numeros.</div>
               </div>
             
     
@@ -106,7 +106,7 @@
     
             <div class="form-group">
                 <label for="imagen">Imagen del Producto:</label>
-                <input type="file" id="imagen" name="imagen" required>
+                <input type="file" id="imagen" name="imagen" accept="image/*" required onchange="validarImagen()">
                 <div class="invalid-feedback">Seleccione una imagen antes de enviar.</div>
             </div>
     

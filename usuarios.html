@@ -78,49 +78,50 @@
 
   <!--==================== LOGIN ====================-->
   <div class="login" id="login">
-    <form action="" class="login__form">
+    <form action="" method="get" class="login__form" class="was-validated">
       <div class="back-to-previous">
         <a href="admin.html#usuarios" class="login__back"><i class="fas fa-arrow-left"></i></a>
       </div>
-    <form action="" class="login__form">
-      <h2 class="login__title">Ingrese datos del usuario</h2>
-
-      <div class="login__group">
-        <div>
+        <h2 class="login__title">Ingrese datos del usuario</h2>
+  
+        <div class="login__group">
+          <div>
             <label for="text" class="login__label">Nombre</label>
-            <input type="text" placeholder="Escriba su nombre Aqui" id="nombre" class="login__input"required>
+            <input type="text" placeholder="Escriba su nombre Aqui" id="nombre" class="login__input" required oninput="validarNombre()">
+          </div>
+  
+          <div>
+            <label for="email" class="login__label">Correo</label>
+            <input type="email" placeholder="Escriba su Correo Aqui" id="email" class="login__input" required oninput="validarEmail()">
+          </div>
+  
+          <div>
+            <label for="password" class="login__label">Contraseña</label>
+            <div class="password-input-container">
+                <input type="password" placeholder="Escriba su Contraseña Aquí" id="password" class="login__input" minlength="8" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility()">
+                    <i id="togglePasswordIcon" class="far fa-eye-slash"></i>
+                </span>
+            </div>
         </div>
-
+        
+        
+        
+  
+        </div>
+  
         <div>
-          <label for="email" class="login__label">Correo</label>
-          <input type="email" placeholder="Escriba su Correo Aqui" id="email" class="login__input"required>
+          <button type="submit" class="login__button" id="registrarbtn" onclick="registrarUsuario()"
+            formaction="admin.html#usuarios">Registrar</button>
         </div>
-
-        <div>
-          <label for="password" class="login__label">Contraseña</label>
-          <input type="password" placeholder="Escriba su Contraseña Aqui" id="password" class="login__input"required>
-        </div>
-      </div>
-    
-      <div>
-        <button type="submit" class="login__button" formaction="admin.html#usuarios">Registrar</button>
-      </div>
+  
+      <i class="ri-close-line login__close" id="login-close"></i>
     </form>
-
-    <i class="ri-close-line login__close" id="login-close"></i>
+  
   </div>
 
-  <!--==================== Confirmacion script ====================-->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var form = document.querySelector(".login__form");
-      form.addEventListener("submit", function(e) {
-        e.preventDefault(); // Evitar que el formulario se envíe realmente
-        alert("Se registrado con exito!.");
-        window.location.href = 'admin.html#usuarios'; // Redirigir a la página index.html después de aceptar el alerta
-      });
-    });
-  </script>
+
+<script src="js/scripts.js"></script>
 
 </body>
 

@@ -72,21 +72,21 @@
             <h2>Editar Usuario</h2>
         </div>
         <form action="editaruser.html" method="get" class="was-validated">
-            <input type="hidden" id="userId" name="userId" value="">
+            <input type="hidden" id="userId" name="userId" value="" required oninput="cargarDatosUsuario()">
             <div class="form-group">
                 <label for="nombre"class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                <input type="text" class="form-control" id="nombre" name="nombre" required oninput="validarNombre()">
                 <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
             </div>
             <div class="form-group">
                 <label for="apellido"class="form-label">Apellido:</label>
-                <input type="text" class="form-control" id="apellido" name="apellido" required>
+                <input type="text" class="form-control" id="apellido" name="apellido" required oninput="validarApellido()">
                 <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
             </div>
             <div class="form-group">
                 <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-                <div class="invalid-feedback">Rellene el campo debe tener @ antes de enviar.</div>
+                <input type="email" class="form-control" id="email" name="email" required oninput="validarEmail()">
+                <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
             </div>
             
             <div class="form-actions">
@@ -94,18 +94,8 @@
             </div>
         </form>
     </div>
-    <script>
-        window.onload = function () {
-            const params = new URLSearchParams(window.location.search);
-            const userId = params.get('id');
-            document.getElementById('userId').value = userId;
 
-            // Fetch and fill the form with the user's data if available
-            document.getElementById('nombre').value = "John";  // Example data
-            document.getElementById('apellido').value = "Doe";
-            document.getElementById('email').value = "john@example.com";
-        };
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

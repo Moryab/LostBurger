@@ -402,6 +402,26 @@ section img:hover {
 }
 
 /*=============== LOGIN ===============*/
+
+/* Ver contraseña con ojo*/
+.password-input-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.toggle-password i {
+  font-size: 0.8em;
+}
+
+
+
 .login__form,
 .login__group {
   display: grid;
@@ -471,6 +491,7 @@ section img:hover {
   border-radius: .5rem;
   cursor: pointer;
   transition: box-shadow .4s;
+  margin-top: 20px; /* Cambia este valor según sea necesario */
 }
 
 .login__button:hover {
