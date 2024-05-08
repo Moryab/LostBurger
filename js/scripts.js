@@ -55,8 +55,13 @@ function validarDescripcion() {
 function validarPrecio() {
   var input = document.getElementById('precio');
   var valor = input.value;
+
   // Remover caracteres no permitidos (solo números)
   var newValue = valor.replace(/\D/g, ''); // \D coincide con cualquier carácter que no sea un dígito
+
+  // Agregar el símbolo "$" al principio del valor
+  newValue = '$' + newValue;
+
   input.value = newValue;
 }
 
