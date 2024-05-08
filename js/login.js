@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
       // Establece las credenciales correctas aquí
       var correctEmail = 'lostburger@gmail.com';
-      var correctPassword = 'burger123';
+      var correctPassword = 'Burger123';
   
       // Comprueba si las credenciales son correctas
       if (email === correctEmail && password === correctPassword) {
