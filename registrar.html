@@ -52,17 +52,18 @@
       <div class="login__group">
         <div>
             <label for="text" class="login__label">Nombre</label>
-            <input type="text" placeholder="Escriba su nombre Aqui" id="nombre" class="login__input"required>
+            <input type="text" placeholder="Escriba su nombre Aqui" id="nombre" class="login__input"required oninput="validarNombre()">
         </div>
 
         <div>
           <label for="email" class="login__label">Correo</label>
-          <input type="email" placeholder="Escriba su Correo Aqui" id="email" class="login__input"required>
+          <input type="email" placeholder="Escriba su Correo Aqui" id="email" class="login__input"required oninput="validarEmail()">
         </div>
 
         <div>
           <label for="password" class="login__label">Contraseña</label>
-          <input type="password" placeholder="Escriba su Contraseña Aqui" id="password" class="login__input"required>
+          <input type="password" placeholder="Escriba su Contraseña Aqui" id="password" class="login__input"required oninput="validarContrasena()">
+         <span style="color: red;" id="errorpass"></span>
         </div>
       </div>
     
@@ -105,7 +106,7 @@
     <p>© 2024 LostBurger. Todos los derechos reservados.</p>
   </footer>
 
-
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>

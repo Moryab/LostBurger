@@ -121,10 +121,6 @@ function mostrarAlerta() {
 
 document.getElementById("registrarbtn").addEventListener("click", mostrarAlerta);
 
-
-
-
-
 //Ver contraseña en registro de usuario
 function togglePasswordVisibility() {
   var passwordInput = document.getElementById('password');
@@ -137,4 +133,18 @@ function togglePasswordVisibility() {
       passwordInput.type = "password";
       toggleIcon.className = "far fa-eye-slash";
   }
+}
+//Validacion de contraseña
+function validarContrasena() {
+  var contrasena = document.getElementById('password').value;
+  var errorpass = document.getElementById('errorpass');
+
+  if (!/[A-Z]/.test(contrasena)) {
+      errorpass.textContent = 'La contraseña debe contener al menos una letra mayúscula.';
+      return false; // Devuelve falso si la validación falla
+  } else {
+      errorpass.textContent = ''; // Limpiar el mensaje de error si la validación es exitosa
+  }
+
+  return true; // Devuelve verdadero si la validación es exitosa
 }
