@@ -46,39 +46,42 @@
       <div class="back-to-previous">
         <a href="index.html" class="login__back"><i class="fas fa-arrow-left"></i></a>
       </div>
-        <h2 class="login__title">Iniciar Sesion</h2>
+      <h2 class="login__title">Iniciar Sesion</h2>
 
-        <div class="login__group">
-          <div>
-            <label for="email" class="login__label">Correo</label>
-            <input type="email" placeholder="Escriba su Correo Aqui" id="email" class="login__input"required oninput="validarEmail()">
+      <div class="login__group">
+        <div>
+          <label for="email" class="login__label">Correo</label>
+          <input type="email" placeholder="Escriba su Correo Aqui" id="email" class="login__input" required
+            oninput="validarEmail()">
+        </div>
+
+        <div>
+          <label for="password" class="login__label">Contraseña</label>
+          <div class="password-input-container">
+            <input type="password" placeholder="Escriba su Contraseña Aquí" id="password" class="login__input"
+              minlength="8" required>
+            <span class="toggle-password" onclick="togglePasswordVisibility()">
+              <i id="togglePasswordIcon" class="far fa-eye-slash"></i>
+            </span>
           </div>
-
-          <div>
-            <label for="password" class="login__label">Contraseña</label>
-            <div class="password-input-container">
-                <input type="password" placeholder="Escriba su Contraseña Aquí" id="password" class="login__input" minlength="8" required>
-                <span class="toggle-password" onclick="togglePasswordVisibility()">
-                    <i id="togglePasswordIcon" class="far fa-eye-slash"></i>
-                </span>
-            </div>
         </div>
       </div>
 
-        <div>
-          <p class="login__signup">
-            Aun no tienes Cuenta? <a href="registrar.html">Registrate</a>
-          </p>
+      <div>
+        <p class="login__signup">
+          Aun no tienes Cuenta? <a href="registrar.html">Registrate</a>
+        </p>
 
-          <p class="login__signup">
-            <a href="recuperar.html">¿Olvido su contraseña?</a>
-          </p>
+        <p class="login__signup">
+          <a href="recuperar.html">¿Olvido su contraseña?</a>
+        </p>
 
-          <button type="submit" class="login__button" id="iniSesionbtn">Continuar</button>
-        </div>
+
+        <button type="submit" class="login__button" id="iniSesionbtn">Continuar</button>
+      </div>
 
       <i class="ri-close-line login__close" id="login-close"></i>
-  </form>  
+    </form>
   </div>
 
   <!--==================== MAIN ====================-->
@@ -102,31 +105,8 @@
     <p>© 2024 LostBurger. Todos los derechos reservados.</p>
   </footer>
 
-  <!--Ingresar admin con correo-->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var loginForm = document.querySelector('.login__form');
-
-      loginForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Previene el envío tradicional del formulario
-
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-
-        // Establece las credenciales correctas aquí
-        var correctEmail = 'lostburger@gmail.com';
-        var correctPassword = 'burger123';
-
-        // Comprueba si las credenciales son correctas
-        if (email === correctEmail && password === correctPassword) {
-          window.location.href = 'admin.html#panel'; // Redirecciona a admin.html
-        } else {
-          alert('Credenciales incorrectas, intente de nuevo.'); // Muestra un mensaje de error
-        }
-      });
-    });
-  </script>
-<script src="js/scripts.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/scripts.js"></script>
 
 </body>
 
