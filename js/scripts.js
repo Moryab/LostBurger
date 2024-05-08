@@ -55,12 +55,11 @@ function validarDescripcion() {
 function validarPrecio() {
   var input = document.getElementById('precio');
   var valor = input.value;
-  // Remover caracteres no permitidos
-  var newValue = valor.replace(/[^0-9$]/g, '');
-  if (valor !== newValue) {
-      input.value = newValue;
-  }
+  // Remover caracteres no permitidos (solo números)
+  var newValue = valor.replace(/\D/g, ''); // \D coincide con cualquier carácter que no sea un dígito
+  input.value = newValue;
 }
+
 
 //validacion Imagenes en adddprouc y edit
 function validarImagen() {

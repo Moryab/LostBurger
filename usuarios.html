@@ -98,10 +98,11 @@
           <div>
             <label for="password" class="login__label">Contraseña</label>
             <div class="password-input-container">
-                <input type="password" placeholder="Escriba su Contraseña Aquí" id="password" class="login__input" minlength="8" required>
+                <input type="password" placeholder="Escriba su Contraseña Aquí" id="password" class="login__input" required oninput="validarContrasena()">
                 <span class="toggle-password" onclick="togglePasswordVisibility()">
                     <i id="togglePasswordIcon" class="far fa-eye-slash"></i>
                 </span>
+                <span style="color: red;" id="errorpass"></span>
             </div>
         </div>
         

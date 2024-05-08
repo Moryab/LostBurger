@@ -72,19 +72,19 @@
         <div class="form-group">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" value="Completo" required oninput="validarNombre()">
-            <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
+            <div class="invalid-feedback">Rellene el campo solo con texto.</div>
         </div>
 
         <div class="form-group">
             <label for="descripcion">Descripción:</label>
             <textarea id="descripcion" name="descripcion" required oninput="validarDescripcion()">Descripción del producto añadido.</textarea>
-            <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
+            <div class="invalid-feedback">Rellene el campo solo con texto</div>
         </div>
 
         <div class="form-group">
           <label for="precio">Precio:</label>
-          <input type="text" id="precio" name="precio" value="$2.000" required oninput="validarPrecio()">
-          <div class="invalid-feedback">Rellene el campo con $ y numeros.</div>
+          <input type="text" id="precio" name="precio" value="$" required oninput="validarPrecio()">
+          <div class="invalid-feedback">Rellene el campo con numeros.</div>
         </div>
         
 
