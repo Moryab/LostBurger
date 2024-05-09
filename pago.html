@@ -66,25 +66,25 @@
 
               <div class="mb-3 mt-3">
                 <label for="rutInput" class="form-label"><i class="fas fa-id-card"></i>Ingrese su RUT:</label>
-                <input type="text" class="form-control" id="rutInput" name="rut" placeholder="12345678-9" required>
+                <input type="text" class="form-control" id="rutInput" name="rut" placeholder="12345678-9" required oninput="validarRut(rut)">
                 <div class="invalid-feedback">El RUT ingresado no es válido.</div>
               </div>
 
               <div class="mb-3 mt-3">
                 <label for="email" class="form-label"><i class="fa fa-envelope"></i> Correo</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com" required oninput="validarEmail()">
                 <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
               </div>
 
               <div class="mb-3 mt-3">
                 <label for="address" class="form-label"><i class="fa fa-address-card-o"></i> Direccion</label>
-                <input type="text" class="form-control" id="address" name="address" placeholder="542 W. 15th Street" required>
+                <input type="text" class="form-control" id="address" name="address" placeholder="542 W. 15th Street" required oninput=" validarDireccion()">
                 <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
               </div>
               
               <div class="mb-3 mt-3">
                 <label for="city" class="form-label"><i class="fa fa-institution"></i> Ciudad</label>
-                <input type="text" class="form-control" id="city" name="city" placeholder="Concepcion" required>
+                <input type="text" class="form-control" id="city" name="city" placeholder="Concepcion" required oninput="validarCiudad()">
                 <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
               </div>
 
@@ -106,8 +106,7 @@
               </div>
 
               <label for="tarjeta" class="form-label">Número de Tarjeta:</label>
-              <input type="text" class="form-control" id="tarjeta" name="tarjeta" minlength="19" maxlength="19"
-                placeholder="0000 0000 0000 0000" required oninput="formatTarjeta()">
+              <input type="text" class="form-control" id="tarjeta" name="tarjeta" minlength="19" maxlength="19"placeholder="0000 0000 0000 0000" required oninput="formatTarjeta()">
               <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
 
               <label for="metodo">Método de Pago:</label>
