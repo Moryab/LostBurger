@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="CSS/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="icon" type="image/png" href="img/Logo.png">
+  <script src="validarRut.js"></script>
+
 </head>
 
 <body>
@@ -52,33 +54,45 @@
     <div class="col-75">
       <div class="container">
         <form id="Metodo_pago" method="get" class="was-validated">
-
+          <!--Direccion de envios-->
           <div class="row">
             <div class="col-50">
               <h3>Direccion de Envio</h3>
-              
+
               <div class="mb-3 mt-3">
                 <label for="fname" class="form-label"><i class="fa fa-user"></i> Nombre Completo</label>
                 <input type="text" class="form-control" id="fname" name="firstname" placeholder="John M. Doe" required>
                 <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
               </div>
 
+              <!-- Campo de entrada para el RUT -->
+              <div class="mb-3 mt-3">
+                <label for="rutInput" class="form-label">Ingrese su RUT:</label>
+                <input type="text" class="form-control" id="rutInput" name="rut" placeholder="12345678-9" maxlength="9" minlength="8" required>
+                <div id="rutIconContainer">
+                  <i id="rutIcon" class="fas"></i>
+                </div>
+                <div class="invalid-feedback">El RUT ingresado no es válido.</div>
+              </div>
+
               <div class="mb-3 mt-3">
                 <label for="email" class="form-label"><i class="fa fa-envelope"></i> Correo</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com"
+                  required>
                 <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
               </div>
 
               <label for="address" class="form-label"><i class="fa fa-address-card-o"></i> Direccion</label>
-              <input type="text" class="form-control" id="address" name="address" placeholder="542 W. 15th Street" required>
+              <input type="text" class="form-control" id="address" name="address" placeholder="542 W. 15th Street"
+                required>
               <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
 
-              <label for="city" class="form-label" ><i class="fa fa-institution"></i> Ciudad</label>
+              <label for="city" class="form-label"><i class="fa fa-institution"></i> Ciudad</label>
               <input type="text" class="form-control" id="city" name="city" placeholder="Concepcion" required>
               <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
 
             </div>
-
+            <!--Tarjeta-pago-->
             <div class="col-50">
               <h3>Pago</h3>
               <label for="fname">Tarjetas Aceptadas</label>
@@ -95,7 +109,8 @@
               </div>
 
               <label for="tarjeta" class="form-label">Número de Tarjeta:</label>
-              <input type="text" class="form-control" id="tarjeta" name="tarjeta" minlength="19" maxlength="19" placeholder="0000 0000 0000 0000" required oninput="formatTarjeta()" >
+              <input type="text" class="form-control" id="tarjeta" name="tarjeta" minlength="19" maxlength="19"
+                placeholder="0000 0000 0000 0000" required oninput="formatTarjeta()">
               <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
 
               <label for="metodo">Método de Pago:</label>
@@ -108,7 +123,8 @@
               <div class="row">
                 <div class="col-50">
                   <label for="expyear" class="form-label">Fecha de Expiración:</label>
-                  <input type="text" class="form-control" id="expyear" name="expyear" maxlength="5" placeholder="07/12" required>
+                  <input type="text" class="form-control" id="expyear" name="expyear" maxlength="5" placeholder="07/12"
+                    required>
                   <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
 
                 </div>
@@ -164,7 +180,29 @@
     <p>© 2024 LostBurger. Todos los derechos reservados.</p>
   </footer>
 
+  <script>
+    document.getElementById('Metodo_pago').addEventListener('submit', function (event) {
+      event.preventDefault(); // Evitar envío del formulario
+
+      var rutInput = document.getElementById('rutInput');
+      var rutError = document.getElementById('rutError');
+
+      var rut = rutInput.value.trim(); // Eliminar espacios al inicio y al final
+
+      if (validarRut(rut)) {
+        rutError.textContent = ''; // Limpiar mensaje de error si el RUT es válido
+        alert('El RUT es válido.');
+      } else {
+        rutError.textContent = 'El RUT ingresado no es válido.';
+      }
+    });
+  </script>
+
+  <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="js/rut.js"></script>
+  <script src="js/valrut.js"></script>
+
   <script>
     handleFormSubmit(); // Llama a la función para manejar el envío del formulario
   </script>
