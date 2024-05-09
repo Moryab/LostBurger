@@ -61,7 +61,13 @@
 
               <div class="mb-3 mt-3">
                 <label for="fname" class="form-label"><i class="fa fa-user"></i> Nombre Completo</label>
-                <input type="text" class="form-control" id="fname" name="firstname" placeholder="John M. Doe" required>
+                <input type="text" class="form-control" id="fname" name="firstname" placeholder="John M. Doe" required oninput="validarfname()">
+                <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
+              </div>
+
+              <div class="mb-3 mt-3">
+                <label for="rut" class="form-label"><i class="fa fa-user"></i> Rut</label>
+                <input type="text" class="form-control" id="rut" name="rut" placeholder="12.454.342-6" required>
                 <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
               </div>
 
@@ -77,17 +83,15 @@
 
               <div class="mb-3 mt-3">
                 <label for="email" class="form-label"><i class="fa fa-envelope"></i> Correo</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com"
-                  required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com" required>
                 <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
               </div>
 
               <label for="address" class="form-label"><i class="fa fa-address-card-o"></i> Direccion</label>
-              <input type="text" class="form-control" id="address" name="address" placeholder="542 W. 15th Street"
-                required>
+              <input type="text" class="form-control" id="address" name="address" placeholder="542 W. 15th Street" required>
               <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
 
-              <label for="city" class="form-label"><i class="fa fa-institution"></i> Ciudad</label>
+              <label for="city" class="form-label" ><i class="fa fa-institution"></i> Ciudad</label>
               <input type="text" class="form-control" id="city" name="city" placeholder="Concepcion" required>
               <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
 
@@ -104,7 +108,7 @@
 
               <div class="mb-3 mt-3">
                 <label for="cname" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="cname" name="cardname" placeholder="John More Doe" required>
+                <input type="text" class="form-control" id="cardname" name="cardname" placeholder="John More Doe" required oninput="validarCardname()">
                 <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
               </div>
 
@@ -123,14 +127,13 @@
               <div class="row">
                 <div class="col-50">
                   <label for="expyear" class="form-label">Fecha de Expiración:</label>
-                  <input type="text" class="form-control" id="expyear" name="expyear" maxlength="5" placeholder="07/12"
-                    required>
+                  <input type="text" class="form-control" id="expyear" name="expyear" maxlength="5" placeholder="07/12" required>
                   <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
 
                 </div>
                 <div class="col-50">
                   <label for="cvv" class="form-label">CVV</label>
-                  <input type="text" class="form-control" id="cvv" name="cvv" maxlength="3" placeholder="352" required>
+                  <input type="text" class="form-control" id="cvv" name="cvv" placeholder="352" required oninput="validarCVV()">
                   <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
 
                 </div>
@@ -142,7 +145,7 @@
             <input type="checkbox" checked="checked" name="sameadr"> Direccion de Envio igual que la facturacion
           </label>
           <div class="text-end">
-            <button type="submit" class="btn">Pagar</button>
+            <button type="submit" class="btn" id="pagar">Pagar</button>
           </div>
         </form>
       </div>
@@ -180,29 +183,7 @@
     <p>© 2024 LostBurger. Todos los derechos reservados.</p>
   </footer>
 
-  <script>
-    document.getElementById('Metodo_pago').addEventListener('submit', function (event) {
-      event.preventDefault(); // Evitar envío del formulario
-
-      var rutInput = document.getElementById('rutInput');
-      var rutError = document.getElementById('rutError');
-
-      var rut = rutInput.value.trim(); // Eliminar espacios al inicio y al final
-
-      if (validarRut(rut)) {
-        rutError.textContent = ''; // Limpiar mensaje de error si el RUT es válido
-        alert('El RUT es válido.');
-      } else {
-        rutError.textContent = 'El RUT ingresado no es válido.';
-      }
-    });
-  </script>
-
-  <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/scripts.js"></script>
-  <script src="js/rut.js"></script>
-  <script src="js/valrut.js"></script>
-
   <script>
     handleFormSubmit(); // Llama a la función para manejar el envío del formulario
   </script>
