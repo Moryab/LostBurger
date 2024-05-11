@@ -11,7 +11,6 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="icon" type="image/png" href="img/admin.png">
-  <script src="js/scripts.js"></script>
 </head>
 
 <body>
@@ -37,22 +36,17 @@
             <li class="nav-item p-3 py-md-1">
               <a href="admin.html#panel" class="nav-link"><i class="fas fa-columns"></i> Administración</a>
             </li>
-            <!-- Dropdown for Productos -->
-            <li class="nav-item dropdown p-3 py-md-1">
-              <a class="nav-link dropdown-toggle" href="#productos" id="navbarDropdownProductos" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-box-open"></i> Agregar Productos
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownProductos">
-                <li><a class="dropdown-item" href="completos.html">Completos</a></li>
-                <li><a class="dropdown-item" href="hamburgesas.html">Hamburguesas</a></li>
-                <li><a class="dropdown-item" href="pizzas.html">Pizzas</a></li>
-                <li><a class="dropdown-item" href="papas.html">Papas Fritas</a></li>
-                <li><a class="dropdown-item" href="bebidas.html">Bebidas</a></li>
-              </ul>
+            <li class="nav-item p-3 py-md-1">
+              <a href="admin.html#pedidos" class="nav-link"><i class="fas fa-shopping-cart"></i></i> Pedidos</a>
+            </li>
+            <li class="nav-item p-3 py-md-1">
+              <a href="productos.html" class="nav-link"><i class="fas fa-box-open"></i></i> Agregar Productos</a>
             </li>
             <li class="nav-item p-3 py-md-1">
               <a href="admin.html#lista" class="nav-link"><i class="fas fa-clipboard-list"></i> Lista de Productos</a>
+            </li>
+            <li class="nav-item p-3 py-md-1">
+              <a href="admin.html#usuarios" class="nav-link"><i class="fas fa-users"></i> Usuarios</a>
             </li>
           </ul>
         </div>
@@ -71,33 +65,36 @@
         
         <div class="form-group">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" value="Completo" required oninput="validarNombre()">
-            <div class="invalid-feedback">Rellene el campo solo con texto.</div>
+            <input type="text" id="nombre" name="nombre" required oninput="validarNombre()">
+            <div id="error-nombre" class="invalid-feedback">Rellene el campo solo con texto.</div>
         </div>
 
         <div class="form-group">
             <label for="descripcion">Descripción:</label>
-            <textarea id="descripcion" name="descripcion" required oninput="validarDescripcion()">Descripción del producto añadido.</textarea>
-            <div class="invalid-feedback">Rellene el campo solo con texto</div>
+            <textarea id="descripcion" name="descripcion" required oninput="validarDescripcion()"></textarea>
+            <div id="error-descripcion" class="invalid-feedback">Rellene el campo solo con texto</div>
         </div>
 
         <div class="form-group">
           <label for="precio">Precio:</label>
-          <input type="text" id="precio" name="precio" value="$" required oninput="validarPrecio()">
-          <div class="invalid-feedback">Rellene el campo con numeros.</div>
+          <input type="text" id="precio" name="precio" required oninput="validarPrecio()">
+          <div id="error-precio" class="invalid-feedback">Ingrese un valor numerico.</div>
         </div>
         
 
         <div class="form-group">
-            <label for="categoria">Categoría:</label>
-            <select id="categoria" name="categoria" required>
-                <option value="Completos"selected>Completos</option>
-                <option value="Hamburguesas">Hamburguesas</option>
-                <option value="Pizzas">Pizzas</option>
-                <option value="Papas Fritas">Papas Fritas</option>
-                <option value="Bebidas">Bebidas</option>
-            </select>
-        </div>
+          <label for="categoria">Categoría:</label>
+          <select id="categoria" name="categoria" required onchange="validarCategoria()">
+              <option value=""selected>Sin Seleccionar</option>
+              <option value="Completos">Completos</option>
+              <option value="Hamburguesas">Hamburguesas</option>
+              <option value="Pizzas">Pizzas</option>
+              <option value="Papas Fritas">Papas Fritas</option>
+              <option value="Bebidas">Bebidas</option>
+          </select>
+          <div id="error-categoria" class="invalid-feedback">Seleccione una Categoria.</div>
+      </div>
+      
 
         <div class="form-group">
           <label for="imagen">Imagen del Producto:</label>
@@ -106,7 +103,7 @@
       </div>
 
         <div class="form-actions">
-            <button type="submit" formaction="completos.html">Añadir Producto</button>
+            <button type="submit" formaction="productos.html">Añadir Producto</button>
         </div>
     </form>
 </div>

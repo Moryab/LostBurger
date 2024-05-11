@@ -38,20 +38,9 @@
                             <a href="admin.html#panel" class="nav-link"><i class="fas fa-columns"></i>
                                 Administración</a>
                         </li>
-                        <!-- Dropdown for Productos -->
-                        <li class="nav-item dropdown p-3 py-md-1">
-                            <a class="nav-link dropdown-toggle" href="#productos" id="navbarDropdownProductos"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-box-open"></i> Agregar Productos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownProductos">
-                                <li><a class="dropdown-item" href="completos.html">Completos</a></li>
-                                <li><a class="dropdown-item" href="hamburgesas.html">Hamburguesas</a></li>
-                                <li><a class="dropdown-item" href="pizzas.html">Pizzas</a></li>
-                                <li><a class="dropdown-item" href="papas.html">Papas Fritas</a></li>
-                                <li><a class="dropdown-item" href="bebidas.html">Bebidas</a></li>
-                            </ul>
-                        </li>
+                        <li class="nav-item p-3 py-md-1">
+                            <a href="productos.html" class="nav-link"><i class="fas fa-box-open"></i></i> Agregar Productos</a>
+                          </li>
                         <li class="nav-item p-3 py-md-1">
                             <a href="admin.html#lista" class="nav-link"><i class="fas fa-clipboard-list"></i> Lista de
                                 Productos</a>
@@ -76,12 +65,12 @@
             <div class="form-group">
                 <label for="nombre"class="form-label">Nombre:</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" required oninput="validarNombre()">
-                <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
+                <div id="error-nombre" class="invalid-feedback">Rellene el campo antes de enviar.</div>
             </div>
             <div class="form-group">
                 <label for="apellido"class="form-label">Apellido:</label>
                 <input type="text" class="form-control" id="apellido" name="apellido" required oninput="validarApellido()">
-                <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
+                <div id="error-apellido" class="invalid-feedback">Rellene el campo antes de enviar.</div>
             </div>
             <div class="form-group">
                 <label for="email" class="form-label">Email:</label>

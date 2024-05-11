@@ -2,21 +2,50 @@
 function validarNombre() {
   var input = document.getElementById('nombre');
   var valor = input.value;
+  
+  // Verificar si el campo está vacío
+  if (valor.trim() === '') {
+      var errorMessage = document.getElementById('error-nombre');
+      errorMessage.textContent = 'El campo no puede estar vacío.';
+      return;
+  }
+  
   // Remover caracteres no alfabéticos y no espacios en blanco
   var newValue = valor.replace(/[^A-Za-z\s]/g, '');
+  
+  // Verificar si el valor ingresado contiene caracteres no alfabéticos
   if (valor !== newValue) {
       input.value = newValue;
+      var errorMessage = document.getElementById('error-nombre');
+      errorMessage.textContent = 'Ingrese solo letras.';
+  } else {
+      var errorMessage = document.getElementById('error-nombre');
+      errorMessage.textContent = ''; // Limpiar el mensaje de error si el nombre es válido
   }
 }
-
-// validacion apellido en editUser
+//Validacion apellido en editUser
 function validarApellido() {
   var input = document.getElementById('apellido');
   var valor = input.value;
+  
+  // Verificar si el campo está vacío
+  if (valor.trim() === '') {
+      var errorMessage = document.getElementById('error-apellido');
+      errorMessage.textContent = 'El campo no puede estar vacío.';
+      return;
+  }
+  
   // Remover caracteres no alfabéticos y no espacios en blanco
   var newValue = valor.replace(/[^A-Za-z\s]/g, '');
+  
+  // Verificar si el valor ingresado contiene caracteres no alfabéticos
   if (valor !== newValue) {
       input.value = newValue;
+      var errorMessage = document.getElementById('error-apellido');
+      errorMessage.textContent = 'Ingrese solo letras.';
+  } else {
+      var errorMessage = document.getElementById('error-apellido');
+      errorMessage.textContent = ''; // Limpiar el mensaje de error si el nombre es válido
   }
 }
 
@@ -24,10 +53,25 @@ function validarApellido() {
 function validarDescripcion() {
   var input = document.getElementById('descripcion');
   var valor = input.value;
-  // Remover números y caracteres no permitidos
-  var newValue = valor.replace(/[^a-zA-Z\s.,:;!?¡¿()-]/g, '');
+  
+  // Verificar si el campo está vacío
+  if (valor.trim() === '') {
+      var errorMessage = document.getElementById('error-descripcion');
+      errorMessage.textContent = 'El campo no puede estar vacío.';
+      return;
+  }
+  
+  // Remover caracteres no alfabéticos y no espacios en blanco
+  var newValue = valor.replace(/[^A-Za-z\s]/g, '');
+  
+  // Verificar si el valor ingresado contiene caracteres no alfabéticos
   if (valor !== newValue) {
       input.value = newValue;
+      var errorMessage = document.getElementById('error-descripcion');
+      errorMessage.textContent = 'Ingrese solo letras.';
+  } else {
+      var errorMessage = document.getElementById('error-descripcion');
+      errorMessage.textContent = ''; // Limpiar el mensaje de error si el nombre es válido
   }
 }
 
@@ -35,15 +79,52 @@ function validarDescripcion() {
 function validarPrecio() {
   var input = document.getElementById('precio');
   var valor = input.value;
-
+  
+  // Verificar si se ha ingresado un valor en el campo de entrada (ignorando el símbolo "$")
+  if (valor.trim() === '' || valor === '$') {
+      var errorMessage = document.getElementById('error-precio');
+      errorMessage.textContent = 'Ingrese un precio.';
+      return; // Salir de la función si el campo está vacío
+  }
   // Remover caracteres no permitidos (solo números)
   var newValue = valor.replace(/\D/g, ''); // \D coincide con cualquier carácter que no sea un dígito
 
-  // Agregar el símbolo "$" al principio del valor
-  newValue = '$' + newValue;
+  // Convertir el valor a un número
+  var numero = parseFloat(newValue);
 
-  input.value = newValue;
+  // Verificar si el precio es mayor que cero
+  if (numero > 0) {
+      // Agregar el símbolo "$" al principio del valor
+      newValue = '$' + newValue;
+
+      input.value = newValue;
+
+      // Si es válido, vaciar el mensaje de error
+      var errorMessage = document.getElementById('error-precio');
+      errorMessage.textContent = '';
+  } else {
+      // Si el precio no es válido, limpiar el campo de entrada y mostrar mensaje de error
+      input.value = '';
+      var errorMessage = document.getElementById('error-precio');
+      errorMessage.textContent = 'El precio debe ser mayor que cero.';
+  }
 }
+
+
+//Validar Categoria
+function validarCategoria() {
+  var categoria = document.getElementById('categoria');
+
+  // Verificar si se ha seleccionado una categoría válida
+  if (categoria.value === 'Sin Seleccionar') {
+      var errorMessage = document.getElementById('error-categoria');
+      errorMessage.textContent = 'Seleccione una categoría.';
+  } else {
+      var errorMessage = document.getElementById('error-categoria');
+      errorMessage.textContent = ''; // Limpiar el mensaje de error si la categoría es válida
+  }
+}
+
 
 
 //validacion Imagenes en adddprouc y edit
