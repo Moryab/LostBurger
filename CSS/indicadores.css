@@ -179,8 +179,10 @@
     font-size: 1rem;
 }
 
+      /* Estilos para los iconos perfil*/
+      .icono-salir,
+      .icono-perfil {
+        color: #adadad; 
+    }
 
-
-  
-  
-
+    
