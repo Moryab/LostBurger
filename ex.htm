@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link href="CSS/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="CSS/admin.css">
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="ex.htm">
+                <i class="fas fa-hamburger"></i> Administración
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admpedidos.html">
+                            <i class="fas fa-shopping-cart"></i> Pedidos
+                        </a>
+                    </li>
+
+                    <a class="nav-link" href="admpagregar.html">
+                        <i class="fas fa-plus"></i> Agregar Productos
+                    </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="admlista.html">
+                            <i class="fas fa-list"></i> Lista de Productos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admusuarios.html">
+                            <i class="fas fa-users"></i> Usuarios
+                        </a>
+                    </li>
+                    <!-- Agrega más elementos de navegación -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Contenido principal -->
+
+    <!--widgets-->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Mensajes -->
+            <div class="col-md-3">
+                <div class="card widget-card">
+                    <div class="card-body">
+                        <i class="fas fa-envelope widget-icon"></i>
+                        <div>
+                            <h5 class="card-text">50</h5>
+                            <p class="card-title">Mensajes</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-mensajes"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Ingresos de Hoy -->
+            <div class="col-md-3">
+                <div class="card widget-card">
+                    <div class="card-body">
+                        <i class="fas fa-dollar-sign widget-icon"></i>
+                        <h5 class="card-text">$1000</h5>
+                        <p class="card-title">Ingresos de Hoy</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-ingresos"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Clientes-->
+            <div class="col-md-3">
+                <div class="card widget-card">
+                    <div class="card-body">
+                        <i class="fas fa-users widget-icon"></i>
+                        <div>
+                            <h5 class="card-text">100</h5>
+                            <p class="card-title">Clientes</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-clientes"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Pedidos de hoy-->
+            <div class="col-md-3">
+                <div class="card widget-card">
+                    <div class="card-body">
+                        <i class="fas fa-shopping-cart widget-icon"></i>
+                        <div>
+                            <h5 class="card-text">50</h5>
+                            <p class="card-title">Pedidos de Hoy</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-pedidos"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

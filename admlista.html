@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado Productos</title>
+    <link href="CSS/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="CSS/admin.css">
+    <link rel="stylesheet" href="CSS/admbtn.css">
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="ex.htm">
+                <i class="fas fa-hamburger"></i> Administración
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admpedidos.html">
+                            <i class="fas fa-shopping-cart"></i> Pedidos
+                        </a>
+                    </li>
+
+                    <a class="nav-link" href="admpagregar.html">
+                        <i class="fas fa-plus"></i> Agregar Productos
+                    </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="admlista.html">
+                            <i class="fas fa-list"></i> Lista de Productos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admusuarios.html">
+                            <i class="fas fa-users"></i> Usuarios
+                        </a>
+                    </li>
+                    <!-- Agrega más elementos de navegación -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Contenido principal -->
+
+
+    <!--LISTA DE PRODUCTOS-->
+    <div id="lista" class="content-section">
+        <div class="container mt-5"><!--main container-->
+            <h1>Listado de Productos</h1>
+            <input class="form-control mb-4" id="tableSearch" type="text" placeholder="Buscar Productos...">
+            <div class="mt-2 table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Imagen</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Hamburguesa de Pavo</td>
+                            <td><img src="img/hpavo.png" alt="Hamburguesa de Pavo" height="50"></td>
+                            <td>carne de pavo, lechuga, tomate, salsa de yogur griego</td>
+                            <td>$5.500</td>
+                            <td>
+                                <a class="btn btn-sm btn-editar" href="editarprod.html">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a class="btn btn-sm btn-borrar" href="">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Hamburguesa BBQ</td>
+                            <td><img src="img/hbbq.png" alt="Hamburguesa BBQ" height="50"></td>
+                            <td>carne de res, BBQ, aros de cebolla, tocino, queso cheddar</td>
+                            <td>$7.500</td>
+                            <td>
+                                <a class="btn btn-sm btn-editar" href="editarprod.html">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a class="btn btn-sm btn-borrar" href="">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Hamburguesa Vegana</td>
+                            <td><img src="img/hvegana.png" alt="Hamburguesa Vegana" height="50"></td>
+                            <td>hamburguesa vegana (mezcla de garbanzos, remolacha y avena), pan integral, lechuga,
+                                tomate,
+                                pepinillos
+                            </td>
+                            <td>$6.500</td>
+                            <td>
+                                <a class="btn btn-sm btn-editar" href="editarprod.html">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a class="btn btn-sm btn-borrar" href="">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul class="pagination text-center">
+                    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                </ul>
+            </div>
+        </div><!--main container ends-->
+    </div>
+</body>
+
+</html>

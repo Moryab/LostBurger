@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de usuarios</title>
+    <link href="CSS/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="CSS/indicadores.css">
+    <link rel="stylesheet" href="CSS/admin.css">
+    <link rel="stylesheet" href="CSS/admbtn.css">
+</head>
+<!--Listado y boton usuarios-->
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="ex.htm">
+                <i class="fas fa-hamburger"></i> Administración
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admpedidos.html">
+                            <i class="fas fa-shopping-cart"></i> Pedidos
+                        </a>
+                    </li>
+
+                    <a class="nav-link" href="admpagregar.html">
+                        <i class="fas fa-plus"></i> Agregar Productos
+                    </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="admlista.html">
+                            <i class="fas fa-list"></i> Lista de Productos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admusuarios.html">
+                            <i class="fas fa-users"></i> Usuarios
+                        </a>
+                    </li>
+                    <!-- Agrega más elementos de navegación -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Listado y boton usuarios-->
+    <div id="usuarios" class="content-section">
+        <div class="container mt-5">
+            <div class="header-section"> <!-- Clase agregada para manejar el título y el botón -->
+                <h1>Lista de usuarios</h1>
+                <button class="cssbuttons-io-button" onclick="window.location.href='usuarios.html';">
+                    Registrar un usuario
+                    <div class="icon">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+            <input class="form-control mb-4" id="tableSearch" type="text" placeholder="Buscar usuario...">
+            <div class="table-responsive">
+                <table class="table mt-2">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Teléfono</th>
+                            <th>Dirección</th>
+                            <th>Email</th>
+                            <th class="text-right">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pedidosTable">
+                        <!-- Ejemplo de filas -->
+                        <tr>
+                            <td>#1234</td>
+                            <td>Juan Pérez</td>
+                            <td>+56923423423</td>
+                            <td>Calle Falsa 123</td>
+                            <td>juan.perez@example.com</td>
+                            <td>
+                                <a class="btn btn-sm btn-editar" href="editaruser.html">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a class="btn btn-sm btn-borrar" href="">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1235</td>
+                            <td>Maria López</td>
+                            <td>+56923423423</td>
+                            <td>Avenida Siempreviva 456</td>
+                            <td>maria.lopez@example.com</td>
+                            <td>
+                                <a class="btn btn-sm btn-editar" href="editaruser.html">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a class="btn btn-sm btn-borrar" href="">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <!-- Agrega más filas según sea necesario -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

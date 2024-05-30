@@ -453,22 +453,6 @@
               <td><img src="img/hbbq.png" alt="Hamburguesa BBQ" height="50"></td>
               <td>carne de res, BBQ, aros de cebolla, tocino, queso cheddar</td>
               <td>$7.500</td>
-              <td>
-                <a href="editarprod.html?productoID=2" role="button" class="btn btn-warning text-light"><i
-                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                <label class="btn btn-danger" for="delete-confirm-hbbq"><i class="fa fa-trash"
-                    aria-hidden="true"></i></label>
-                <input type="checkbox" id="delete-confirm-hbbq" class="checkbox">
-                <div class="modal">
-                  <div class="modal-content">
-                    <span the="close"
-                      onclick="document.getElementById('delete-confirm-hbbq').checked = false;">&times;</span>
-                    <p>¿Estás seguro de que deseas eliminar este producto?</p>
-                    <button onclick="deleteProduct('hbbq')">Eliminar</button>
-                    <button onclick="document.getElementById('delete-confirm-hbbq').checked = false;">Cancelar</button>
-                  </div>
-                </div>
-              </td>
             </tr>
             <tr>
               <td>3</td>
@@ -478,23 +462,6 @@
                 pepinillos
               </td>
               <td>$6.500</td>
-              <td>
-                <a href="editarprod.html?productoID=3" role="button" class="btn btn-warning text-light"><i
-                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                <label class="btn btn-danger" for="delete-confirm-hvegana"><i class="fa fa-trash"
-                    aria-hidden="true"></i></label>
-                <input type="checkbox" id="delete-confirm-hvegana" class="checkbox">
-                <div class="modal">
-                  <div the="modal-content">
-                    <span class="close"
-                      onclick="document.getElementById('delete-confirm-hvegana').checked = false;">&times;</span>
-                    <p>¿Estás seguro de que deseas eliminar este producto?</p>
-                    <button onclick="deleteProduct('hvegana')">Eliminar</button>
-                    <button
-                      onclick="document.getElementById('delete-confirm-hvegana').checked = false;">Cancelar</button>
-                  </div>
-                </div>
-              </td>
             </tr>
           </tbody>
         </table>
@@ -508,12 +475,7 @@
       </div>
     </div><!--main container ends-->
   </div>
-  <script>
-    function deleteProduct(productId) {
-      console.log("Deleting product with ID:", productId);
-      // Add server request logic or other deletion logic here
-    }
-  </script>
+  
 
   
 <!-- Contenido de Productos -->

@@ -4,113 +4,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin</title>
+  <title>Agregar Usuarios</title>
   <link href="CSS/bootstrap.css" rel="stylesheet">
-  <link rel="stylesheet" href="CSS/styles.css">
   <script src="js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <link rel="icon" type="image/png" href="img/admin.png">
+  <link rel="stylesheet" href="CSS/editartabla.css">
+  <link rel="stylesheet" href="CSS/indicadores.css">
+  <link rel="stylesheet" href="CSS/admin.css">
 
 </head>
 
 <body>
-  <!-- MENU START -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <!-- NAV CONTAINER START -->
-    <div class="container-fluid">
-      <a href="index.html" class="navbar-brand text-info fw-semibold fs-4"><i class="fas fa-home"></i>LostBurger</a>
-
-      <!-- NAV BUTTON -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="ex.htm">
+        <i class="fas fa-hamburger"></i> Administración
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- OFFCANVAS MAIN CONTAINER START -->
-      <section class="offcanvas offcanvas-start" id="menuLateral" tabindex="-1">
-        <div class="offcanvas-header" data-bs-theme="dark">
-          <h5 class="offcanvas-title text-info">LostBurger</h5>
-          <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <!-- OFF CANVAS MENU LINKS START -->
-        <div class="offcanvas-body d-flex flex-column justify-content-between px-0">
-          <ul class="navbar-nav fs-5 justify-content-evenly">
-            <li class="nav-item p-3 py-md-1">
-              <a href="admin.html#panel" class="nav-link"><i class="fas fa-columns"></i> Administración</a>
-            </li>
-            <li class="nav-item p-3 py-md-1">
-              <a href="admin.html#pedidos" class="nav-link"><i class="fas fa-shopping-cart"></i></i> Pedidos</a>
-            </li>
-            <li class="nav-item p-3 py-md-1">
-              <a href="admin.html#agregar" class="nav-link"><i class="fas fa-box-open"></i></i> Agregar Productos</a>
-            </li>
-            <li class="nav-item p-3 py-md-1">
-              <a href="admin.html#lista" class="nav-link"><i class="fas fa-clipboard-list"></i> Lista de Productos</a>
-            </li>
-            <li class="nav-item p-3 py-md-1">
-              <a href="admin.html#usuarios" class="nav-link"><i class="fas fa-users"></i> Usuarios</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- OFFCANVAS MAIN CONTAINER END -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="admpedidos.html">
+              <i class="fas fa-shopping-cart"></i> Pedidos
+            </a>
+          </li>
+
+          <a class="nav-link" href="admpagregar.html">
+            <i class="fas fa-plus"></i> Agregar Productos
+          </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="admlista.html">
+              <i class="fas fa-list"></i> Lista de Productos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admusuarios.html">
+              <i class="fas fa-users"></i> Usuarios
+            </a>
+          </li>
+          <!-- Agrega más elementos de navegación -->
+        </ul>
+      </div>
     </div>
   </nav>
 
-
-
-
-
-
   <!-- Contenido de Usuarios -->
-  <body style="background-color: #eeeded;">
-
-  <!--==================== LOGIN ====================-->
-  <div class="login" id="login">
-    <form action="" method="get" class="login__form" class="was-validated">
-      <div class="back-to-previous">
-        <a href="admin.html#usuarios" class="login__back"><i class="fas fa-arrow-left"></i></a>
-      </div>
-        <h2 class="login__title">Ingrese datos del usuario</h2>
-  
-        <div class="login__group">
-          <div>
-            <label for="text" class="login__label">Nombre</label>
-            <input type="text" placeholder="Escriba su nombre Aqui" id="nombre" class="login__input" required oninput="validarNombre()">
-          </div>
-  
-          <div>
-            <label for="email" class="login__label">Correo</label>
-            <input type="email" placeholder="Escriba su Correo Aqui" id="email" class="login__input" required oninput="validarEmail()">
-          </div>
-  
-          <div>
-            <label for="password" class="login__label">Contraseña</label>
-            <div class="password-input-container">
-                <input type="password" placeholder="Escriba su Contraseña Aquí" id="password" class="login__input" required oninput="validarContrasena()">
-                <span class="toggle-password" onclick="togglePasswordVisibility()">
-                    <i id="togglePasswordIcon" class="far fa-eye-slash"></i>
-                </span>
-                <span style="color: red;" id="errorpass"></span>
+  <!--fORMULARIO-->
+  <div class="edit-form-container">
+    <div class="form-header">
+        <a href="admusuarios.html" class="back-arrow"><i class="fas fa-arrow-left"></i></a>
+        <h2>Registrar Usuarios</h2>
+    </div>
+    <form action="editaruser.html" method="get" class="was-validated">
+        <input type="hidden" id="userId" name="userId" value="" required oninput="cargarDatosUsuario()">
+        <div class="form-group">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required oninput="validarNombre()">
+            <div id="error-nombre" class="invalid-feedback">Rellene el campo antes de enviar. Solo se permiten
+                letras.</div>
+        </div>
+        <div class="form-group">
+            <label for="apellido" class="form-label">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" required
+                oninput="validarApellido()">
+            <div id="error-apellido" class="invalid-feedback">Rellene el campo antes de enviar. Solo se permiten
+                letras.</div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required oninput="validarEmail()">
+            <div class="invalid-feedback">Rellene el campo antes de enviar.</div>
+        </div>
+        <div class="form-group">
+            <label for="telefono" class="form-label">Teléfono:</label>
+            <div class="input-group">
+                <select class="form-select" id="prefijo" name="prefijo" required>
+                    <option value="+56" selected>+56 Chile</option>
+                    <option value="+34">+34 España</option>
+                    <option value="+52">+52 México</option>
+                    <option value="+54">+54 Argentina</option>
+                    <option value="+1">+1 EE.UU.</option>
+                    <!-- Agrega más prefijos según sea necesario -->
+                </select>
+                <input type="tel" class="form-control" id="telefono" name="telefono" required
+                    oninput="validarTelefono()">
             </div>
+            <div id="error-telefono" class="invalid-feedback">Rellene el campo antes de enviar. Solo se permiten
+                números.</div>
         </div>
-        
-        
-        
-  
+        <div class="form-group">
+            <label for="direccion" class="form-label">Dirección:</label>
+            <input type="text" class="form-control" id="direccion" name="direccion" required
+                oninput="validarDireccion()">
+            <div id="error-direccion" class="invalid-feedback">Rellene el campo antes de enviar.</div>
         </div>
-  
-        <div>
-          <button type="submit" class="login__button" id="registrarbtn" onclick="registrarUsuario()"
-            formaction="admin.html#usuarios">Registrar</button>
+        <div class="form-actions">
+            <button type="submit" formaction="admusuarios.html">Guardar Cambios</button>
         </div>
-  
-      <i class="ri-close-line login__close" id="login-close"></i>
     </form>
-  
-  </div>
-
+</div>
 
 <script src="js/scripts.js"></script>
-
 </body>
+
 
 </html>

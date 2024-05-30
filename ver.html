@@ -2,69 +2,57 @@
 <html lang="es">
   
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver Pedido</title>
-    <link href="CSS/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="icon" type="image/png" href="img/admin.png">
-  
-  </head>
-  
-  <body>
-    <!-- MENU START -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <!-- NAV CONTAINER START -->
-      <div class="container-fluid">
-        <a href="index.html" class="navbar-brand text-info fw-semibold fs-4"><i class="fas fa-home"></i>LostBurger</a>
-  
-        <!-- NAV BUTTON -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- OFFCANVAS MAIN CONTAINER START -->
-        <section class="offcanvas offcanvas-start" id="menuLateral" tabindex="-1">
-          <div class="offcanvas-header" data-bs-theme="dark">
-            <h5 class="offcanvas-title text-info">LostBurger</h5>
-            <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración</title>
+  <link href="CSS/bootstrap.css" rel="stylesheet">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="CSS/admin.css">
+  <link rel="stylesheet" href="CSS/indicadores.css">
+</head>
+
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+          <a class="navbar-brand" href="ex.htm">
+              <i class="fas fa-hamburger"></i> Administración
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="admpedidos.html">
+                          <i class="fas fa-shopping-cart"></i> Pedidos
+                      </a>
+                  </li>
+
+                  <a class="nav-link" href="admpagregar.html">
+                      <i class="fas fa-plus"></i> Agregar Productos
+                  </a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="admlista.html">
+                          <i class="fas fa-list"></i> Lista de Productos
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="admusuarios.html">
+                          <i class="fas fa-users"></i> Usuarios
+                      </a>
+                  </li>
+                  <!-- Agrega más elementos de navegación -->
+              </ul>
           </div>
-          <!-- OFF CANVAS MENU LINKS START -->
-          <div class="offcanvas-body d-flex flex-column justify-content-between px-0">
-            <ul class="navbar-nav fs-5 justify-content-evenly">
-              <li class="nav-item p-3 py-md-1">
-                <a href="admin.html#panel" class="nav-link"><i class="fas fa-columns"></i> Administración</a>
-              </li>
-              <li class="nav-item p-3 py-md-1">
-                <a href="admin.html#pedidos" class="nav-link"><i class="fas fa-shopping-cart"></i></i> Pedidos</a>
-              </li>
-              <!-- Dropdown for Productos -->
-              <li class="nav-item dropdown p-3 py-md-1">
-                <a class="nav-link dropdown-toggle" href="#productos" id="navbarDropdownProductos" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fas fa-box-open"></i> Agregar Productos
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownProductos">
-                  <li><a class="dropdown-item" href="completos.html">Completos</a></li>
-                  <li><a class="dropdown-item" href="hamburgesas.html">Hamburguesas</a></li>
-                  <li><a class="dropdown-item" href="pizzas.html">Pizzas</a></li>
-                  <li><a class="dropdown-item" href="papas.html">Papas Fritas</a></li>
-                  <li><a class="dropdown-item" href="bebidas.html">Bebidas</a></li>
-                </ul>  
-              </li>
-              <li class="nav-item p-3 py-md-1">
-                <a href="admin.html#lista" class="nav-link"><i class="fas fa-clipboard-list"></i> Lista de Productos</a>
-              </li>
-              <li class="nav-item p-3 py-md-1">
-                <a href="admin.html#usuarios" class="nav-link"><i class="fas fa-users"></i> Usuarios</a>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <!-- OFFCANVAS MAIN CONTAINER END -->
       </div>
-    </nav>
+  </nav>
+  <!-- Contenido principal -->
 
     <div class="container-sm mt-2">
       <h1 class="h3 text-center">Detalle del Pedido</h1>
@@ -107,7 +95,7 @@
               <h5 class="mt-4">Estado del Pedido</h5>
               <p>Actual: Entregado</p>
               <div class="text-center"style="margin-top: 40px;">
-                  <a href="admin.html#pedidos" class="btn">Volver</a>
+                  <a href="admpedidos.html" class="btn">Volver</a>
               </div>
           </div>
       </div>
