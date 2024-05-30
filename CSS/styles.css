@@ -337,26 +337,6 @@ section img:hover {
 }
 
 /*=============== LOGIN ===============*/
-
-/* Ver contraseña con ojo*/
-.password-input-container {
-  position: relative;
-}
-
-.toggle-password {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.toggle-password i {
-  font-size: 0.8em;
-}
-
-
-
 .login__form,
 .login__group {
   display: grid;
