@@ -213,19 +213,3 @@ function validarContrasena() {
 
   return true; // Devuelve verdadero si la validación es exitosa
 }
-
-//validacion telefono editar usuario
-function validarTelefono() {
-  const telefono = document.getElementById('telefono').value;
-  // Expresión regular que valida números de teléfono en formato internacional
-  const telefonoRegex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
-  if (!telefonoRegex.test(telefono)) {
-      // Si el número de teléfono no coincide con el formato, se agrega la clase 'is-invalid' para mostrar un mensaje de error
-      document.getElementById('telefono').classList.add('is-invalid');
-      document.getElementById('error-telefono').textContent = 'Ingrese un número de teléfono válido.';
-  } else {
-      // Si el número de teléfono es válido, se elimina la clase 'is-invalid' y se quita cualquier mensaje de error
-      document.getElementById('telefono').classList.remove('is-invalid');
-      document.getElementById('error-telefono').textContent = '';
-  }
-}
